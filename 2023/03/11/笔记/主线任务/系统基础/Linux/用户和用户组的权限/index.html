@@ -10,18 +10,18 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/03/11/hello-world/"/>
+    <link rel="canonical" href="http://example.com/2023/03/11/笔记/主线任务/系统基础/linux/用户和用户组的权限/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Hello World">
+    <meta property="og:title" content="CSHRIMP&#39;S BLOG">
     <meta property="og:description" content="Hexo Theme Redefine">
-    <meta property="og:url" content="http://example.com2023/03/11/hello-world/">
+    <meta property="og:url" content="http://example.com2023/03/11/笔记/主线任务/系统基础/Linux/用户和用户组的权限/">
     
     <meta property="og:site_name" content="CSHRIMP&#39;S BLOG">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hello World">
+    <meta name="twitter:title" content="CSHRIMP&#39;S BLOG">
     <meta name="twitter:description" content="Hexo Theme Redefine">
     <meta name="twitter:image" content="/images/redefine-logo.svg">
     <!--- Icon Part-->
@@ -31,8 +31,6 @@
     <link rel="shortcut icon" href="/images/redefine-logo.svg">
     
     <title>
-        
-            Hello World -
         
         CSHRIMP&#39;S BLOG
     </title>
@@ -212,7 +210,7 @@
             
             
                 <div class="article-title">
-                    <h1 class="article-title-regular">Hello World</h1>
+                    <h1 class="article-title-regular"></h1>
                 </div>
             
                 
@@ -234,15 +232,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-03-11 21:24:10</span>
-        <span class="mobile">2023-03-11 21:24</span>
+        <span class="pc">2023-03-11 22:21:48</span>
+        <span class="mobile">2023-03-11 22:21</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-03-11 21:21:52</span>
-            <span class="mobile">2023-03-11 21:21</span>
+            <span class="pc">2023-02-23 08:01:41</span>
+            <span class="mobile">2023-02-23 08:01</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -253,12 +251,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>75 字</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>613 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 分钟</span>
         </span>
     
     
@@ -270,19 +268,124 @@
             
 
             <div class="article-content markdown-body">
-                <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+                <h1 id="用户和用户组"><a href="#用户和用户组" class="headerlink" title="用户和用户组"></a>用户和用户组</h1><hr>
+<p>文件创建时间–2023.2.21 13:20 <br><br>文件修改时间–2023.2.23 8:01</p>
+<hr>
+<h1 id="用户和用户组管理"><a href="#用户和用户组管理" class="headerlink" title="用户和用户组管理"></a>用户和用户组管理</h1><h3 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h3><p>useradd 用户名 [选项]</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">useradd ZhangSan</span></span><br></pre></td></tr></table></figure></div>
+<p>常用选项：</p>
+<ul>
+<li>-c：注释，会显示在passwd的注释栏上</li>
+<li>-d：登录目录</li>
+<li>-g：加入的用户组</li>
+<li>-G：附属的用户组</li>
+<li>-s：指定shell</li>
+<li>-u：指定uid</li>
+</ul>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p>userdel 用户名</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">userdel ZhangSan</span></span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+<h3 id="修改用户权限"><a href="#修改用户权限" class="headerlink" title="修改用户权限"></a>修改用户权限</h3><p>usermod [选项] 用户名</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">usermod ZhangSan</span></span><br></pre></td></tr></table></figure></div>
+<p>常用选项：</p>
+<ul>
+<li>-c：注释</li>
+<li>-d：修改主目录</li>
+<li>-e：修改密码过期时间</li>
+<li>-f：缓冲时间，密码过期多少天禁用账号</li>
+<li>-g：修改用户所属组</li>
+<li>-G：修改用户附属所属组</li>
+<li>-I：修改用户名称</li>
+<li>-L：锁定用户，密码作废</li>
+<li>-s：切换登入的shell</li>
+<li>-u：修改用户id</li>
+<li>-U：解除密码锁定</li>
+</ul>
+<h3 id="修改用户密码"><a href="#修改用户密码" class="headerlink" title="修改用户密码"></a>修改用户密码</h3><p>passwd 用户名 [选项]</p>
+<p><strong>注：该指令需要拥有su权限，而且输入密码时没有回显</strong></p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">passwd ZhangSan</span></span><br><span class="line">Enter new UNIX password：</span><br><span class="line">Retype new UNIX password：</span><br><span class="line">passwd: password updated successfully</span><br><span class="line"><span class="meta prompt_">#</span></span><br></pre></td></tr></table></figure></div>
+<p>常用选项：</p>
+<ul>
+<li>-d：删除密码</li>
+<li>-f：强制用户下次登入修改密码</li>
+<li>-l：锁定账号</li>
+</ul>
+<h3 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h3><p>su [用户名]<br>注：不写用户默认切换root</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">su ZhangSan</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">whoami</span></span></span><br><span class="line">ZhangSan</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+<h3 id="新建用户组"><a href="#新建用户组" class="headerlink" title="新建用户组"></a>新建用户组</h3><p>groupadd 组名称 [选项]</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">groupadd ZhangSan</span></span><br></pre></td></tr></table></figure></div>
+<p>常用选项：</p>
+<ul>
+<li>-g：指定新建的用户组id</li>
+<li>-r：创建为系统工作组，gid小于500</li>
+</ul>
+<h1 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h1><p>文件权限有读、写、执行，对应的符号是r、w、x，对应数字是4，2，1</p>
+<h2 id="利用chmod命令更改文件权限："><a href="#利用chmod命令更改文件权限：" class="headerlink" title="利用chmod命令更改文件权限："></a>利用chmod命令更改文件权限：</h2><p>chmod [权限] [路径]</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chmod</span> 777 ZhangSan</span></span><br></pre></td></tr></table></figure></div>
+<p>权限：文件所有者，文件所有者同组成员，其他人</p>
+<table>
+<thead>
+<tr>
+<th align="center">权限</th>
+<th align="center">rwx</th>
+<th align="center">八进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">只读</td>
+<td align="center">r–</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">只写</td>
+<td align="center">-w-</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">只执行</td>
+<td align="center">–x</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">无权限</td>
+<td align="center">—</td>
+<td align="center">0</td>
+</tr>
+</tbody></table>
+<p>也可以使用加和减增加或删除权限</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chmod</span> u+r,g+w,o+x zhangsan</span></span><br></pre></td></tr></table></figure></div>
+<p>解释：给予所有者读取权限，给予同组成员写入权限，给予其他用户执行权限</p>
+<table>
+<thead>
+<tr>
+<th align="center">字母</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">u</td>
+<td align="center">用户</td>
+</tr>
+<tr>
+<td align="center">g</td>
+<td align="center">组成员</td>
+</tr>
+<tr>
+<td align="center">o</td>
+<td align="center">其他用户</td>
+</tr>
+</tbody></table>
+<p>人话翻译：u等于你，g等于同班同学，o等于其他班的同学</p>
+<h2 id="利用chown修改文件所属者"><a href="#利用chown修改文件所属者" class="headerlink" title="利用chown修改文件所属者"></a>利用chown修改文件所属者</h2><p>chown [-R] 用户名 路径</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">chowm ZhangSan Li4.txt</span></span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+<h2 id="利用chgrp修改文件所属组"><a href="#利用chgrp修改文件所属组" class="headerlink" title="利用chgrp修改文件所属组"></a>利用chgrp修改文件所属组</h2><p>chgrp 组名 路径</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chgrp</span> ZhangSan Li4.txt</span></span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="利用umask修改默认权限"><a href="#利用umask修改默认权限" class="headerlink" title="利用umask修改默认权限"></a>利用umask修改默认权限</h2><p>umask [减去的权限]</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">umask</span></span></span><br><span class="line">022</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">umask</span> 077</span></span><br></pre></td></tr></table></figure></div>
+<p>不带任何东西只执行umask显示当前权限，022指755权限</p>
 
             </div>
 
@@ -290,11 +393,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：Hello World</li>
+        <li>本文标题：</li>
         <li>本文作者：CShrimp</li>
-        <li>创建时间：2023-03-11 21:24:10</li>
+        <li>创建时间：2023-03-11 22:21:48</li>
         <li>
-            本文链接：https://dalongxia2017.github.io/2023/03/11/hello-world/
+            本文链接：https://dalongxia2017.github.io/2023/03/11/笔记/主线任务/系统基础/Linux/用户和用户组的权限/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -315,7 +418,7 @@
                         <div class="article-prev">
                             <a class="prev"
                             rel="prev"
-                            href="/2023/03/11/%E7%AC%94%E8%AE%B0/%E7%9B%AE%E5%BD%95/"
+                            href="/2023/03/11/%E7%AC%94%E8%AE%B0/%E4%B8%BB%E7%BA%BF%E4%BB%BB%E5%8A%A1/%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/Linux/%E7%AE%A1%E7%90%86RPM%E5%8C%85TAR%E5%8C%85/"
                             >
                                 <span class="left arrow-icon flex-center">
                                     <i class="fa-solid fa-chevron-left"></i>
@@ -327,6 +430,21 @@
                             </a>
                         </div>
                     
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/03/11/%E7%AC%94%E8%AE%B0/%E4%B8%BB%E7%BA%BF%E4%BB%BB%E5%8A%A1/%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/Linux/%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB%E4%B8%8E%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item"></span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
                     
                 </div>
             
@@ -340,8 +458,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">Hello World</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <div class="page-title"></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84"><span class="nav-text">用户和用户组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86"><span class="nav-text">用户和用户组管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7"><span class="nav-text">新建用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7"><span class="nav-text">删除用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90"><span class="nav-text">修改用户权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81"><span class="nav-text">修改用户密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7"><span class="nav-text">切换用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7%E7%BB%84"><span class="nav-text">新建用户组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86"><span class="nav-text">权限管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8chmod%E5%91%BD%E4%BB%A4%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%EF%BC%9A"><span class="nav-text">利用chmod命令更改文件权限：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8chown%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%89%80%E5%B1%9E%E8%80%85"><span class="nav-text">利用chown修改文件所属者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8chgrp%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%89%80%E5%B1%9E%E7%BB%84"><span class="nav-text">利用chgrp修改文件所属组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8umask%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E6%9D%83%E9%99%90"><span class="nav-text">利用umask修改默认权限</span></a></li></ol></li></ol>
 
     </div>
 </div>
