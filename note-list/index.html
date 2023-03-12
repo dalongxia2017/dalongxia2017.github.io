@@ -10,14 +10,14 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/list/"/>
+    <link rel="canonical" href="http://example.com/note-list/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
     <meta property="og:title" content="魔法禁书目录">
     <meta property="og:description" content="Hexo Theme Redefine">
-    <meta property="og:url" content="http://example.comlist/index.html">
+    <meta property="og:url" content="http://example.comnote-list/index.html">
     
     <meta property="og:site_name" content="CSHRIMP&#39;S BLOG">
     <meta name="twitter:card" content="summary_large_image">
@@ -48,7 +48,7 @@
     <script id="hexo-configurations">
     let REDEFINE = window.REDEFINE || {};
     REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#ec0e66","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-logo.svg","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"CSHRIMP 的魔幻小窝","custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.0","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":false,"audio":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]}}};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#ec0e66","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-logo.svg","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/my-light.webp","dark":"/images/my-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"CSHRIMP 的魔幻小窝","custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.0","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":false,"audio":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]}}};
     REDEFINE.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
     
@@ -145,16 +145,33 @@
                         
                             <li class="menu-item">
                                 <!-- Menu -->
-                                <a class="active" 
-                                    href="/list"  >
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
                                     
                                         
-                                            <i class="fa-regular fa-link"></i>
-                                        
-                                        目录
+                                        目录&nbsp;<i class="fa-solid fa-chevron-down"></i>
                                     
                                 </a>
                                 <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a href="/note-list">网络安全
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/extra-list">奇妙玩意
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/todo">TODO
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
                                 
                             </li>
                     
@@ -223,17 +240,29 @@
             
                 
                     <li class="drawer-menu-item flex-center">
-                        <a class="active" 
-                        href="/list"  >
-                             
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
                                 
-                                    <i class="fa-regular fa-link"></i>
-                                
-                                目录
+                                目录&nbsp;<i class="fa-solid fa-chevron-down"></i>
                             
                         </a>
                     </li>
                     <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/note-list">网络安全</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/extra-list">奇妙玩意</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/todo">TODO</a>
+                            </li>
+                        
                     
             
                 
@@ -336,58 +365,7 @@
 </li>
 <li><h2 id="渗透"><a href="#渗透" class="headerlink" title="渗透"></a>渗透</h2></li>
 <li><h2 id="加固"><a href="#加固" class="headerlink" title="加固"></a>加固</h2></li>
-<li><h2 id="支线任务"><a href="#支线任务" class="headerlink" title="支线任务"></a>支线任务</h2><ul>
-<li></li>
-<li></li>
 </ul>
-</li>
-<li><h2 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h2><ul>
-<li><h3 id="Clash-for-window使用"><a href="#Clash-for-window使用" class="headerlink" title="Clash for window使用"></a>Clash for window使用</h3></li>
-<li><h3 id="使用移动设备作为扩展显示器"><a href="#使用移动设备作为扩展显示器" class="headerlink" title="使用移动设备作为扩展显示器()"></a>使用移动设备作为扩展显示器()</h3></li>
-</ul>
-</li>
-<li><h2 id="挖坑区域（前面的区域以后再来探索吧）"><a href="#挖坑区域（前面的区域以后再来探索吧）" class="headerlink" title="挖坑区域（前面的区域以后再来探索吧）"></a>挖坑区域（前面的区域以后再来探索吧）</h2><ul>
-<li><h3 id="obsi笔记"><a href="#obsi笔记" class="headerlink" title="obsi笔记"></a>obsi笔记</h3></li>
-<li><h3 id="笔记推上github"><a href="#笔记推上github" class="headerlink" title="笔记推上github"></a>笔记推上github</h3></li>
-<li><h3 id="wine兼容层的使用"><a href="#wine兼容层的使用" class="headerlink" title="wine兼容层的使用"></a>wine兼容层的使用</h3></li>
-<li><h3 id="qemu虚拟机的使用"><a href="#qemu虚拟机的使用" class="headerlink" title="qemu虚拟机的使用"></a>qemu虚拟机的使用</h3></li>
-<li><h3 id="kernelsu"><a href="#kernelsu" class="headerlink" title="kernelsu"></a>kernelsu</h3></li>
-<li><h3 id="magisk模块编写"><a href="#magisk模块编写" class="headerlink" title="magisk模块编写"></a>magisk模块编写</h3></li>
-<li><h3 id="lsposed模块编写"><a href="#lsposed模块编写" class="headerlink" title="lsposed模块编写"></a>lsposed模块编写</h3></li>
-<li><h3 id="openharmony的移植"><a href="#openharmony的移植" class="headerlink" title="openharmony的移植"></a>openharmony的移植</h3></li>
-<li><h3 id="黑苹果安装"><a href="#黑苹果安装" class="headerlink" title="黑苹果安装"></a>黑苹果安装</h3></li>
-<li><h3 id="grub美化"><a href="#grub美化" class="headerlink" title="grub美化"></a>grub美化</h3></li>
-<li><h3 id="Godot-Editor使用"><a href="#Godot-Editor使用" class="headerlink" title="Godot Editor使用"></a>Godot Editor使用</h3></li>
-<li><h3 id="termux-chroot的虚拟机"><a href="#termux-chroot的虚拟机" class="headerlink" title="termux+chroot的虚拟机"></a>termux+chroot的虚拟机</h3></li>
-<li><h3 id="基于Linxu的无盘引导启动linux系统"><a href="#基于Linxu的无盘引导启动linux系统" class="headerlink" title="基于Linxu的无盘引导启动linux系统"></a>基于Linxu的无盘引导启动linux系统</h3></li>
-</ul>
-</li>
-</ul>
-  <!-- - ### Pacemaker故障转移服务器
-  - ### LVS负载均衡服务器
-  - ### Haproxy负载均衡服务器
-  - ### Keepalived 故障转移服务器
-  - ### K8S集群部署
-  - ### Docker容器
-  - ### 容器编排
-  - ### Docker-compose
-  - ### Openstack
-  - ### 网络设备
-  - ### Ansible 自动化
-  - ### Python
-  - ### Powershell
-  - ### Shell编程
-  - ### NIS 域
-  - ### ldap 域
-  - ### LDAP OVER SSL
-  - ### LDAP OVER TLS
-  - ### 认识色环电阻
-  - ### 认识电容
-  - ### 电烙铁和风枪
-  - ### 手搓i9-13900KS
-  - ### 搬板 Z790-HERO ROG 抄下来并在嘉立创打板焊好
-  - ### 成立自主主板品牌，卖出1999的Z790板 -->
-
 <h1 id="努力努力再努力，拼搏拼搏再拼搏"><a href="#努力努力再努力，拼搏拼搏再拼搏" class="headerlink" title="努力努力再努力，拼搏拼搏再拼搏"></a><strong>努力努力再努力，拼搏拼搏再拼搏</strong></h1>
             
         </div>
