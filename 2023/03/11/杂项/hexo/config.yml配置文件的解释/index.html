@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    <meta name="description" content="Hexo Theme Redefine">
+    <meta name="author" content="CShrimp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/03/11/杂项/hexo/config.yml配置文件的解释/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="hexo的配置文件">
+    <meta property="og:description" content="Hexo Theme Redefine">
+    <meta property="og:url" content="http://example.com2023/03/11/杂项/hexo/config.yml配置文件的解释/">
+    
+    <meta property="og:site_name" content="CSHRIMP&#39;S BLOG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="hexo的配置文件">
+    <meta name="twitter:description" content="Hexo Theme Redefine">
+    <meta name="twitter:image" content="/images/redefine-logo.svg">
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-logo.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-logo.svg">
+    <meta name="theme-color" content="#ec0e66">
+    <link rel="shortcut icon" href="/images/redefine-logo.svg">
+    
+    <title>
+        
+            hexo的配置文件 -
+        
+        CSHRIMP&#39;S BLOG
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/assets/fonts.css">
+
+    
+    
+    
+    <script id="hexo-configurations">
+    let REDEFINE = window.REDEFINE || {};
+    REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#ec0e66","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-logo.svg","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"CSHRIMP 的魔幻小窝","custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.0","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":false,"audio":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]}}};
+    REDEFINE.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+    
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="menu-wrapper">
+    
+    <div class="menu-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                CSHRIMP&#39;S BLOG
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        首页
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        归档
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/list"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-link"></i>
+                                        
+                                        目录
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/about"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-user"></i>
+                                        
+                                        关于
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="menu-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                首页
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                归档
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/list"  >
+                             
+                                
+                                    <i class="fa-regular fa-link"></i>
+                                
+                                目录
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/about"  >
+                             
+                                
+                                    <i class="fa-regular fa-user"></i>
+                                
+                                关于
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">hexo的配置文件</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">CShrimp</span>
+                            
+                                <span class="author-label">lol</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-03-11 18:20:39</span>
+        <span class="mobile">2023-03-11 18:20</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="pc">2023-03-12 11:36:37</span>
+            <span class="mobile">2023-03-12 11:36</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>886 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 分钟</span>
+        </span>
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="hexo的配置文件"><a href="#hexo的配置文件" class="headerlink" title="hexo的配置文件"></a>hexo的配置文件</h1><h2 id="Docs-https-hexo-io-docs-configuration-html"><a href="#Docs-https-hexo-io-docs-configuration-html" class="headerlink" title="Docs: https://hexo.io/docs/configuration.html"></a>Docs: <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/configuration.html">https://hexo.io/docs/configuration.html <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h2><h2 id="Source-https-github-com-hexojs-hexo"><a href="#Source-https-github-com-hexojs-hexo" class="headerlink" title="Source: https://github.com/hexojs/hexo/"></a>Source: <a class="link" target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/">https://github.com/hexojs/hexo/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h2><h2 id="文档原文链接，以及hexo的源码"><a href="#文档原文链接，以及hexo的源码" class="headerlink" title="文档原文链接，以及hexo的源码"></a>文档原文链接，以及hexo的源码</h2><hr>
+<h3 id="Site—–网站设置"><a href="#Site—–网站设置" class="headerlink" title="Site—–网站设置"></a>Site—–网站设置</h3><table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">title</td>
+<td align="center">网站标题</td>
+</tr>
+<tr>
+<td align="center">subtitle</td>
+<td align="center">网站副标题</td>
+</tr>
+<tr>
+<td align="center">description</td>
+<td align="center">网站描述</td>
+</tr>
+<tr>
+<td align="center">keywords</td>
+<td align="center">网站的关键词。支持多个关键词</td>
+</tr>
+<tr>
+<td align="center">author</td>
+<td align="center">君の名字</td>
+</tr>
+<tr>
+<td align="center">language</td>
+<td align="center">网站使用的语言，对于简中用户，使用不同的主题可能需要设置成不同的值，请参考主题的文档设置，常见的有zh-Hans和zh-CN</td>
+</tr>
+<tr>
+<td align="center">timezone</td>
+<td align="center">网站时区，hexo默认使用您电脑的时区一般的，对于中国大陆地区可以使用Asia/Shanghai</td>
+</tr>
+</tbody></table>
+<p>其中，description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。author参数用于主题显示文章的作者。</p>
+<hr>
+<h3 id="URL—–网址设置"><a href="#URL—–网址设置" class="headerlink" title="URL—–网址设置"></a>URL—–网址设置</h3><table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">解释</th>
+<th align="center">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">url</td>
+<td align="center">网址, 必须以 http:// 或 https:// 开头</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">root</td>
+<td align="center">网站根目录</td>
+<td align="center">url’s pathname</td>
+</tr>
+<tr>
+<td align="center">permalink</td>
+<td align="center">文章的永久链接格式</td>
+<td align="center">:year/:month/:day/:title/</td>
+</tr>
+<tr>
+<td align="center">permalink_defaults</td>
+<td align="center">永久链接中各部分的默认值</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">pretty_urls</td>
+<td align="center">改写permalink的值来美化URL</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">pretty_urls.trailing_index</td>
+<td align="center">是否在永久链接中保留尾部的index.html，设置为false时去除</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">pretty_urls.trailing_html</td>
+<td align="center">是否在永久链接中保留尾部的.html,设置为false时去除(对尾部的index.html无效)</td>
+<td align="center">true</td>
+</tr>
+</tbody></table>
+<blockquote>
+<h1 id="网站存放在子目录"><a href="#网站存放在子目录" class="headerlink" title="网站存放在子目录"></a>网站存放在子目录</h1><p>如果您的网站存放在子目录中，例如<a href="http://example.com/blog%EF%BC%8C%E5%88%99%E8%AF%B7%E5%B0%86%E6%82%A8%E7%9A%84url%E8%AE%BE%E4%B8%BAhttp://example.com/blog%E5%B9%B6%E6%8A%8Aroot%E8%AE%BE%E4%B8%BA/blog/">http://example.com/blog，则请将您的url设为http://example.com/blog并把root设为/blog/</a></p>
+</blockquote>
+<hr>
+<h3 id="Directory—–目录"><a href="#Directory—–目录" class="headerlink" title="Directory—–目录"></a>Directory—–目录</h3><table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">描述</th>
+<th align="center">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">source_dir</td>
+<td align="center">资源文件夹，这个文件夹用来存放内容。</td>
+<td align="center">source</td>
+</tr>
+<tr>
+<td align="center">public_dir</td>
+<td align="center">公共文件夹，这个文件夹用于存放生成的站点文件。</td>
+<td align="center">public</td>
+</tr>
+<tr>
+<td align="center">tag_dir</td>
+<td align="center">标签文件夹</td>
+<td align="center">tags</td>
+</tr>
+<tr>
+<td align="center">archive_dir</td>
+<td align="center">归档文件夹</td>
+<td align="center">archives</td>
+</tr>
+<tr>
+<td align="center">category_dir</td>
+<td align="center">分类文件夹</td>
+<td align="center">categories</td>
+</tr>
+<tr>
+<td align="center">code_dir</td>
+<td align="center">Include code 文件夹，source_dir 下的子目录</td>
+<td align="center">downloads/code</td>
+</tr>
+<tr>
+<td align="center">i18n_dir</td>
+<td align="center">国际化（i18n）文件夹</td>
+<td align="center">:lang</td>
+</tr>
+<tr>
+<td align="center">skip_render</td>
+<td align="center">跳过指定文件的渲染。匹配到的文件将会被不做改动地复制到 public 目录中。您可使用 glob 表达式来匹配路径。</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="Writing—–文章"><a href="#Writing—–文章" class="headerlink" title="Writing—–文章"></a>Writing—–文章</h3><table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">描述</th>
+<th align="center">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">new_post_name</td>
+<td align="center">新文章的文件名称</td>
+<td align="center">:title.md</td>
+</tr>
+<tr>
+<td align="center">default_layout</td>
+<td align="center">预设布局</td>
+<td align="center">post</td>
+</tr>
+<tr>
+<td align="center">auto_spacing</td>
+<td align="center">在中文和英文之间加入空格</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">titlecase</td>
+<td align="center">把标题转换为 title case</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">external_link</td>
+<td align="center">在新标签中打开链接</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">external_link.enable</td>
+<td align="center">在新标签中打开链接</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">external_link.field</td>
+<td align="center">对整个网站（site）生效或仅对文章（post）生效</td>
+<td align="center">site</td>
+</tr>
+<tr>
+<td align="center">external_link.exclude</td>
+<td align="center">需要排除的域名。主域名和子域名如 www 需分别配置</td>
+<td align="center">[]</td>
+</tr>
+<tr>
+<td align="center">filename_case</td>
+<td align="center">把文件名称转换为 (1) 小写或 (2) 大写</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">render_drafts</td>
+<td align="center">显示草稿</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">post_asset_folder</td>
+<td align="center">启动 Asset 文件夹</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">relative_link</td>
+<td align="center">把链接改为与根目录的相对位址</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">future</td>
+<td align="center">显示未来的文章</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">highlight</td>
+<td align="center">代码块的设置, 请参考 Highlight.js 进行设置</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">prismjs</td>
+<td align="center">代码块的设置, 请参考 PrismJS 进行设置</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="Home-page-setting"><a href="#Home-page-setting" class="headerlink" title="Home page setting"></a>Home page setting</h1><h1 id="path-Root-path-for-your-blogs-index-page-default-‘’"><a href="#path-Root-path-for-your-blogs-index-page-default-‘’" class="headerlink" title="path: Root path for your blogs index page. (default = ‘’)"></a>path: Root path for your blogs index page. (default = ‘’)</h1><h1 id="per-page-Posts-displayed-per-page-0-disable-pagination"><a href="#per-page-Posts-displayed-per-page-0-disable-pagination" class="headerlink" title="per_page: Posts displayed per page. (0 = disable pagination)"></a>per_page: Posts displayed per page. (0 = disable pagination)</h1><h1 id="order-by-Posts-order-Order-by-date-descending-by-default"><a href="#order-by-Posts-order-Order-by-date-descending-by-default" class="headerlink" title="order_by: Posts order. (Order by date descending by default)"></a>order_by: Posts order. (Order by date descending by default)</h1><p>index_generator:</p>
+<p>  path: ‘’</p>
+<p>  per_page: 10</p>
+<p>  order_by: -date</p>
+<h1 id="Category-amp-Tag"><a href="#Category-amp-Tag" class="headerlink" title="Category &amp; Tag"></a>Category &amp; Tag</h1><p>default_category: uncategorized</p>
+<p>category_map:</p>
+<p>tag_map:</p>
+<h1 id="Metadata-elements"><a href="#Metadata-elements" class="headerlink" title="Metadata elements"></a>Metadata elements</h1><h2 id="https-developer-mozilla-org-en-US-docs-Web-HTML-Element-meta"><a href="#https-developer-mozilla-org-en-US-docs-Web-HTML-Element-meta" class="headerlink" title="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta"></a><a class="link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h2><p>meta_generator: true</p>
+<h1 id="Date-Time-format"><a href="#Date-Time-format" class="headerlink" title="Date / Time format"></a>Date / Time format</h1><h2 id="Hexo-uses-Moment-js-to-parse-and-display-date"><a href="#Hexo-uses-Moment-js-to-parse-and-display-date" class="headerlink" title="Hexo uses Moment.js to parse and display date"></a>Hexo uses Moment.js to parse and display date</h2><h2 id="You-can-customize-the-date-format-as-defined-in"><a href="#You-can-customize-the-date-format-as-defined-in" class="headerlink" title="You can customize the date format as defined in"></a>You can customize the date format as defined in</h2><h2 id="http-momentjs-com-docs-displaying-format"><a href="#http-momentjs-com-docs-displaying-format" class="headerlink" title="http://momentjs.com/docs/#/displaying/format/"></a><a class="link" target="_blank" rel="noopener" href="http://momentjs.com/docs/#/displaying/format/">http://momentjs.com/docs/#/displaying/format/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h2><p>date_format: YYYY-MM-DD</p>
+<p>time_format: HH:mm:ss</p>
+<h2 id="updated-option-supports-‘mtime’-‘date’-‘empty’"><a href="#updated-option-supports-‘mtime’-‘date’-‘empty’" class="headerlink" title="updated_option supports ‘mtime’, ‘date’, ‘empty’"></a>updated_option supports ‘mtime’, ‘date’, ‘empty’</h2><p>updated_option: ‘mtime’</p>
+<h1 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a>Pagination</h1><h2 id="Set-per-page-to-0-to-disable-pagination"><a href="#Set-per-page-to-0-to-disable-pagination" class="headerlink" title="Set per_page to 0 to disable pagination"></a>Set per_page to 0 to disable pagination</h2><p>per_page: 10</p>
+<p>pagination_dir: page</p>
+<h1 id="Include-Exclude-file-s"><a href="#Include-Exclude-file-s" class="headerlink" title="Include / Exclude file(s)"></a>Include / Exclude file(s)</h1><h2 id="include-exclude-options-only-apply-to-the-‘source-‘-folder"><a href="#include-exclude-options-only-apply-to-the-‘source-‘-folder" class="headerlink" title="include:/exclude: options only apply to the ‘source/‘ folder"></a>include:/exclude: options only apply to the ‘source/‘ folder</h2><p>include:</p>
+<p>exclude:</p>
+<p>ignore:</p>
+<h1 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a>Extensions</h1><h2 id="Plugins-https-hexo-io-plugins"><a href="#Plugins-https-hexo-io-plugins" class="headerlink" title="Plugins: https://hexo.io/plugins/"></a>Plugins: <a class="link" target="_blank" rel="noopener" href="https://hexo.io/plugins/">https://hexo.io/plugins/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h2><h2 id="Themes-https-hexo-io-themes"><a href="#Themes-https-hexo-io-themes" class="headerlink" title="Themes: https://hexo.io/themes/"></a>Themes: <a class="link" target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h2><h1 id="theme-landscape"><a href="#theme-landscape" class="headerlink" title="theme: landscape"></a>theme: landscape</h1><p>theme: redefine</p>
+<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><h2 id="Docs-https-hexo-io-docs-one-command-deployment"><a href="#Docs-https-hexo-io-docs-one-command-deployment" class="headerlink" title="Docs: https://hexo.io/docs/one-command-deployment"></a>Docs: <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment">https://hexo.io/docs/one-command-deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h2><p>deploy:</p>
+<p>  type: ‘git’</p>
+<p>  repo: ‘<a class="link" href="mailto:&#x67;&#x69;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#x6d;">&#x67;&#x69;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#x6d; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>:dalongxia2017/dalongxia2017.github.io.git’</p>
+<p>  branch: main</p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：hexo的配置文件</li>
+        <li>本文作者：CShrimp</li>
+        <li>创建时间：2023-03-11 18:20:39</li>
+        <li>
+            本文链接：https://dalongxia2017.github.io/2023/03/11/杂项/hexo/config.yml配置文件的解释/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/03/11/%E6%9D%82%E9%A1%B9/hexo/%E5%AE%89%E8%A3%85hexo/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">安装hexo</span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">hexo的配置文件</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-text">hexo的配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docs-https-hexo-io-docs-configuration-html"><span class="nav-text">Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;configuration.html </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Source-https-github-com-hexojs-hexo"><span class="nav-text">Source: https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo&#x2F; </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E5%8E%9F%E6%96%87%E9%93%BE%E6%8E%A5%EF%BC%8C%E4%BB%A5%E5%8F%8Ahexo%E7%9A%84%E6%BA%90%E7%A0%81"><span class="nav-text">文档原文链接，以及hexo的源码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Site%E2%80%94%E2%80%93%E7%BD%91%E7%AB%99%E8%AE%BE%E7%BD%AE"><span class="nav-text">Site—–网站设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL%E2%80%94%E2%80%93%E7%BD%91%E5%9D%80%E8%AE%BE%E7%BD%AE"><span class="nav-text">URL—–网址设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E5%AD%98%E6%94%BE%E5%9C%A8%E5%AD%90%E7%9B%AE%E5%BD%95"><span class="nav-text">网站存放在子目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Directory%E2%80%94%E2%80%93%E7%9B%AE%E5%BD%95"><span class="nav-text">Directory—–目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Writing%E2%80%94%E2%80%93%E6%96%87%E7%AB%A0"><span class="nav-text">Writing—–文章</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Home-page-setting"><span class="nav-text">Home page setting</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#path-Root-path-for-your-blogs-index-page-default-%E2%80%98%E2%80%99"><span class="nav-text">path: Root path for your blogs index page. (default &#x3D; ‘’)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#per-page-Posts-displayed-per-page-0-disable-pagination"><span class="nav-text">per_page: Posts displayed per page. (0 &#x3D; disable pagination)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#order-by-Posts-order-Order-by-date-descending-by-default"><span class="nav-text">order_by: Posts order. (Order by date descending by default)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Category-amp-Tag"><span class="nav-text">Category &amp; Tag</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Metadata-elements"><span class="nav-text">Metadata elements</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#https-developer-mozilla-org-en-US-docs-Web-HTML-Element-meta"><span class="nav-text">https:&#x2F;&#x2F;developer.mozilla.org&#x2F;en-US&#x2F;docs&#x2F;Web&#x2F;HTML&#x2F;Element&#x2F;meta </span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Date-Time-format"><span class="nav-text">Date &#x2F; Time format</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-uses-Moment-js-to-parse-and-display-date"><span class="nav-text">Hexo uses Moment.js to parse and display date</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-can-customize-the-date-format-as-defined-in"><span class="nav-text">You can customize the date format as defined in</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http-momentjs-com-docs-displaying-format"><span class="nav-text">http:&#x2F;&#x2F;momentjs.com&#x2F;docs&#x2F;#&#x2F;displaying&#x2F;format&#x2F; </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#updated-option-supports-%E2%80%98mtime%E2%80%99-%E2%80%98date%E2%80%99-%E2%80%98empty%E2%80%99"><span class="nav-text">updated_option supports ‘mtime’, ‘date’, ‘empty’</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Pagination"><span class="nav-text">Pagination</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Set-per-page-to-0-to-disable-pagination"><span class="nav-text">Set per_page to 0 to disable pagination</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Include-Exclude-file-s"><span class="nav-text">Include &#x2F; Exclude file(s)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#include-exclude-options-only-apply-to-the-%E2%80%98source-%E2%80%98-folder"><span class="nav-text">include:&#x2F;exclude: options only apply to the ‘source&#x2F;‘ folder</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Extensions"><span class="nav-text">Extensions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Plugins-https-hexo-io-plugins"><span class="nav-text">Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F; </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Themes-https-hexo-io-themes"><span class="nav-text">Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F; </span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#theme-landscape"><span class="nav-text">theme: landscape</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Deployment"><span class="nav-text">Deployment</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docs-https-hexo-io-docs-one-command-deployment"><span class="nav-text">Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;one-command-deployment </span></a></li></ol></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-regular fa-computer-classic"></i>&nbsp;&nbsp;<a href="/">CShrimp</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 驱动</span>
+                <br> 
+            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.2.0</a>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="unfolded-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="fa-regular fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="folded-tools-list">
+        <li class="right-bottom-tools tool-toggle-show flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/layouts/menu-shrink.js"></script>
+
+<script src="/js/tools/go-top-bottom.js"></script>
+
+<script src="/js/tools/dark-light-toggle.js"></script>
+
+
+
+
+
+    
+<script src="/js/tools/code-block.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/toc-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
+    
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            REDEFINE.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            REDEFINE.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            REDEFINE.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
