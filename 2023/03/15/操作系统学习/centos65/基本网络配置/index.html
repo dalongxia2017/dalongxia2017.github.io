@@ -10,18 +10,18 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/1970/01/01/例子/"/>
+    <link rel="canonical" href="http://example.com/2023/03/15/操作系统学习/centos65/基本网络配置/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="test">
+    <meta property="og:title" content="基本网络配置">
     <meta property="og:description" content="Hexo Theme Redefine">
-    <meta property="og:url" content="http://example.com1970/01/01/例子/">
+    <meta property="og:url" content="http://example.com2023/03/15/操作系统学习/centos65/基本网络配置/">
     
     <meta property="og:site_name" content="CSHRIMP&#39;S BLOG">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="test">
+    <meta name="twitter:title" content="基本网络配置">
     <meta name="twitter:description" content="Hexo Theme Redefine">
     <meta name="twitter:image" content="/images/redefine-logo.svg">
     <!--- Icon Part-->
@@ -32,7 +32,7 @@
     
     <title>
         
-            test -
+            基本网络配置 -
         
         CSHRIMP&#39;S BLOG
     </title>
@@ -303,7 +303,7 @@
             
             
                 <div class="article-title">
-                    <h1 class="article-title-regular">test</h1>
+                    <h1 class="article-title-regular">基本网络配置</h1>
                 </div>
             
                 
@@ -325,15 +325,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">1970-01-01</span>
-        <span class="mobile">1970-01-01 00</span>
+        <span class="pc">2023-03-15 13:35:39</span>
+        <span class="mobile">2023-03-15 13:35</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-03-12 11:39:02</span>
-            <span class="mobile">2023-03-12 11:39</span>
+            <span class="pc">2023-03-15 20:18:46</span>
+            <span class="mobile">2023-03-15 20:18</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -344,12 +344,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>51 字</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>491 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 分钟</span>
         </span>
     
     
@@ -361,55 +361,50 @@
             
 
             <div class="article-content markdown-body">
-                <p>asd</p>
-<pre><code>print(&#39;123&#39;)
-print(&#39;456&#39;)
-print(&#39;789&#39;)
-</code></pre>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span></span><br><span class="line"><span class="built_in">print</span></span><br></pre></td></tr></table></figure></div>
-<p><a href="www.baidu.com">百度</a></p>
-<p><img lazyload src="/images/loading.svg" data-src="/asdsadsa.jpg" alt="图片"></p>
-<p><a class="link" href="mailto:&#x64;&#x61;&#108;&#111;&#110;&#x67;&#x78;&#x69;&#97;&#50;&#x30;&#49;&#x37;&#64;&#49;&#54;&#51;&#x2e;&#99;&#x6f;&#109;">&#x64;&#x61;&#108;&#111;&#110;&#x67;&#x78;&#x69;&#97;&#50;&#x30;&#49;&#x37;&#64;&#49;&#54;&#51;&#x2e;&#99;&#x6f;&#109; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<table>
-<thead>
-<tr>
-<th align="center">12312312321</th>
-<th align="right">123123213123213213</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">qwewqewqeqwe</td>
-<td align="right">qwewqeqweqqwe</td>
-</tr>
-</tbody></table>
-<p>asdasdsadasdsa<a href="wqwqe">^1</a></p>
-<dl><dt>123<br>: qwe</dt><dd>qwe</dd></dl><p><del>123</del></p>
-<ul>
-<li><input checked disabled type="checkbox"> 123</li>
-<li><input disabled type="checkbox"> 123</li>
-<li><input checked disabled type="checkbox"> 123</li>
-</ul>
-<blockquote>
-<p>1</p>
-<blockquote>
-<p>2</p>
-<blockquote>
-<p>3</p>
-</blockquote>
-</blockquote>
-</blockquote>
+                <h3 id="相关文件"><a href="#相关文件" class="headerlink" title="相关文件"></a>相关文件</h3><h4 id="etc-hosts"><a href="#etc-hosts" class="headerlink" title="/etc/hosts"></a>/etc/hosts</h4><p>hosts文件的作用相当于dns的作用，linux需要域名解析先查询/etc/hosts文件有无对应的记录，若存在，先使用对应的记录，否则再去向dns服务器发出域名解析请求。</p>
+<h4 id="etc-resolv-conf"><a href="#etc-resolv-conf" class="headerlink" title="/etc/resolv.conf"></a>/etc/resolv.conf</h4><p>resolv.conf主要用于设置dns服务器，主要有nameserver、search、domain三个设置<br>例如</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nameserver 114.514.191.981</span><br></pre></td></tr></table></figure></div>
 
+<h4 id="etc-sysconfig-network"><a href="#etc-sysconfig-network" class="headerlink" title="/etc/sysconfig/network"></a>/etc/sysconfig/network</h4><p>network主要用于配置本机网络，即使没有安装和配置网卡也要该文件，保证回路设备正常运行<br>例如：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NETWORKING=yes</span><br><span class="line">HOSTNAME=www.hostname.com</span><br></pre></td></tr></table></figure></div>
+
+<p>/etc/sysconfig/network-scrips：<br>该目录包含网络接口的配置文件，一般命名格式为ifcfg-网卡名称/型号:虚拟网卡序号，例如ifcfg-eth0:1</p>
+<p>常见配置项：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">DEVICE=</span><br><span class="line">设备名称</span><br><span class="line"></span><br><span class="line">HWADDR=</span><br><span class="line">网卡的mac地址</span><br><span class="line"></span><br><span class="line">IPADDR=</span><br><span class="line">网卡的ip</span><br><span class="line"></span><br><span class="line">PREFIX=</span><br><span class="line">子网掩码位数</span><br><span class="line"></span><br><span class="line">NETMASK=</span><br><span class="line">子网掩码</span><br><span class="line"></span><br><span class="line">GATEWAY=</span><br><span class="line">网关</span><br><span class="line"></span><br><span class="line">DNS1=</span><br><span class="line">dns服务器</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h3 id="设置ip地址"><a href="#设置ip地址" class="headerlink" title="设置ip地址"></a>设置ip地址</h3><h4 id="ifconfig"><a href="#ifconfig" class="headerlink" title="ifconfig"></a>ifconfig</h4><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ifconfig</span></span><br><span class="line">查看全部网卡信息</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ifconfig eth0</span></span><br><span class="line">查看eth0网卡的信息</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ifconfig eth0 up</span></span><br><span class="line">开启eth0网卡</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ifconfig eth0 down</span></span><br><span class="line">关闭eth0网卡</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ifconfig eth0 192.168.0.2</span></span><br><span class="line">配置ip地址</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ifconfig eth0 192.168.0.2 netmask 255.255.255.0</span></span><br><span class="line">配置ip并设置掩码</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="使用setup指令配置网卡"><a href="#使用setup指令配置网卡" class="headerlink" title="使用setup指令配置网卡"></a>使用setup指令配置网卡</h4><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">setup</span></span><br><span class="line">Network configuration -&gt; Device configuration -&gt; 网卡名称 -&gt; 相关设置</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="使用-etc-sysconfig-network-scripts-对应网卡名称-型号-配置ip"><a href="#使用-etc-sysconfig-network-scripts-对应网卡名称-型号-配置ip" class="headerlink" title="使用/etc/sysconfig/network-scripts/对应网卡名称/型号 配置ip"></a>使用/etc/sysconfig/network-scripts/对应网卡名称/型号 配置ip</h4><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">vim /etc/sysconfig/network-scripts/ifcfg-eth0</span></span><br><span class="line">编辑文件</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">service network restart</span></span><br><span class="line">重启网络服务</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="设置主机名"><a href="#设置主机名" class="headerlink" title="设置主机名"></a>设置主机名</h3><h4 id="hostname"><a href="#hostname" class="headerlink" title="hostname"></a>hostname</h4><p>hostname [主机名]</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">hostname</span></span><br><span class="line">查询主机名</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">hostname www.hostname.com</span></span><br><span class="line">修改主机名为www.hostname.com</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="etc-resolv-conf-1"><a href="#etc-resolv-conf-1" class="headerlink" title="/etc/resolv.conf"></a>/etc/resolv.conf</h4><p>修改相关项即可</p>
+<h5 id="使用setup配置"><a href="#使用setup配置" class="headerlink" title="使用setup配置"></a>使用setup配置</h5><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">setup</span></span><br><span class="line">Network configuration -&gt; DNS configuration -&gt; 相关设置</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="检查网卡连通性"><a href="#检查网卡连通性" class="headerlink" title="检查网卡连通性"></a>检查网卡连通性</h3><p>ping [选项] [目标主机/ip]</p>
+<p>常用选项：</p>
+<ul>
+<li>-c：数目，指定发送的icmp包数量</li>
+<li>-q：只显示结果，不显示传送封包的过程</li>
+<li>-R：记录路由过程</li>
+</ul>
+<p>例：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ping 192.168.1.1</span></span><br><span class="line">ping 192.168.1.1 这个机子</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ping 192.168.1.1 -c 5</span></span><br><span class="line">只对 192.168.1.1 发送5个包</span><br></pre></td></tr></table></figure></div>
             </div>
 
             
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：test</li>
+        <li>本文标题：基本网络配置</li>
         <li>本文作者：CShrimp</li>
-        <li>创建时间：1970-01-01 00:00:00</li>
+        <li>创建时间：2023-03-15 13:35:39</li>
         <li>
-            本文链接：https://dalongxia2017.github.io/1970/01/01/例子/
+            本文链接：https://dalongxia2017.github.io/2023/03/15/操作系统学习/centos65/基本网络配置/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -427,21 +422,21 @@ print(&#39;789&#39;)
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/02/19/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/Centos%E5%AE%89%E8%A3%85/"
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/03/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/"
                             >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">Centos6.5的安装</span>
-                                    <span class="post-nav-item">上一篇</span>
+                                    <span class="post-nav-title-item">windows server 2008 r2的安装</span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
                                 </span>
                             </a>
                         </div>
-                    
                     
                 </div>
             
@@ -455,8 +450,8 @@ print(&#39;789&#39;)
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">test</div>
-        
+        <div class="page-title">基本网络配置</div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%96%87%E4%BB%B6"><span class="nav-text">相关文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#etc-hosts"><span class="nav-text">&#x2F;etc&#x2F;hosts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#etc-resolv-conf"><span class="nav-text">&#x2F;etc&#x2F;resolv.conf</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#etc-sysconfig-network"><span class="nav-text">&#x2F;etc&#x2F;sysconfig&#x2F;network</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEip%E5%9C%B0%E5%9D%80"><span class="nav-text">设置ip地址</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ifconfig"><span class="nav-text">ifconfig</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8setup%E6%8C%87%E4%BB%A4%E9%85%8D%E7%BD%AE%E7%BD%91%E5%8D%A1"><span class="nav-text">使用setup指令配置网卡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-etc-sysconfig-network-scripts-%E5%AF%B9%E5%BA%94%E7%BD%91%E5%8D%A1%E5%90%8D%E7%A7%B0-%E5%9E%8B%E5%8F%B7-%E9%85%8D%E7%BD%AEip"><span class="nav-text">使用&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;对应网卡名称&#x2F;型号 配置ip</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="nav-text">设置主机名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hostname"><span class="nav-text">hostname</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#etc-resolv-conf-1"><span class="nav-text">&#x2F;etc&#x2F;resolv.conf</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8setup%E9%85%8D%E7%BD%AE"><span class="nav-text">使用setup配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5%E7%BD%91%E5%8D%A1%E8%BF%9E%E9%80%9A%E6%80%A7"><span class="nav-text">检查网卡连通性</span></a></li></ol>
 
     </div>
 </div>

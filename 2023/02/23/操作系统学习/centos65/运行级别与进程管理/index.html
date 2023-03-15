@@ -332,8 +332,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-03-12 11:33:41</span>
-            <span class="mobile">2023-03-12 11:33</span>
+            <span class="pc">2023-03-15 13:35:17</span>
+            <span class="mobile">2023-03-15 13:35</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -344,12 +344,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>495 字</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.5k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 分钟</span>
         </span>
     
     
@@ -426,7 +426,220 @@
 <li>-A：显示所有程序</li>
 <li>-l：显示详细信息</li>
 </ul>
-<h3 id="top指令"><a href="#top指令" class="headerlink" title="top指令"></a>top指令</h3><h3 id="结束进程"><a href="#结束进程" class="headerlink" title="结束进程"></a>结束进程</h3><p>kill [信号代码] PID<br>killall [信号代码] PID<br>信号代码：</p>
+<h3 id="top指令"><a href="#top指令" class="headerlink" title="top指令"></a>top指令</h3><p>top</p>
+<p>进入后按q键退出</p>
+<p>输出含义解释：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">top - 13:04:57 up 3 days, 20:14,  1 user,  load average: 0.45, 0.59, 0.48</span><br><span class="line">Tasks: 509 total,   1 running, 508 sleeping,   0 stopped,   0 zombie</span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">Cpu(s):  2.0 us,  1.2 sy,  0.0 ni, 96.2 <span class="built_in">id</span>,  0.0 wa,  0.0 hi,  0.6 si,  0.0 st</span></span><br><span class="line">MiB Mem :  64177.9 total,   6461.9 free,   8067.5 used,  49648.5 buff/cache</span><br><span class="line">MiB Swap:  16384.0 total,  16377.2 free,      6.8 used.  54429.6 avail Mem </span><br><span class="line"></span><br><span class="line">    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                     </span><br><span class="line"> 302213 homo      20   0   12.3g 692848 322640 S  13.6   1.1  32:16.05 firefox-bin                                                 </span><br><span class="line">   3081 homo      20   0 4838016 338272 162452 S   5.0   0.5 129:16.41 kwin_x11                                                    </span><br><span class="line">   1758 root      20   0   24.4g 228928 109356 S   2.7   0.3 133:00.71 Xorg           </span><br></pre></td></tr></table></figure></div>
+
+<p>第一行的内容解释：</p>
+<p>top - 13:04:57 up 3 days, 20:14,  1 user,  load average: 0.45, 0.59, 0.48</p>
+<table>
+<thead>
+<tr>
+<th align="left">内容</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">13:04:57</td>
+<td align="left">表示当前时间</td>
+</tr>
+<tr>
+<td align="left">up 3 days, 20:14</td>
+<td align="left">系统远行时间，格式为天，时：分</td>
+</tr>
+<tr>
+<td align="left">1 user</td>
+<td align="left">当前登陆用户数</td>
+</tr>
+<tr>
+<td align="left">load average: 0.45, 0.59, 0.48</td>
+<td align="left">系统负载，即任务队列的平均长度。 三个数值分别为 1分钟、5分钟、15分钟前到现在的平均值</td>
+</tr>
+</tbody></table>
+<p>第二行的内容解释：</p>
+<p>Tasks: 509 total,   1 running, 508 sleeping,   0 stopped,   0 zombie</p>
+<table>
+<thead>
+<tr>
+<th align="left">内容</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Tasks: 509 total</td>
+<td align="left">进程总数</td>
+</tr>
+<tr>
+<td align="left">1 running</td>
+<td align="left">正在运行的进程数</td>
+</tr>
+<tr>
+<td align="left">508 sleeping</td>
+<td align="left">睡眠的进程数</td>
+</tr>
+<tr>
+<td align="left">0 stopped</td>
+<td align="left">停止的进程数</td>
+</tr>
+<tr>
+<td align="left">0 zombie</td>
+<td align="left">僵尸进程数</td>
+</tr>
+</tbody></table>
+<p>第三行的内容解释：</p>
+<p>%Cpu(s):  2.0 us,  1.2 sy,  0.0 ni, 96.2 id,  0.0 wa,  0.0 hi,  0.6 si,  0.0 st</p>
+<table>
+<thead>
+<tr>
+<th align="left">内容</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">2.0 us</td>
+<td align="left">用户空间占用CPU百分比</td>
+</tr>
+<tr>
+<td align="left">1.2 sy</td>
+<td align="left">内核空间占用CPU百分比</td>
+</tr>
+<tr>
+<td align="left">0.0 ni</td>
+<td align="left">用户进程空间内改变过优先级的进程占用CPU百分比</td>
+</tr>
+<tr>
+<td align="left">96.2 id</td>
+<td align="left">空闲CPU百分比</td>
+</tr>
+<tr>
+<td align="left">0.0 wa</td>
+<td align="left">等待输入输出的CPU时间百分比</td>
+</tr>
+<tr>
+<td align="left">0.0 hi</td>
+<td align="left">硬中断（Hardware IRQ）占用CPU的百分比</td>
+</tr>
+<tr>
+<td align="left">0.6 si</td>
+<td align="left">软中断（Software Interrupts）占用CPU的百分比</td>
+</tr>
+<tr>
+<td align="left">0.0 st</td>
+<td align="left">用于有虚拟cpu的情况，用来指示被虚拟机偷掉的cpu时间</td>
+</tr>
+</tbody></table>
+<p>第四行的内容解释：</p>
+<p>MiB Mem :  64177.9 total,   6461.9 free,   8067.5 used,  49648.5 buff/cache</p>
+<table>
+<thead>
+<tr>
+<th align="left">内容</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">64177.9 total</td>
+<td align="left">物理内存总量</td>
+</tr>
+<tr>
+<td align="left">8067.5 used</td>
+<td align="left">使用的物理内存总量</td>
+</tr>
+<tr>
+<td align="left">6461.9 free</td>
+<td align="left">空闲内存总量</td>
+</tr>
+<tr>
+<td align="left">49648.5 buffers</td>
+<td align="left">用作内核缓存的内存量</td>
+</tr>
+</tbody></table>
+<p>第五行的内容解释：</p>
+<p>MiB Swap:  16384.0 total,  16377.2 free,      6.8 used.  54429.6 avail Mem </p>
+<table>
+<thead>
+<tr>
+<th align="left">内容</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">16384.0 total</td>
+<td align="left">交换区总量</td>
+</tr>
+<tr>
+<td align="left">6.8 used</td>
+<td align="left">使用的交换区总量</td>
+</tr>
+<tr>
+<td align="left">16377.2 free</td>
+<td align="left">空闲交换区总量</td>
+</tr>
+<tr>
+<td align="left">54429.6 cached</td>
+<td align="left">缓冲的交换区总量</td>
+</tr>
+</tbody></table>
+<p>第六行的内容解释：</p>
+<p>PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND   </p>
+<table>
+<thead>
+<tr>
+<th align="left">列名</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">PID</td>
+<td align="left">进程id</td>
+</tr>
+<tr>
+<td align="left">USER</td>
+<td align="left">进程所有者的用户名</td>
+</tr>
+<tr>
+<td align="left">PR</td>
+<td align="left">优先级</td>
+</tr>
+<tr>
+<td align="left">NI</td>
+<td align="left">nice值。负值表示高优先级，正值表示低优先级</td>
+</tr>
+<tr>
+<td align="left">VIRT</td>
+<td align="left">进程使用的虚拟内存总量，单位kb。VIRT=SWAP+RES</td>
+</tr>
+<tr>
+<td align="left">RES</td>
+<td align="left">进程使用的、未被换出的物理内存大小，单位kb。RES=CODE+DATA</td>
+</tr>
+<tr>
+<td align="left">SHR</td>
+<td align="left">共享内存大小，单位kb</td>
+</tr>
+<tr>
+<td align="left">S</td>
+<td align="left">进程状态。D=不可中断的睡眠状态 R=运行 S=睡眠 T=跟踪/停止 Z=僵尸进程</td>
+</tr>
+<tr>
+<td align="left">%CPU</td>
+<td align="left">上次更新到现在的CPU时间占用百分比</td>
+</tr>
+<tr>
+<td align="left">%MEM</td>
+<td align="left">进程使用的物理内存百分比</td>
+</tr>
+<tr>
+<td align="left">TIME+</td>
+<td align="left">进程使用的CPU时间总计，单位1/100秒</td>
+</tr>
+<tr>
+<td align="left">COMMAND</td>
+<td align="left">命令名/命令行</td>
+</tr>
+</tbody></table>
+<h3 id="结束进程"><a href="#结束进程" class="headerlink" title="结束进程"></a>结束进程</h3><p>kill [信号代码] PID<br>killall [信号代码] PID<br>信号代码：</p>
 <ul>
 <li>-9：发送SIGKILL信号，无信号的kill无效时，可强制终止进程</li>
 <li>-15：发送SIGTERM信号，一般在-9选项无效时使用的</li>
@@ -438,7 +651,17 @@
 <li>-u：修改指定用户的所有进程的优先级</li>
 <li>-g：修改指定组的所有进程的优先级</li>
 </ul>
-<h3 id="at调度"><a href="#at调度" class="headerlink" title="at调度"></a>at调度</h3><h3 id="cron调度"><a href="#cron调度" class="headerlink" title="cron调度"></a>cron调度</h3>
+<h3 id="at调度"><a href="#at调度" class="headerlink" title="at调度"></a>at调度</h3><p>at [选项] [日期时间]</p>
+<p>常见选项：</p>
+<ul>
+<li>-f：指定包含具体指令的任务文件</li>
+<li>-q：指定新任务的队列名称</li>
+<li>-l：显示待执行任务的列表</li>
+<li>-d：删除指定的待执行任务</li>
+<li>-m：任务执行完成后向用户发送 E-mail</li>
+</ul>
+<h3 id="cron调度"><a href="#cron调度" class="headerlink" title="cron调度"></a>cron调度</h3><p>编辑位于/etc/crontab的配置文件</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Example of job definition:</span><br><span class="line"># .---------------- minute (0 - 59)</span><br><span class="line"># |  .------------- hour (0 - 23)</span><br><span class="line"># |  |  .---------- day of month (1 - 31)</span><br><span class="line"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span><br><span class="line"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span><br><span class="line"># |  |  |  |  |</span><br><span class="line"># *  *  *  *  * user-name command to be executed</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
             </div>
 
             
