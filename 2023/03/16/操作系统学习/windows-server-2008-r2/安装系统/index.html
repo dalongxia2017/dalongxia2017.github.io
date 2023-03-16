@@ -10,18 +10,18 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/03/05/操作系统学习/centos65/samba/"/>
+    <link rel="canonical" href="http://example.com/2023/03/16/操作系统学习/windows-server-2008-r2/安装系统/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="samba配置">
+    <meta property="og:title" content="windows server 2008 r2的安装">
     <meta property="og:description" content="Hexo Theme Redefine">
-    <meta property="og:url" content="http://example.com2023/03/05/操作系统学习/centos65/samba/">
+    <meta property="og:url" content="http://example.com2023/03/16/操作系统学习/windows-server-2008-r2/安装系统/">
     
     <meta property="og:site_name" content="CSHRIMP&#39;S BLOG">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="samba配置">
+    <meta name="twitter:title" content="windows server 2008 r2的安装">
     <meta name="twitter:description" content="Hexo Theme Redefine">
     <meta name="twitter:image" content="/images/redefine-logo.svg">
     <!--- Icon Part-->
@@ -32,7 +32,7 @@
     
     <title>
         
-            samba配置 -
+            windows server 2008 r2的安装 -
         
         CSHRIMP&#39;S BLOG
     </title>
@@ -349,7 +349,7 @@
             
             
                 <div class="article-title">
-                    <h1 class="article-title-regular">samba配置</h1>
+                    <h1 class="article-title-regular">windows server 2008 r2的安装</h1>
                 </div>
             
                 
@@ -371,15 +371,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-03-05 18:24:39</span>
-        <span class="mobile">2023-03-05 18:24</span>
+        <span class="pc">2023-03-16 16:18:39</span>
+        <span class="mobile">2023-03-16 16:18</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-03-16 16:18:48</span>
-            <span class="mobile">2023-03-16 16:18</span>
+            <span class="pc">2023-03-16 18:26:37</span>
+            <span class="mobile">2023-03-16 18:26</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -390,7 +390,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>343 字</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>7 字</span>
         </span>
     
     
@@ -407,11 +407,8 @@
             
 
             <div class="article-content markdown-body">
-                <p>1、安装samba<br><br><img lazyload src="/images/loading.svg" data-src="/2023/03/05/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/samba/samba-1.png" alt="P0"></p>
-<p>2、启动samba服务<br><br><img lazyload src="/images/loading.svg" data-src="/2023/03/05/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/samba/samba-2.png" alt="2"></p>
-<p>3、关闭samba服务<br><br><img lazyload src="/images/loading.svg" data-src="/2023/03/05/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/samba/samba-3.png" alt="3"></p>
-<p>4、编辑配置文件，/etc/samba/smb.conf</p>
-<div class="highlight-container" data-rel="Ini"><figure class="iseeu highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[global]</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">workgroup</span> = MYGROUP</span><br><span class="line">    <span class="comment">;用法：workgroup = &lt;工作组群&gt;</span></span><br><span class="line">    <span class="comment">;说明：设定samba server的工作组</span></span><br><span class="line"></span><br><span class="line">    server <span class="attr">string</span> = Samba Server Version</span><br><span class="line">    <span class="comment">;用法：server string = &lt;说明&gt;</span></span><br><span class="line">    <span class="comment">;说明：设置注释</span></span><br><span class="line"></span><br><span class="line">    max log <span class="attr">size</span> = <span class="number">1000</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">logging</span> = file</span><br><span class="line"></span><br><span class="line">    panic <span class="attr">action</span> = /usr/share/samba/panic-action %d</span><br><span class="line"></span><br><span class="line">    server <span class="attr">role</span> = standalone server</span><br><span class="line"></span><br><span class="line">    obey pam <span class="attr">restrictions</span> = <span class="literal">yes</span></span><br><span class="line"></span><br><span class="line">    unix password <span class="attr">sync</span> = <span class="literal">yes</span></span><br><span class="line"></span><br><span class="line">    passwd <span class="attr">program</span> = /usr/bin/passwd %u</span><br><span class="line"></span><br><span class="line">    passwd <span class="attr">chat</span> = *Enter\snew\s*\spassword:* %n\n *Retype\snew\s*\spassword:* %n\n *password\supdated\ssuccessfully* .</span><br><span class="line"></span><br><span class="line">    pam password <span class="attr">change</span> = <span class="literal">yes</span></span><br><span class="line"></span><br><span class="line">    map to <span class="attr">guest</span> = bad user</span><br><span class="line"></span><br><span class="line">    create <span class="attr">mode</span> = <span class="number">0766</span></span><br><span class="line"></span><br><span class="line">    force create <span class="attr">mode</span> = <span class="number">0766</span></span><br><span class="line"></span><br><span class="line">    directory <span class="attr">mode</span> = <span class="number">0777</span></span><br><span class="line"></span><br><span class="line">    force directory <span class="attr">mode</span> = <span class="number">0777</span></span><br><span class="line"></span><br><span class="line">    usershare allow <span class="attr">guests</span> = <span class="literal">yes</span></span><br><span class="line"></span><br><span class="line">    unix <span class="attr">extensions</span> = <span class="literal">no</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">[printers]</span></span><br><span class="line"><span class="comment">;分享的名字</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">comment</span> = All Printers</span><br><span class="line">    <span class="comment">;显示的注释</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">browseable</span> = <span class="literal">no</span></span><br><span class="line">    <span class="comment">;是否在资源中显示共享目录</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">path</span> = /var/spool/samba</span><br><span class="line">    <span class="comment">;共享文件的目录</span></span><br><span class="line">    </span><br><span class="line">    <span class="attr">printable</span> = <span class="literal">yes</span></span><br><span class="line">    <span class="comment">;是否允许打印</span></span><br><span class="line"></span><br><span class="line">    guest <span class="attr">ok</span> = <span class="literal">no</span></span><br><span class="line">    <span class="comment">;是否公开共享，需要设置security = share 时生效</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">public</span> = <span class="literal">yes</span></span><br><span class="line">    <span class="comment">;是否公开共享，需要设置security = share 时生效</span></span><br><span class="line"></span><br><span class="line">    read <span class="attr">only</span> = <span class="literal">yes</span></span><br><span class="line">    <span class="comment">;只读</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">writable</span> = <span class="literal">no</span></span><br><span class="line">    <span class="comment">;如果和read only冲突，优先使用writable</span></span><br><span class="line"></span><br><span class="line">    create <span class="attr">mask</span> = <span class="number">0700</span></span><br><span class="line">    <span class="comment">;创建文件时给予的权限</span></span><br><span class="line"></span><br><span class="line">    directory <span class="attr">mask</span> = <span class="number">0700</span></span><br><span class="line">    <span class="comment">;创建文件夹给予的权限</span></span><br><span class="line"></span><br><span class="line">    vaild <span class="attr">users</span> = </span><br><span class="line">    <span class="comment">;设定只有此名单内的用户才能访问共享资源</span></span><br><span class="line"></span><br><span class="line">    invaild <span class="attr">users</span> = </span><br><span class="line">    <span class="comment">;设定只有此名单内的用户不能访问共享资源</span></span><br><span class="line"></span><br><span class="line">    read <span class="attr">list</span> = </span><br><span class="line">    <span class="comment">;只有列表内成员</span></span><br><span class="line"></span><br><span class="line">    hide dot <span class="attr">ftles</span> = <span class="literal">no</span></span><br><span class="line">    <span class="comment">;是否隐藏拥有隐藏属性的文件</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+                <p>1、创建虚拟机<br><br><img lazyload src="/images/loading.svg" data-src="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/p1.png" alt="p1"></p>
+<p>2、</p>
 
             </div>
 
@@ -419,11 +416,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：samba配置</li>
+        <li>本文标题：windows server 2008 r2的安装</li>
         <li>本文作者：CShrimp</li>
-        <li>创建时间：2023-03-05 18:24:39</li>
+        <li>创建时间：2023-03-16 16:18:39</li>
         <li>
-            本文链接：https://dalongxia2017.github.io/2023/03/05/操作系统学习/centos65/samba/
+            本文链接：https://dalongxia2017.github.io/2023/03/16/操作系统学习/windows-server-2008-r2/安装系统/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -444,13 +441,13 @@
                         <div class="article-prev">
                             <a class="prev"
                             rel="prev"
-                            href="/2023/03/10/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/ssh/"
+                            href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/"
                             >
                                 <span class="left arrow-icon flex-center">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">ssh的使用和配置</span>
+                                    <span class="post-nav-title-item">telnet的配置和使用</span>
                                     <span class="post-nav-item">上一篇</span>
                                 </span>
                             </a>
@@ -460,10 +457,10 @@
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/02/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/%E7%AE%A1%E7%90%86RPM%E5%8C%85TAR%E5%8C%85/"
+                            href="/2023/03/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/%E5%9F%BA%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">管理RPM包TAR包</span>
+                                    <span class="post-nav-title-item">基本网络配置</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -484,7 +481,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">samba配置</div>
+        <div class="page-title">windows server 2008 r2的安装</div>
         
 
     </div>

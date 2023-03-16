@@ -191,6 +191,31 @@
                                 
                             </li>
                     
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-regular fa-link"></i>
+                                        
+                                        友链&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://blog.ahao.space">AHAO
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
                     
                 </ul>
             </div>
@@ -280,6 +305,27 @@
                     <!-- Submenu -->
                     
             
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-regular fa-link"></i>
+                                
+                                友链&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://blog.ahao.space">AHAO</a>
+                            </li>
+                        
+                    
+            
 
         </ul>
     </div>
@@ -332,8 +378,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-03-12 11:28:13</span>
-            <span class="mobile">2023-03-12 11:28</span>
+            <span class="pc">2023-03-16 22:33</span>
+            <span class="mobile">2023-03-16 22</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -344,12 +390,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>56 字</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.1k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 分钟</span>
         </span>
     
     
@@ -370,6 +416,188 @@
 <h2 id="远程连接"><a href="#远程连接" class="headerlink" title="远程连接"></a>远程连接</h2><p>远程连接到其他设备<br>ssh 账户名@ip地址/主机名</p>
 <div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ssh root@127.0.0.1</span></span><br></pre></td></tr></table></figure></div>
 
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>ssh服务端配置文件位于/etc/ssh/sshd_config</p>
+<p>文件解析：</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Port 22</td>
+<td align="left">SSH 预设使用 22 这个 port，您也可以使用多的 port ！</td>
+</tr>
+<tr>
+<td align="left">Protocol 2,1</td>
+<td align="left">选择的 SSH 协议版本，可以是 1 也可以是 2 ，如果要同时支持两者，就必须要使用 2,1 这个分隔了！</td>
+</tr>
+<tr>
+<td align="left">ListenAddress 0.0.0.0</td>
+<td align="left">监听的主机适配卡！举个例子来说，如果您有两个 IP，分别是 192.168.0.100 及 192.168.2.20 ，那么只想要开放 192.168.0.100 时，就可以写如同下面的样式：</td>
+</tr>
+<tr>
+<td align="left">ListenAddress 192.168.0.100</td>
+<td align="left">只监听来自 192.168.0.100 这个 IP 的SSH联机。如果不使用设定的话，则预设所有接口均接受 SSH</td>
+</tr>
+<tr>
+<td align="left">PidFile /var/run/sshd.pid</td>
+<td align="left">可以放置 SSHD 这个 PID 的档案！左列为默认值</td>
+</tr>
+<tr>
+<td align="left">LoginGraceTime 600</td>
+<td align="left">当使用者连上 SSH server 之后，会出现输入密码的画面，在该画面中，在多久时间内没有成功连上 SSH server ，就断线！时间为秒！</td>
+</tr>
+<tr>
+<td align="left">Compression yes</td>
+<td align="left">是否可以使用压缩指令？</td>
+</tr>
+<tr>
+<td align="left">HostKey /etc/ssh/ssh_host_key</td>
+<td align="left">SSH version 1 使用的私钥</td>
+</tr>
+<tr>
+<td align="left">HostKey /etc/ssh/ssh_host_rsa_key</td>
+<td align="left">SSH version 2 使用的 RSA 私钥</td>
+</tr>
+<tr>
+<td align="left">HostKey /etc/ssh/ssh_host_dsa_key</td>
+<td align="left">SSH version 2 使用的 DSA 私钥</td>
+</tr>
+<tr>
+<td align="left">KeyRegenerationInterval 3600</td>
+<td align="left">由前面联机的说明可以知道， version 1 会使用 server 的 Public Key ，每隔一段时间来重新建立一次！时间为秒！</td>
+</tr>
+<tr>
+<td align="left">ServerKeyBits 768</td>
+<td align="left">Server key 的长度！</td>
+</tr>
+<tr>
+<td align="left">SyslogFacility AUTH</td>
+<td align="left">当有人使用 SSH 登入系统的时候，SSH会记录信息</td>
+</tr>
+<tr>
+<td align="left">LogLevel INFO</td>
+<td align="left">登录记录的等级—》全部</td>
+</tr>
+<tr>
+<td align="left">PermitRootLogin no</td>
+<td align="left">是否允许 root 登入！预设是允许的，但是建议设定成 no！</td>
+</tr>
+<tr>
+<td align="left">UserLogin no</td>
+<td align="left">在 SSH 底下本来就不接受 login 这个程序的登入！</td>
+</tr>
+<tr>
+<td align="left">StrictModes yes</td>
+<td align="left">当使用者的 host key 改变之后，Server 就不接受联机</td>
+</tr>
+<tr>
+<td align="left">RSAAuthentication yes</td>
+<td align="left">是否使用纯的 RSA 认证！？仅针对 version 1 ！</td>
+</tr>
+<tr>
+<td align="left">PubkeyAuthentication yes</td>
+<td align="left">是否允许 Public Key ？只有 version 2</td>
+</tr>
+<tr>
+<td align="left">AuthorizedKeysFile   .ssh/authorized_keys</td>
+<td align="left">设定若要使用不需要密码登入的账号时，那么那个账号的存放档案所在档名！</td>
+</tr>
+<tr>
+<td align="left">RhostsAuthentication no</td>
+<td align="left">本机系统不使用 .rhosts ， .rhosts 不安全！</td>
+</tr>
+<tr>
+<td align="left">IgnoreRhosts yes</td>
+<td align="left">是否取消使用 ~/.ssh/.rhosts 来做为认证！</td>
+</tr>
+<tr>
+<td align="left">RhostsRSAAuthentication no</td>
+<td align="left">针对 version 1 ，使用 rhosts 档案在/etc/hosts.equiv配合 RSA 演算方式来进行认证！</td>
+</tr>
+<tr>
+<td align="left">HostbasedAuthentication no</td>
+<td align="left">这个项目与上面的项目类似，不过是给 version 2 使用的！</td>
+</tr>
+<tr>
+<td align="left">IgnoreUserKnownHosts no</td>
+<td align="left">是否忽略家目录内的 ~/.ssh/known_hosts 这个档案所记录的主机内容</td>
+</tr>
+<tr>
+<td align="left">PasswordAuthentication yes</td>
+<td align="left">密码验证当然是需要的！</td>
+</tr>
+<tr>
+<td align="left">PermitEmptyPasswords no</td>
+<td align="left">上面那一项如果设定为 yes 的话，这一项就最好设定为 no ，这个项目在是否允许以空的密码登入！</td>
+</tr>
+<tr>
+<td align="left">ChallengeResponseAuthentication yes</td>
+<td align="left">挑战任何的密码认证！所以，任何 login.conf 规定的认证方式，均可适用！</td>
+</tr>
+<tr>
+<td align="left">PAMAuthenticationViaKbdInt yes</td>
+<td align="left">是否启用其它的 PAM 模块！启用这个模块将会导致 PasswordAuthentication 设定失效！</td>
+</tr>
+<tr>
+<td align="left">KerberosAuthentication no</td>
+<td align="left">与Kerberos 有关的参数设定！底下不用设定</td>
+</tr>
+<tr>
+<td align="left">KerberosOrLocalPasswd yes</td>
+<td align="left">与Kerberos 有关的参数设定！底下不用设定</td>
+</tr>
+<tr>
+<td align="left">KerberosTicketCleanup yes</td>
+<td align="left">与Kerberos 有关的参数设定！底下不用设定</td>
+</tr>
+<tr>
+<td align="left">KerberosTgtPassing no</td>
+<td align="left">与Kerberos 有关的参数设定！底下不用设定</td>
+</tr>
+<tr>
+<td align="left">X11Forwarding yes</td>
+<td align="left">有关在 X-Window 底下使用的相关设定</td>
+</tr>
+<tr>
+<td align="left">X11DisplayOffset 10</td>
+<td align="left">有关在 X-Window 底下使用的相关设定</td>
+</tr>
+<tr>
+<td align="left">X11UseLocalhost yes</td>
+<td align="left">有关在 X-Window 底下使用的相关设定</td>
+</tr>
+<tr>
+<td align="left">PrintMotd no</td>
+<td align="left">登入后是否显示出一些信息呢？例如上次登入的时间、地点等，预设是 yes ，但是，如果为了安全，可以考虑改为 no ！</td>
+</tr>
+<tr>
+<td align="left">PrintLastLog yes</td>
+<td align="left">显示上次登入的信息！预设也是 yes</td>
+</tr>
+<tr>
+<td align="left">KeepAlive yes</td>
+<td align="left">一般而言，如果设定这项目的话，那么 SSH Server 会传送KeepAlive 的讯息给 Client 端，以确保两者的联机正常！在这个情况下，任何一端死掉后， SSH 可以立刻知道！而不会有僵尸程序的发生！</td>
+</tr>
+<tr>
+<td align="left">UsePrivilegeSeparation yes</td>
+<td align="left">使用者的权限设定项目！</td>
+</tr>
+<tr>
+<td align="left">MaxStartups 10</td>
+<td align="left">同时允许几个尚未登入的联机画面</td>
+</tr>
+<tr>
+<td align="left">DenyUsers *</td>
+<td align="left">设定受抵挡的使用者名称</td>
+</tr>
+<tr>
+<td align="left">AllowUsers *</td>
+<td align="left">设定允许的使用者名称</td>
+</tr>
+</tbody></table>
 
             </div>
 
@@ -443,7 +671,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">ssh的使用和配置</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85ssh"><span class="nav-text">安装ssh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="nav-text">远程连接</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85ssh"><span class="nav-text">安装ssh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="nav-text">远程连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-text">配置文件</span></a></li></ol>
 
     </div>
 </div>
