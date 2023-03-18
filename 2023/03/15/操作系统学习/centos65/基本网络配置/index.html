@@ -378,8 +378,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="pc">2023-03-16 16:19:09</span>
-            <span class="mobile">2023-03-16 16:19</span>
+            <span class="pc">2023-03-18 15:25:22</span>
+            <span class="mobile">2023-03-18 15:25</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -390,7 +390,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>491 字</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>504 字</span>
         </span>
     
     
@@ -424,6 +424,9 @@
 <h4 id="使用setup指令配置网卡"><a href="#使用setup指令配置网卡" class="headerlink" title="使用setup指令配置网卡"></a>使用setup指令配置网卡</h4><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">setup</span></span><br><span class="line">Network configuration -&gt; Device configuration -&gt; 网卡名称 -&gt; 相关设置</span><br></pre></td></tr></table></figure></div>
 
 <h4 id="使用-etc-sysconfig-network-scripts-对应网卡名称-型号-配置ip"><a href="#使用-etc-sysconfig-network-scripts-对应网卡名称-型号-配置ip" class="headerlink" title="使用/etc/sysconfig/network-scripts/对应网卡名称/型号 配置ip"></a>使用/etc/sysconfig/network-scripts/对应网卡名称/型号 配置ip</h4><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">vim /etc/sysconfig/network-scripts/ifcfg-eth0</span></span><br><span class="line">编辑文件</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">service network restart</span></span><br><span class="line">重启网络服务</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="通过dhcp获取地址"><a href="#通过dhcp获取地址" class="headerlink" title="通过dhcp获取地址"></a>通过dhcp获取地址</h4><p>dhclient [参数] [网卡]</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">dhclient</span></span><br></pre></td></tr></table></figure></div>
 
 <h3 id="设置主机名"><a href="#设置主机名" class="headerlink" title="设置主机名"></a>设置主机名</h3><h4 id="hostname"><a href="#hostname" class="headerlink" title="hostname"></a>hostname</h4><p>hostname [主机名]</p>
 <div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">hostname</span></span><br><span class="line">查询主机名</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">hostname www.hostname.com</span></span><br><span class="line">修改主机名为www.hostname.com</span><br></pre></td></tr></table></figure></div>
@@ -471,13 +474,13 @@
                         <div class="article-prev">
                             <a class="prev"
                             rel="prev"
-                            href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/"
+                            href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/hyperv/"
                             >
                                 <span class="left arrow-icon flex-center">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">windows server 2008 r2的安装</span>
+                                    <span class="post-nav-title-item">hyper-v的安装和配置</span>
                                     <span class="post-nav-item">上一篇</span>
                                 </span>
                             </a>
@@ -512,7 +515,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">基本网络配置</div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%96%87%E4%BB%B6"><span class="nav-text">相关文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#etc-hosts"><span class="nav-text">&#x2F;etc&#x2F;hosts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#etc-resolv-conf"><span class="nav-text">&#x2F;etc&#x2F;resolv.conf</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#etc-sysconfig-network"><span class="nav-text">&#x2F;etc&#x2F;sysconfig&#x2F;network</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEip%E5%9C%B0%E5%9D%80"><span class="nav-text">设置ip地址</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ifconfig"><span class="nav-text">ifconfig</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8setup%E6%8C%87%E4%BB%A4%E9%85%8D%E7%BD%AE%E7%BD%91%E5%8D%A1"><span class="nav-text">使用setup指令配置网卡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-etc-sysconfig-network-scripts-%E5%AF%B9%E5%BA%94%E7%BD%91%E5%8D%A1%E5%90%8D%E7%A7%B0-%E5%9E%8B%E5%8F%B7-%E9%85%8D%E7%BD%AEip"><span class="nav-text">使用&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;对应网卡名称&#x2F;型号 配置ip</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="nav-text">设置主机名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hostname"><span class="nav-text">hostname</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#etc-resolv-conf-1"><span class="nav-text">&#x2F;etc&#x2F;resolv.conf</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8setup%E9%85%8D%E7%BD%AE"><span class="nav-text">使用setup配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5%E7%BD%91%E5%8D%A1%E8%BF%9E%E9%80%9A%E6%80%A7"><span class="nav-text">检查网卡连通性</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%96%87%E4%BB%B6"><span class="nav-text">相关文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#etc-hosts"><span class="nav-text">&#x2F;etc&#x2F;hosts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#etc-resolv-conf"><span class="nav-text">&#x2F;etc&#x2F;resolv.conf</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#etc-sysconfig-network"><span class="nav-text">&#x2F;etc&#x2F;sysconfig&#x2F;network</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEip%E5%9C%B0%E5%9D%80"><span class="nav-text">设置ip地址</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ifconfig"><span class="nav-text">ifconfig</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8setup%E6%8C%87%E4%BB%A4%E9%85%8D%E7%BD%AE%E7%BD%91%E5%8D%A1"><span class="nav-text">使用setup指令配置网卡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-etc-sysconfig-network-scripts-%E5%AF%B9%E5%BA%94%E7%BD%91%E5%8D%A1%E5%90%8D%E7%A7%B0-%E5%9E%8B%E5%8F%B7-%E9%85%8D%E7%BD%AEip"><span class="nav-text">使用&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;对应网卡名称&#x2F;型号 配置ip</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87dhcp%E8%8E%B7%E5%8F%96%E5%9C%B0%E5%9D%80"><span class="nav-text">通过dhcp获取地址</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="nav-text">设置主机名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hostname"><span class="nav-text">hostname</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#etc-resolv-conf-1"><span class="nav-text">&#x2F;etc&#x2F;resolv.conf</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8setup%E9%85%8D%E7%BD%AE"><span class="nav-text">使用setup配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5%E7%BD%91%E5%8D%A1%E8%BF%9E%E9%80%9A%E6%80%A7"><span class="nav-text">检查网卡连通性</span></a></li></ol>
 
     </div>
 </div>
@@ -715,5 +718,5 @@
 
 
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
