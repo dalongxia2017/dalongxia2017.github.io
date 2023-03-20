@@ -7,6 +7,10 @@
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="CShrimp">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://evan.beee.top" crossorigin>
     
     <!--- Seo Part-->
     
@@ -23,12 +27,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CSHRIMP&#39;S BLOG">
     <meta name="twitter:description" content="Hexo Theme Redefine">
-    <meta name="twitter:image" content="/images/redefine-logo.svg">
+    <meta name="twitter:image" content="/images/redefine-favicon.svg">
     <!--- Icon Part-->
-    <link rel="icon" type="image/png" href="/images/redefine-logo.svg" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-logo.svg">
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
     <meta name="theme-color" content="#ec0e66">
-    <link rel="shortcut icon" href="/images/redefine-logo.svg">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
     
     <title>
         
@@ -40,16 +45,22 @@
     
 <link rel="stylesheet" href="/assets/fonts.css">
 
+    <!--- Font Part-->
     
     
+    
+    
+
+    <!--- Inject Part-->
     
     <script id="hexo-configurations">
     let REDEFINE = window.REDEFINE || {};
     REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#ec0e66","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-logo.svg","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/my-light.webp","dark":"/images/my-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"CSHRIMP 的魔幻小窝","custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.0","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":false,"audio":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]}}};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#ec0e66","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-favicon.svg","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/my-light.webp","dark":"/images/my-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"font_sizes":{"title":"2.8rem","subtitle":"1.5rem"},"line_height":1.2,"title":"CSHRIMP 的魔幻小窝","subtitle":{"enable":false,"list":[]},"custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.3","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":false,"audio":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}}};
     REDEFINE.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
     
+    <!--- Fontawesome Part-->
     
 <link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
 
@@ -90,7 +101,8 @@
         <div class="first-screen-container flex-center">
     <div class="content flex-center">
         <div class="description fade-in-down-animation" >
-          CSHRIMP 的魔幻小窝
+          CSHRIMP 的魔幻小窝 
+          
         </div>
         
     </div>
@@ -369,8 +381,8 @@
                     
                         安装1# yum install vsftpd -y
 
-配置匿名登录主配置文件/etc/vsftpd/vsftpd.conf
-1234567891011121314anonymous_enable=yes# YES允许匿名，NO拒绝匿名登录anon_...
+配置匿名登录主配置文件&#x2F;etc&#x2F;vsftpd&#x2F;vsftpd.conf
+1234567891011121314anonymous_enable=yes# YES允许匿...
                     
                 </div>
 
@@ -408,9 +420,7 @@
                     
                         安装1# yum install httpd -y
 
-配置主配置文件位于/etc/httpd/conf/httpd.conf默认站点主目录：/var/www/html/配置文件包括三部分：
-
-Global Environment—全局环境配置，决定A...
+配置主配置文件位于&#x2F;etc&#x2F;httpd&#x2F;conf&#x2F;httpd.conf默认站点主目录：&#x2F;var&#x2F;www&#x2F;html&#x2F;配...
                     
                 </div>
 
@@ -495,12 +505,12 @@ Global Environment—全局环境配置，决定A...
 
 
 
-/bin/
-存放系统命令，普通用户和 root 都可以执行。放在 /bin 下的命令在单用户模式下也可以执行
+&#x2F;bin&#x2F;
+存放系统命令，普通用户和 root 都可以执行。放在 &#x2F;bin 下的命令在单用户模式下也可以执行
 
 
-/boot/
-系统启动目录，保存与系统启动相关的文件，如内核文件和启动引导程序（...
+&#x2F;boot&#x2F;
+系统启动目录，保...
                     
                 </div>
 
@@ -518,44 +528,6 @@ Global Environment—全局环境配置，决定A...
     </div>
 
     <a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/">阅读全文<span class="seo-reader-text">文件结构</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/nfs/">
-                        nfs
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        nfs服务端安装和配置1、安装nfs-utils和rpcbind1# yum install nfs-utils rpcbind -y
-
-2、查询安装情况123456# rpm -qa | grep nfsnfs-utils-xxx-xxx-xxxn...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Mar 17 2023 07:31:39 GMT+0800">
-                
-                    2023-03-17
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/nfs/">阅读全文<span class="seo-reader-text">nfs</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -605,6 +577,44 @@ Global Environment—全局环境配置，决定A...
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/nfs/">
+                        nfs
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        nfs服务端安装和配置1、安装nfs-utils和rpcbind1# yum install nfs-utils rpcbind -y
+
+2、查询安装情况123456# rpm -qa | grep nfsnfs-utils-xxx-xxx-xxxn...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Mar 17 2023 07:31:39 GMT+0800">
+                
+                    2023-03-17
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/nfs/">阅读全文<span class="seo-reader-text">nfs</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/">
                         telnet的配置和使用
                     </a>
@@ -613,11 +623,10 @@ Global Environment—全局环境配置，决定A...
                 <div class="home-article-content markdown-body">
                     
                         安装telnet服务端1、安装telnet
-2、配置 /etc/xinetd.d/telnet 文件启动telnet
-3、设置最大连接数配置文件内添加 instances=最大连接数
+2、配置 &#x2F;etc&#x2F;xinetd.d&#x2F;telnet 文件启动telnet
+3、设置最大连接数配置文件内添加 instances&#x3D;最大连接数
 4、启动telnet
-5、关闭telnet
-6、编辑/etc/se...
+5、...
                     
                 </div>
 
@@ -635,6 +644,46 @@ Global Environment—全局环境配置，决定A...
     </div>
 
     <a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/">阅读全文<span class="seo-reader-text">telnet的配置和使用</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/hyperv/">
+                        hyper-v的安装和配置
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        安装1、给虚拟机开启虚拟化在虚拟机的cpu选项寻找vt-x&#x2F;amd-v，并启动
+2、打开服务器管理器
+点击角色 -&gt; 添加角色 -&gt; 服务器角色 -&gt; Hyper-v -&gt; 下一步
+
+3、选择网卡创建虚拟网络（打钩即...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Mar 16 2023 16:18:39 GMT+0800">
+                
+                    2023-03-16
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/hyperv/">阅读全文<span class="seo-reader-text">hyper-v的安装和配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -691,47 +740,6 @@ Global Environment—全局环境配置，决定A...
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/hyperv/">
-                        hyper-v的安装和配置
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        安装1、给虚拟机开启虚拟化在虚拟机的cpu选项寻找vt-x/amd-v，并启动
-2、打开服务器管理器
-点击角色 -&gt; 添加角色 -&gt; 服务器角色 -&gt; Hyper-v -&gt; 下一步
-
-3、选择网卡创建虚拟网络（打钩即可）
-4、...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Mar 16 2023 16:18:39 GMT+0800">
-                
-                    2023-03-16
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/hyperv/">阅读全文<span class="seo-reader-text">hyper-v的安装和配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
                     <a href="/2023/03/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/%E5%9F%BA%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">
                         基本网络配置
                     </a>
@@ -739,8 +747,8 @@ Global Environment—全局环境配置，决定A...
 
                 <div class="home-article-content markdown-body">
                     
-                        相关文件/etc/hostshosts文件的作用相当于dns的作用，linux需要域名解析先查询/etc/hosts文件有无对应的记录，若存在，先使用对应的记录，否则再去向dns服务器发出域名解析请求。
-/etc/resolv.confresolv....
+                        相关文件&#x2F;etc&#x2F;hostshosts文件的作用相当于dns的作用，linux需要域名解析先查询&#x2F;etc&#x2F;hosts文件有无对应的记录，若存在，先使用对应的记录，否则再去向dns服务器发出域名解析请求。
+&#x...
                     
                 </div>
 
@@ -766,13 +774,7 @@ Global Environment—全局环境配置，决定A...
 
     <div class="home-paginator">
         <div class="paginator">
-    
-
-    
-        <a class="next btn"
-           href="/page/2/"
-        >下一页</a>
-    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
 </div>
 
     </div>
@@ -796,13 +798,13 @@ Global Environment—全局环境配置，决定A...
               <span>2022</span>
               -
             
-            2023&nbsp;&nbsp;<i class="fa-regular fa-computer-classic"></i>&nbsp;&nbsp;<a href="/">CShrimp</a>
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">CShrimp</a>
         </div>
         
         <div class="theme-info info-item">
             <span class="powered-by-container">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 驱动</span>
                 <br> 
-            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.2.0</a>
+            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.2.3</a>
         </div>
         
         
@@ -904,8 +906,11 @@ Global Environment—全局环境配置，决定A...
 
 
 
+
+
+
+
 <div class="post-scripts pjax">
-    
     
 </div>
 

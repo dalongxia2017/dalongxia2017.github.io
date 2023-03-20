@@ -7,6 +7,10 @@
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="CShrimp">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://evan.beee.top" crossorigin>
     
     <!--- Seo Part-->
     
@@ -23,12 +27,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="telnet的配置和使用">
     <meta name="twitter:description" content="Hexo Theme Redefine">
-    <meta name="twitter:image" content="/images/redefine-logo.svg">
+    <meta name="twitter:image" content="/images/redefine-favicon.svg">
     <!--- Icon Part-->
-    <link rel="icon" type="image/png" href="/images/redefine-logo.svg" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-logo.svg">
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
     <meta name="theme-color" content="#ec0e66">
-    <link rel="shortcut icon" href="/images/redefine-logo.svg">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
     
     <title>
         
@@ -42,16 +47,22 @@
     
 <link rel="stylesheet" href="/assets/fonts.css">
 
+    <!--- Font Part-->
     
     
+    
+    
+
+    <!--- Inject Part-->
     
     <script id="hexo-configurations">
     let REDEFINE = window.REDEFINE || {};
     REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#ec0e66","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-logo.svg","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/my-light.webp","dark":"/images/my-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"CSHRIMP 的魔幻小窝","custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.0","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":false,"audio":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]}}};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#ec0e66","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-favicon.svg","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/my-light.webp","dark":"/images/my-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"font_sizes":{"title":"2.8rem","subtitle":"1.5rem"},"line_height":1.2,"title":"CSHRIMP 的魔幻小窝","subtitle":{"enable":false,"list":[]},"custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.3","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":false,"audio":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}}};
     REDEFINE.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
     
+    <!--- Fontawesome Part-->
     
 <link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
 
@@ -390,7 +401,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>79 字</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>85 字</span>
         </span>
     
     
@@ -408,11 +419,11 @@
 
             <div class="article-content markdown-body">
                 <h3 id="安装telnet服务端"><a href="#安装telnet服务端" class="headerlink" title="安装telnet服务端"></a>安装telnet服务端</h3><h4 id="1、安装telnet"><a href="#1、安装telnet" class="headerlink" title="1、安装telnet"></a>1、安装telnet</h4><p><br><img lazyload src="/images/loading.svg" data-src="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/p1.png"></p>
-<h4 id="2、配置-etc-xinetd-d-telnet-文件启动telnet"><a href="#2、配置-etc-xinetd-d-telnet-文件启动telnet" class="headerlink" title="2、配置 /etc/xinetd.d/telnet 文件启动telnet"></a>2、配置 /etc/xinetd.d/telnet 文件启动telnet</h4><p><br><img lazyload src="/images/loading.svg" data-src="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/p2.png"></p>
-<h4 id="3、设置最大连接数"><a href="#3、设置最大连接数" class="headerlink" title="3、设置最大连接数"></a>3、设置最大连接数</h4><p>配置文件内添加 instances=最大连接数<br><br><img lazyload src="/images/loading.svg" data-src="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/p3.png"></p>
+<h4 id="2、配置-x2F-etc-x2F-xinetd-d-x2F-telnet-文件启动telnet"><a href="#2、配置-x2F-etc-x2F-xinetd-d-x2F-telnet-文件启动telnet" class="headerlink" title="2、配置 &#x2F;etc&#x2F;xinetd.d&#x2F;telnet 文件启动telnet"></a>2、配置 &#x2F;etc&#x2F;xinetd.d&#x2F;telnet 文件启动telnet</h4><p><br><img lazyload src="/images/loading.svg" data-src="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/p2.png"></p>
+<h4 id="3、设置最大连接数"><a href="#3、设置最大连接数" class="headerlink" title="3、设置最大连接数"></a>3、设置最大连接数</h4><p>配置文件内添加 instances&#x3D;最大连接数<br><br><img lazyload src="/images/loading.svg" data-src="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/p3.png"></p>
 <h4 id="4、启动telnet"><a href="#4、启动telnet" class="headerlink" title="4、启动telnet"></a>4、启动telnet</h4><p><br><img lazyload src="/images/loading.svg" data-src="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/p4.png"></p>
 <h4 id="5、关闭telnet"><a href="#5、关闭telnet" class="headerlink" title="5、关闭telnet"></a>5、关闭telnet</h4><p><br><img lazyload src="/images/loading.svg" data-src="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/p5.png"></p>
-<h4 id="6、编辑-etc-services更改端口号"><a href="#6、编辑-etc-services更改端口号" class="headerlink" title="6、编辑/etc/services更改端口号"></a>6、编辑/etc/services更改端口号</h4><p><br><img lazyload src="/images/loading.svg" data-src="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/p6.png"></p>
+<h4 id="6、编辑-x2F-etc-x2F-services更改端口号"><a href="#6、编辑-x2F-etc-x2F-services更改端口号" class="headerlink" title="6、编辑&#x2F;etc&#x2F;services更改端口号"></a>6、编辑&#x2F;etc&#x2F;services更改端口号</h4><p><br><img lazyload src="/images/loading.svg" data-src="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/p6.png"></p>
 <h3 id="远程连接客户端"><a href="#远程连接客户端" class="headerlink" title="远程连接客户端"></a>远程连接客户端</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">telnet 主机名/ip</span></span><br><span class="line">login：用户名</span><br><span class="line">passwd：密码</span><br></pre></td></tr></table></figure></div>
             </div>
 
@@ -445,13 +456,13 @@
                         <div class="article-prev">
                             <a class="prev"
                             rel="prev"
-                            href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/dns/"
+                            href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/nfs/"
                             >
                                 <span class="left arrow-icon flex-center">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">dns服务配置</span>
+                                    <span class="post-nav-title-item">nfs</span>
                                     <span class="post-nav-item">上一篇</span>
                                 </span>
                             </a>
@@ -461,10 +472,10 @@
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/"
+                            href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/hyperv/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">windows server 2008 r2的安装</span>
+                                    <span class="post-nav-title-item">hyper-v的安装和配置</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -486,7 +497,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">telnet的配置和使用</div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85telnet%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-text">安装telnet服务端</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85telnet"><span class="nav-text">1、安装telnet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E9%85%8D%E7%BD%AE-etc-xinetd-d-telnet-%E6%96%87%E4%BB%B6%E5%90%AF%E5%8A%A8telnet"><span class="nav-text">2、配置 &#x2F;etc&#x2F;xinetd.d&#x2F;telnet 文件启动telnet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%E3%80%81%E8%AE%BE%E7%BD%AE%E6%9C%80%E5%A4%A7%E8%BF%9E%E6%8E%A5%E6%95%B0"><span class="nav-text">3、设置最大连接数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4%E3%80%81%E5%90%AF%E5%8A%A8telnet"><span class="nav-text">4、启动telnet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5%E3%80%81%E5%85%B3%E9%97%ADtelnet"><span class="nav-text">5、关闭telnet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6%E3%80%81%E7%BC%96%E8%BE%91-etc-services%E6%9B%B4%E6%94%B9%E7%AB%AF%E5%8F%A3%E5%8F%B7"><span class="nav-text">6、编辑&#x2F;etc&#x2F;services更改端口号</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-text">远程连接客户端</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85telnet%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-text">安装telnet服务端</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85telnet"><span class="nav-text">1、安装telnet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E9%85%8D%E7%BD%AE-x2F-etc-x2F-xinetd-d-x2F-telnet-%E6%96%87%E4%BB%B6%E5%90%AF%E5%8A%A8telnet"><span class="nav-text">2、配置 &#x2F;etc&#x2F;xinetd.d&#x2F;telnet 文件启动telnet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%E3%80%81%E8%AE%BE%E7%BD%AE%E6%9C%80%E5%A4%A7%E8%BF%9E%E6%8E%A5%E6%95%B0"><span class="nav-text">3、设置最大连接数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4%E3%80%81%E5%90%AF%E5%8A%A8telnet"><span class="nav-text">4、启动telnet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5%E3%80%81%E5%85%B3%E9%97%ADtelnet"><span class="nav-text">5、关闭telnet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6%E3%80%81%E7%BC%96%E8%BE%91-x2F-etc-x2F-services%E6%9B%B4%E6%94%B9%E7%AB%AF%E5%8F%A3%E5%8F%B7"><span class="nav-text">6、编辑&#x2F;etc&#x2F;services更改端口号</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-text">远程连接客户端</span></a></li></ol>
 
     </div>
 </div>
@@ -513,13 +524,13 @@
               <span>2022</span>
               -
             
-            2023&nbsp;&nbsp;<i class="fa-regular fa-computer-classic"></i>&nbsp;&nbsp;<a href="/">CShrimp</a>
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">CShrimp</a>
         </div>
         
         <div class="theme-info info-item">
             <span class="powered-by-container">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 驱动</span>
                 <br> 
-            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.2.0</a>
+            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.2.3</a>
         </div>
         
         
@@ -637,6 +648,10 @@
 
 
 
+
+
+
+
 <div class="post-scripts pjax">
     
         
@@ -648,7 +663,6 @@
 
 <script src="/js/plugins/tabs.js"></script>
 
-    
     
 </div>
 

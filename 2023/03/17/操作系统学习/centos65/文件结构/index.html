@@ -7,6 +7,10 @@
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="CShrimp">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://evan.beee.top" crossorigin>
     
     <!--- Seo Part-->
     
@@ -23,12 +27,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="文件结构">
     <meta name="twitter:description" content="Hexo Theme Redefine">
-    <meta name="twitter:image" content="/images/redefine-logo.svg">
+    <meta name="twitter:image" content="/images/redefine-favicon.svg">
     <!--- Icon Part-->
-    <link rel="icon" type="image/png" href="/images/redefine-logo.svg" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-logo.svg">
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
     <meta name="theme-color" content="#ec0e66">
-    <link rel="shortcut icon" href="/images/redefine-logo.svg">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
     
     <title>
         
@@ -42,16 +47,22 @@
     
 <link rel="stylesheet" href="/assets/fonts.css">
 
+    <!--- Font Part-->
     
     
+    
+    
+
+    <!--- Inject Part-->
     
     <script id="hexo-configurations">
     let REDEFINE = window.REDEFINE || {};
     REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#ec0e66","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-logo.svg","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/my-light.webp","dark":"/images/my-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"CSHRIMP 的魔幻小窝","custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.0","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":false,"audio":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]}}};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#ec0e66","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-favicon.svg","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/my-light.webp","dark":"/images/my-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"font_sizes":{"title":"2.8rem","subtitle":"1.5rem"},"line_height":1.2,"title":"CSHRIMP 的魔幻小窝","subtitle":{"enable":false,"list":[]},"custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.3","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":false,"audio":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}}};
     REDEFINE.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
     
+    <!--- Fontawesome Part-->
     
 <link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
 
@@ -390,12 +401,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.5k 字</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.7k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 分钟</span>
         </span>
     
     
@@ -415,59 +426,59 @@
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">/bin/</td>
-<td align="left">存放系统命令，普通用户和 root 都可以执行。放在 /bin 下的命令在单用户模式下也可以执行</td>
+<td align="left">&#x2F;bin&#x2F;</td>
+<td align="left">存放系统命令，普通用户和 root 都可以执行。放在 &#x2F;bin 下的命令在单用户模式下也可以执行</td>
 </tr>
 <tr>
-<td align="left">/boot/</td>
+<td align="left">&#x2F;boot&#x2F;</td>
 <td align="left">系统启动目录，保存与系统启动相关的文件，如内核文件和启动引导程序（grub）文件等</td>
 </tr>
 <tr>
-<td align="left">/dev/</td>
+<td align="left">&#x2F;dev&#x2F;</td>
 <td align="left">设备文件保存位置</td>
 </tr>
 <tr>
-<td align="left">/etc/</td>
+<td align="left">&#x2F;etc&#x2F;</td>
 <td align="left">配置文件保存位置。系统内所有采用默认安装方式（rpm 安装）的服务配置文件全部保存在此目录中，如用户信息、服务的启动脚本、常用服务的配置文件等</td>
 </tr>
 <tr>
-<td align="left">/home/</td>
-<td align="left">普通用户的主目录（也称为家目录）。在创建用户时，每个用户要有一个默认登录和保存自己数据的位置，就是用户的主目录，所有普通用户的主目录是在 /home/ 下建立一个和用户名相同的目录。如用户 liming 的主目录就是 /home/liming</td>
+<td align="left">&#x2F;home&#x2F;</td>
+<td align="left">普通用户的主目录（也称为家目录）。在创建用户时，每个用户要有一个默认登录和保存自己数据的位置，就是用户的主目录，所有普通用户的主目录是在 &#x2F;home&#x2F; 下建立一个和用户名相同的目录。如用户 liming 的主目录就是 &#x2F;home&#x2F;liming</td>
 </tr>
 <tr>
-<td align="left">/lib/</td>
+<td align="left">&#x2F;lib&#x2F;</td>
 <td align="left">系统调用的函数库保存位置</td>
 </tr>
 <tr>
-<td align="left">/media/</td>
+<td align="left">&#x2F;media&#x2F;</td>
 <td align="left">挂载目录。系统建议用来挂载媒体设备，如软盘和光盘</td>
 </tr>
 <tr>
-<td align="left">/mnt/</td>
+<td align="left">&#x2F;mnt&#x2F;</td>
 <td align="left">挂载目录。早期 Linux 中只有这一个挂载目录，并没有细分。系统建议这个目录用来挂载额外的设备，如 U 盘、移动硬盘和其他操作系统的分区</td>
 </tr>
 <tr>
-<td align="left">/misc/</td>
-<td align="left">挂载目录。系统建议用来挂载 NFS 服务的共享目录。虽然系统准备了三个默认挂载目录 /media/、/mnt/、/misc/，但是到底在哪个目录中挂载什么设备可以由管理员自己决定。例如，笔者在接触 Linux 的时候，默认挂载目录只有 /mnt/，所以养成了在 /mnt/ 下建立不同目录挂载不同设备的习惯，如 /mnt/cdrom/ 挂载光盘、/mnt/usb/ 挂载 U 盘，都是可以的</td>
+<td align="left">&#x2F;misc&#x2F;</td>
+<td align="left">挂载目录。系统建议用来挂载 NFS 服务的共享目录。虽然系统准备了三个默认挂载目录 &#x2F;media&#x2F;、&#x2F;mnt&#x2F;、&#x2F;misc&#x2F;，但是到底在哪个目录中挂载什么设备可以由管理员自己决定。例如，笔者在接触 Linux 的时候，默认挂载目录只有 &#x2F;mnt&#x2F;，所以养成了在 &#x2F;mnt&#x2F; 下建立不同目录挂载不同设备的习惯，如 &#x2F;mnt&#x2F;cdrom&#x2F; 挂载光盘、&#x2F;mnt&#x2F;usb&#x2F; 挂载 U 盘，都是可以的</td>
 </tr>
 <tr>
-<td align="left">/opt/</td>
-<td align="left">第三方安装的软件保存位置。这个目录是放置和安装其他软件的位置，手工安装的源码包软件都可以安装到这个目录中。不过笔者还是习惯把软件放到 /usr/local/ 目录中，也就是说，/usr/local/ 目录也可以用来安装软件</td>
+<td align="left">&#x2F;opt&#x2F;</td>
+<td align="left">第三方安装的软件保存位置。这个目录是放置和安装其他软件的位置，手工安装的源码包软件都可以安装到这个目录中。不过笔者还是习惯把软件放到 &#x2F;usr&#x2F;local&#x2F; 目录中，也就是说，&#x2F;usr&#x2F;local&#x2F; 目录也可以用来安装软件</td>
 </tr>
 <tr>
-<td align="left">/root/</td>
-<td align="left">root 的主目录。普通用户主目录在 /home/ 下，root 主目录直接在“/”下</td>
+<td align="left">&#x2F;root&#x2F;</td>
+<td align="left">root 的主目录。普通用户主目录在 &#x2F;home&#x2F; 下，root 主目录直接在“&#x2F;”下</td>
 </tr>
 <tr>
-<td align="left">/sbin/</td>
+<td align="left">&#x2F;sbin&#x2F;</td>
 <td align="left">保存与系统环境设置相关的命令，只有 root 可以使用这些命令进行系统环境设置，但也有些命令可以允许普通用户查看</td>
 </tr>
 <tr>
-<td align="left">/srv/</td>
+<td align="left">&#x2F;srv&#x2F;</td>
 <td align="left">服务数据目录。一些系统服务启动之后，可以在这个目录中保存所需要的数据</td>
 </tr>
 <tr>
-<td align="left">/tmp/</td>
+<td align="left">&#x2F;tmp&#x2F;</td>
 <td align="left">临时目录。系统存放临时文件的目录，在该目录下，所有用户都可以访问和写入。建议此目录中不能保存重要数据，最好每次开机都把该目录清空</td>
 </tr>
 </tbody></table>
@@ -479,19 +490,19 @@
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">/lost+found/</td>
-<td align="left">当系统意外崩溃或意外关机时，产生的一些文件碎片会存放在这里。在系统启动的过程中，fsck 工具会检查这里，并修复已经损坏的文件系统。这个目录只在每个分区中出现，例如，/lost+found 就是根分区的备份恢复目录，/boot/lost+found 就是 /boot 分区的备份恢复目录</td>
+<td align="left">&#x2F;lost+found&#x2F;</td>
+<td align="left">当系统意外崩溃或意外关机时，产生的一些文件碎片会存放在这里。在系统启动的过程中，fsck 工具会检查这里，并修复已经损坏的文件系统。这个目录只在每个分区中出现，例如，&#x2F;lost+found 就是根分区的备份恢复目录，&#x2F;boot&#x2F;lost+found 就是 &#x2F;boot 分区的备份恢复目录</td>
 </tr>
 <tr>
-<td align="left">/proc/</td>
-<td align="left">虚拟文件系统。该目录中的数据并不保存在硬盘上，而是保存到内存中。主要保存系统的内核、进程、外部设备状态和网络状态等。如 /proc/cpuinfo 是保存 CPU 信息的，/proc/devices 是保存设备驱动的列表的，/proc/filesystems 是保存文件系统列表的，/proc/net 是保存网络协议信息的……</td>
+<td align="left">&#x2F;proc&#x2F;</td>
+<td align="left">虚拟文件系统。该目录中的数据并不保存在硬盘上，而是保存到内存中。主要保存系统的内核、进程、外部设备状态和网络状态等。如 &#x2F;proc&#x2F;cpuinfo 是保存 CPU 信息的，&#x2F;proc&#x2F;devices 是保存设备驱动的列表的，&#x2F;proc&#x2F;filesystems 是保存文件系统列表的，&#x2F;proc&#x2F;net 是保存网络协议信息的……</td>
 </tr>
 <tr>
-<td align="left">/sys/</td>
-<td align="left">虚拟文件系统。和 /proc/ 目录相似，该目录中的数据都保存在内存中，主要保存与内核相关的信息</td>
+<td align="left">&#x2F;sys&#x2F;</td>
+<td align="left">虚拟文件系统。和 &#x2F;proc&#x2F; 目录相似，该目录中的数据都保存在内存中，主要保存与内核相关的信息</td>
 </tr>
 </tbody></table>
-<h4 id="usr目录"><a href="#usr目录" class="headerlink" title="/usr目录"></a>/usr目录</h4><p><strong>usr（注意不是 user），全称为 Unix Software Resource，此目录用于存储系统软件资源。</strong></p>
+<h4 id="x2F-usr目录"><a href="#x2F-usr目录" class="headerlink" title="&#x2F;usr目录"></a>&#x2F;usr目录</h4><p><strong>usr（注意不是 user），全称为 Unix Software Resource，此目录用于存储系统软件资源。</strong></p>
 <table>
 <thead>
 <tr>
@@ -500,71 +511,71 @@
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">/usr/bin/</td>
+<td align="left">&#x2F;usr&#x2F;bin&#x2F;</td>
 <td align="left">存放系统命令，普通用户和超级用户都可以执行。这些命令和系统启动无关，在单用户模式下不能执行</td>
 </tr>
 <tr>
-<td align="left">/usr/sbin/</td>
+<td align="left">&#x2F;usr&#x2F;sbin&#x2F;</td>
 <td align="left">存放根文件系统不必要的系统管理命令，如多数服务程序，只有 root 可以使用。</td>
 </tr>
 <tr>
-<td align="left">/usr/lib/</td>
+<td align="left">&#x2F;usr&#x2F;lib&#x2F;</td>
 <td align="left">应用程序调用的函数库保存位置</td>
 </tr>
 <tr>
-<td align="left">/usr/XllR6/</td>
+<td align="left">&#x2F;usr&#x2F;XllR6&#x2F;</td>
 <td align="left">图形界面系统保存位置</td>
 </tr>
 <tr>
-<td align="left">/usr/local/</td>
+<td align="left">&#x2F;usr&#x2F;local&#x2F;</td>
 <td align="left">手工安装的软件保存位置。我们一般建议源码包软件安装在这个位置</td>
 </tr>
 <tr>
-<td align="left">/usr/share/</td>
+<td align="left">&#x2F;usr&#x2F;share&#x2F;</td>
 <td align="left">应用程序的资源文件保存位置，如帮助文档、说明文档和字体目录</td>
 </tr>
 <tr>
-<td align="left">/usr/src/</td>
-<td align="left">源码包保存位置。我们手工下载的源码包和内核源码包都可以保存到这里。不过笔者更习惯把手工下载的源码包保存到 /usr/local/src/ 目录中，把内核源码保存到 /usr/src/linux/ 目录中</td>
+<td align="left">&#x2F;usr&#x2F;src&#x2F;</td>
+<td align="left">源码包保存位置。我们手工下载的源码包和内核源码包都可以保存到这里。不过笔者更习惯把手工下载的源码包保存到 &#x2F;usr&#x2F;local&#x2F;src&#x2F; 目录中，把内核源码保存到 &#x2F;usr&#x2F;src&#x2F;linux&#x2F; 目录中</td>
 </tr>
 <tr>
-<td align="left">/usr/include</td>
-<td align="left">C/C++ 等编程语言头文件的放置目录</td>
+<td align="left">&#x2F;usr&#x2F;include</td>
+<td align="left">C&#x2F;C++ 等编程语言头文件的放置目录</td>
 </tr>
 </tbody></table>
-<h4 id="var目录"><a href="#var目录" class="headerlink" title="/var目录"></a>/var目录</h4><table>
+<h4 id="x2F-var目录"><a href="#x2F-var目录" class="headerlink" title="&#x2F;var目录"></a>&#x2F;var目录</h4><table>
 <thead>
 <tr>
-<th align="left">/var子目录</th>
+<th align="left">&#x2F;var子目录</th>
 <th align="left">功能（作用）</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">/var/lib/</td>
-<td align="left">程序运行中需要调用或改变的数据保存位置。如 MySQL 的数据库保存在 /var/lib/mysql/ 目录中</td>
+<td align="left">&#x2F;var&#x2F;lib&#x2F;</td>
+<td align="left">程序运行中需要调用或改变的数据保存位置。如 MySQL 的数据库保存在 &#x2F;var&#x2F;lib&#x2F;mysql&#x2F; 目录中</td>
 </tr>
 <tr>
-<td align="left">/var/log/</td>
-<td align="left">登陆文件放置的目录，其中所包含比较重要的文件如 /var/log/messages, /var/log/wtmp 等。</td>
+<td align="left">&#x2F;var&#x2F;log&#x2F;</td>
+<td align="left">登陆文件放置的目录，其中所包含比较重要的文件如 &#x2F;var&#x2F;log&#x2F;messages, &#x2F;var&#x2F;log&#x2F;wtmp 等。</td>
 </tr>
 <tr>
-<td align="left">/var/run/</td>
+<td align="left">&#x2F;var&#x2F;run&#x2F;</td>
 <td align="left">一些服务和程序运行后，它们的 PID（进程 ID）保存位置</td>
 </tr>
 <tr>
-<td align="left">/var/spool/</td>
-<td align="left">里面主要都是一些临时存放，随时会被用户所调用的数据，例如 /var/spool/mail/ 存放新收到的邮件，/var/spool/cron/ 存放系统定时任务。</td>
+<td align="left">&#x2F;var&#x2F;spool&#x2F;</td>
+<td align="left">里面主要都是一些临时存放，随时会被用户所调用的数据，例如 &#x2F;var&#x2F;spool&#x2F;mail&#x2F; 存放新收到的邮件，&#x2F;var&#x2F;spool&#x2F;cron&#x2F; 存放系统定时任务。</td>
 </tr>
 <tr>
-<td align="left">/var/www/</td>
+<td align="left">&#x2F;var&#x2F;www&#x2F;</td>
 <td align="left">RPM 包安装的 Apache 的网页主目录</td>
 </tr>
 <tr>
-<td align="left">/var/nis和/var/yp</td>
+<td align="left">&#x2F;var&#x2F;nis和&#x2F;var&#x2F;yp</td>
 <td align="left">NIS 服务机制所使用的目录，nis 主要记录所有网络中每一个 client 的连接信息；yp 是 linux 的 nis 服务的日志文件存放的目录</td>
 </tr>
 <tr>
-<td align="left">/var/tmp</td>
+<td align="left">&#x2F;var&#x2F;tmp</td>
 <td align="left">一些应用程序在安装或执行时，需要在重启后使用的某些文件，此目录能将该类文件暂时存放起来，完成后再行删除</td>
 </tr>
 </tbody></table>
@@ -616,10 +627,10 @@
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/nfs/"
+                            href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/dns/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">nfs</span>
+                                    <span class="post-nav-title-item">dns服务配置</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -641,7 +652,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">文件结构</div>
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="nav-text">系统文件结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%BB%93%E6%9E%84"><span class="nav-text">主要结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E7%9B%AE%E5%BD%95"><span class="nav-text">其他目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#usr%E7%9B%AE%E5%BD%95"><span class="nav-text">&#x2F;usr目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#var%E7%9B%AE%E5%BD%95"><span class="nav-text">&#x2F;var目录</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="nav-text">系统文件结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%BB%93%E6%9E%84"><span class="nav-text">主要结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E7%9B%AE%E5%BD%95"><span class="nav-text">其他目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#x2F-usr%E7%9B%AE%E5%BD%95"><span class="nav-text">&#x2F;usr目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#x2F-var%E7%9B%AE%E5%BD%95"><span class="nav-text">&#x2F;var目录</span></a></li></ol></li></ol>
 
     </div>
 </div>
@@ -668,13 +679,13 @@
               <span>2022</span>
               -
             
-            2023&nbsp;&nbsp;<i class="fa-regular fa-computer-classic"></i>&nbsp;&nbsp;<a href="/">CShrimp</a>
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">CShrimp</a>
         </div>
         
         <div class="theme-info info-item">
             <span class="powered-by-container">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 驱动</span>
                 <br> 
-            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.2.0</a>
+            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.2.3</a>
         </div>
         
         
@@ -792,6 +803,10 @@
 
 
 
+
+
+
+
 <div class="post-scripts pjax">
     
         
@@ -803,7 +818,6 @@
 
 <script src="/js/plugins/tabs.js"></script>
 
-    
     
 </div>
 

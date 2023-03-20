@@ -7,6 +7,10 @@
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="CShrimp">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://evan.beee.top" crossorigin>
     
     <!--- Seo Part-->
     
@@ -23,12 +27,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="hexo的配置文件">
     <meta name="twitter:description" content="Hexo Theme Redefine">
-    <meta name="twitter:image" content="/images/redefine-logo.svg">
+    <meta name="twitter:image" content="/images/redefine-favicon.svg">
     <!--- Icon Part-->
-    <link rel="icon" type="image/png" href="/images/redefine-logo.svg" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-logo.svg">
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
     <meta name="theme-color" content="#ec0e66">
-    <link rel="shortcut icon" href="/images/redefine-logo.svg">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
     
     <title>
         
@@ -42,16 +47,22 @@
     
 <link rel="stylesheet" href="/assets/fonts.css">
 
+    <!--- Font Part-->
     
     
+    
+    
+
+    <!--- Inject Part-->
     
     <script id="hexo-configurations">
     let REDEFINE = window.REDEFINE || {};
     REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#ec0e66","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-logo.svg","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/my-light.webp","dark":"/images/my-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"CSHRIMP 的魔幻小窝","custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.0","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":false,"audio":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]}}};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#ec0e66","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-favicon.svg","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/my-light.webp","dark":"/images/my-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"font_sizes":{"title":"2.8rem","subtitle":"1.5rem"},"line_height":1.2,"title":"CSHRIMP 的魔幻小窝","subtitle":{"enable":false,"list":[]},"custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.3","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":false,"audio":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}}};
     REDEFINE.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
     
+    <!--- Fontawesome Part-->
     
 <link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
 
@@ -442,7 +453,7 @@
 </tr>
 <tr>
 <td align="center">timezone</td>
-<td align="center">网站时区，hexo默认使用您电脑的时区一般的，对于中国大陆地区可以使用Asia/Shanghai</td>
+<td align="center">网站时区，hexo默认使用您电脑的时区一般的，对于中国大陆地区可以使用Asia&#x2F;Shanghai</td>
 </tr>
 </tbody></table>
 <p>其中，description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。author参数用于主题显示文章的作者。</p>
@@ -457,7 +468,7 @@
 </thead>
 <tbody><tr>
 <td align="center">url</td>
-<td align="center">网址, 必须以 http:// 或 https:// 开头</td>
+<td align="center">网址, 必须以 http:&#x2F;&#x2F; 或 https:&#x2F;&#x2F; 开头</td>
 <td align="center"></td>
 </tr>
 <tr>
@@ -468,7 +479,7 @@
 <tr>
 <td align="center">permalink</td>
 <td align="center">文章的永久链接格式</td>
-<td align="center">:year/:month/:day/:title/</td>
+<td align="center">:year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;</td>
 </tr>
 <tr>
 <td align="center">permalink_defaults</td>
@@ -492,7 +503,7 @@
 </tr>
 </tbody></table>
 <blockquote>
-<h1 id="网站存放在子目录"><a href="#网站存放在子目录" class="headerlink" title="网站存放在子目录"></a>网站存放在子目录</h1><p>如果您的网站存放在子目录中，例如<a href="http://example.com/blog">http://example.com/blog</a> ，则请将您的url设为<a href="http://example.com/blog">http://example.com/blog</a> 并把root设为/blog/</p>
+<h1 id="网站存放在子目录"><a href="#网站存放在子目录" class="headerlink" title="网站存放在子目录"></a>网站存放在子目录</h1><p>如果您的网站存放在子目录中，例如<a href="http://example.com/blog">http://example.com/blog</a> ，则请将您的url设为<a href="http://example.com/blog">http://example.com/blog</a> 并把root设为&#x2F;blog&#x2F;</p>
 </blockquote>
 <hr>
 <h3 id="Directory—–目录"><a href="#Directory—–目录" class="headerlink" title="Directory—–目录"></a>Directory—–目录</h3><table>
@@ -531,7 +542,7 @@
 <tr>
 <td align="center">code_dir</td>
 <td align="center">Include code 文件夹，source_dir 下的子目录</td>
-<td align="center">downloads/code</td>
+<td align="center">downloads&#x2F;code</td>
 </tr>
 <tr>
 <td align="center">i18n_dir</td>
@@ -661,7 +672,7 @@
 <h3 id="Metadata-elements"><a href="#Metadata-elements" class="headerlink" title="Metadata elements"></a>Metadata elements</h3><p><a class="link" target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>meta_generator: true</p>
 <hr>
-<h3 id="Date-Time-format—–日期-时间格式"><a href="#Date-Time-format—–日期-时间格式" class="headerlink" title="Date / Time format—–日期 / 时间格式"></a>Date / Time format—–日期 / 时间格式</h3><table>
+<h3 id="Date-x2F-Time-format—–日期-x2F-时间格式"><a href="#Date-x2F-Time-format—–日期-x2F-时间格式" class="headerlink" title="Date &#x2F; Time format—–日期 &#x2F; 时间格式"></a>Date &#x2F; Time format—–日期 &#x2F; 时间格式</h3><table>
 <thead>
 <tr>
 <th align="center">参数</th>
@@ -702,7 +713,7 @@
 </thead>
 <tbody><tr>
 <td align="center">per_page</td>
-<td align="center">每页显示的文章量 (0 = 关闭分页功能)</td>
+<td align="center">每页显示的文章量 (0 &#x3D; 关闭分页功能)</td>
 <td align="center">10</td>
 </tr>
 <tr>
@@ -712,8 +723,8 @@
 </tr>
 </tbody></table>
 <hr>
-<h3 id="Include-Exclude-file-s-—–包括或不包括目录和文件"><a href="#Include-Exclude-file-s-—–包括或不包括目录和文件" class="headerlink" title="Include / Exclude file(s)—–包括或不包括目录和文件"></a>Include / Exclude file(s)—–包括或不包括目录和文件</h3><p>在 Hexo 配置文件中，通过设置 include/exclude 可以让 Hexo 进行处理或忽略某些目录和文件夹。你可以使用 glob 表达式 对目录和文件进行匹配。</p>
-<p>include 和 exclude 选项只会应用到 source/ ，而 ignore 选项会应用到所有文件夹</p>
+<h3 id="Include-x2F-Exclude-file-s-—–包括或不包括目录和文件"><a href="#Include-x2F-Exclude-file-s-—–包括或不包括目录和文件" class="headerlink" title="Include &#x2F; Exclude file(s)—–包括或不包括目录和文件"></a>Include &#x2F; Exclude file(s)—–包括或不包括目录和文件</h3><p>在 Hexo 配置文件中，通过设置 include&#x2F;exclude 可以让 Hexo 进行处理或忽略某些目录和文件夹。你可以使用 glob 表达式 对目录和文件进行匹配。</p>
+<p>include 和 exclude 选项只会应用到 source&#x2F; ，而 ignore 选项会应用到所有文件夹</p>
 <table>
 <thead>
 <tr>
@@ -723,11 +734,11 @@
 </thead>
 <tbody><tr>
 <td align="center">include</td>
-<td align="center">Hexo 默认会不包括 source/ 下的文件和文件夹（包括名称以下划线和 . 开头的文件和文件夹，Hexo 的 _posts 和 _data 等目录除外）。通过设置此字段将使 Hexo 处理他们并将它们复制到 source 目录下。</td>
+<td align="center">Hexo 默认会不包括 source&#x2F; 下的文件和文件夹（包括名称以下划线和 . 开头的文件和文件夹，Hexo 的 _posts 和 _data 等目录除外）。通过设置此字段将使 Hexo 处理他们并将它们复制到 source 目录下。</td>
 </tr>
 <tr>
 <td align="center">exclude</td>
-<td align="center">Hexo 不包括 source/ 下的这些文件和目录</td>
+<td align="center">Hexo 不包括 source&#x2F; 下的这些文件和目录</td>
 </tr>
 <tr>
 <td align="center">ignore</td>
@@ -865,7 +876,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">hexo的配置文件</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-text">hexo的配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Site%E2%80%94%E2%80%93%E7%BD%91%E7%AB%99%E8%AE%BE%E7%BD%AE"><span class="nav-text">Site—–网站设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL%E2%80%94%E2%80%93%E7%BD%91%E5%9D%80%E8%AE%BE%E7%BD%AE"><span class="nav-text">URL—–网址设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E5%AD%98%E6%94%BE%E5%9C%A8%E5%AD%90%E7%9B%AE%E5%BD%95"><span class="nav-text">网站存放在子目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Directory%E2%80%94%E2%80%93%E7%9B%AE%E5%BD%95"><span class="nav-text">Directory—–目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Writing%E2%80%94%E2%80%93%E6%96%87%E7%AB%A0"><span class="nav-text">Writing—–文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Home-page-setting%E2%80%94%E2%80%93%E9%A6%96%E9%A1%B5%E8%AE%BE%E7%BD%AE"><span class="nav-text">Home page setting—–首页设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Category-amp-Tag%E2%80%94%E2%80%93%E5%88%86%E7%B1%BB-amp-%E6%A0%87%E7%AD%BE"><span class="nav-text">Category &amp; Tag—–分类 &amp; 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Metadata-elements"><span class="nav-text">Metadata elements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Date-Time-format%E2%80%94%E2%80%93%E6%97%A5%E6%9C%9F-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F"><span class="nav-text">Date &#x2F; Time format—–日期 &#x2F; 时间格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pagination%E2%80%94%E2%80%93%E5%88%86%E9%A1%B5"><span class="nav-text">Pagination—–分页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Include-Exclude-file-s-%E2%80%94%E2%80%93%E5%8C%85%E6%8B%AC%E6%88%96%E4%B8%8D%E5%8C%85%E6%8B%AC%E7%9B%AE%E5%BD%95%E5%92%8C%E6%96%87%E4%BB%B6"><span class="nav-text">Include &#x2F; Exclude file(s)—–包括或不包括目录和文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Extensions%E2%80%94%E2%80%93%E6%89%A9%E5%B1%95"><span class="nav-text">Extensions—–扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deployment%E2%80%94%E2%80%93%E9%83%A8%E7%BD%B2"><span class="nav-text">Deployment—–部署</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-text">hexo的配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Site%E2%80%94%E2%80%93%E7%BD%91%E7%AB%99%E8%AE%BE%E7%BD%AE"><span class="nav-text">Site—–网站设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL%E2%80%94%E2%80%93%E7%BD%91%E5%9D%80%E8%AE%BE%E7%BD%AE"><span class="nav-text">URL—–网址设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E5%AD%98%E6%94%BE%E5%9C%A8%E5%AD%90%E7%9B%AE%E5%BD%95"><span class="nav-text">网站存放在子目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Directory%E2%80%94%E2%80%93%E7%9B%AE%E5%BD%95"><span class="nav-text">Directory—–目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Writing%E2%80%94%E2%80%93%E6%96%87%E7%AB%A0"><span class="nav-text">Writing—–文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Home-page-setting%E2%80%94%E2%80%93%E9%A6%96%E9%A1%B5%E8%AE%BE%E7%BD%AE"><span class="nav-text">Home page setting—–首页设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Category-amp-Tag%E2%80%94%E2%80%93%E5%88%86%E7%B1%BB-amp-%E6%A0%87%E7%AD%BE"><span class="nav-text">Category &amp; Tag—–分类 &amp; 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Metadata-elements"><span class="nav-text">Metadata elements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Date-x2F-Time-format%E2%80%94%E2%80%93%E6%97%A5%E6%9C%9F-x2F-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F"><span class="nav-text">Date &#x2F; Time format—–日期 &#x2F; 时间格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pagination%E2%80%94%E2%80%93%E5%88%86%E9%A1%B5"><span class="nav-text">Pagination—–分页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Include-x2F-Exclude-file-s-%E2%80%94%E2%80%93%E5%8C%85%E6%8B%AC%E6%88%96%E4%B8%8D%E5%8C%85%E6%8B%AC%E7%9B%AE%E5%BD%95%E5%92%8C%E6%96%87%E4%BB%B6"><span class="nav-text">Include &#x2F; Exclude file(s)—–包括或不包括目录和文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Extensions%E2%80%94%E2%80%93%E6%89%A9%E5%B1%95"><span class="nav-text">Extensions—–扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deployment%E2%80%94%E2%80%93%E9%83%A8%E7%BD%B2"><span class="nav-text">Deployment—–部署</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
@@ -892,13 +903,13 @@
               <span>2022</span>
               -
             
-            2023&nbsp;&nbsp;<i class="fa-regular fa-computer-classic"></i>&nbsp;&nbsp;<a href="/">CShrimp</a>
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">CShrimp</a>
         </div>
         
         <div class="theme-info info-item">
             <span class="powered-by-container">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 驱动</span>
                 <br> 
-            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.2.0</a>
+            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.2.3</a>
         </div>
         
         
@@ -1016,6 +1027,10 @@
 
 
 
+
+
+
+
 <div class="post-scripts pjax">
     
         
@@ -1027,7 +1042,6 @@
 
 <script src="/js/plugins/tabs.js"></script>
 
-    
     
 </div>
 
