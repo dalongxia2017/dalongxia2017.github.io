@@ -58,7 +58,7 @@
     <script id="hexo-configurations">
     let REDEFINE = window.REDEFINE || {};
     REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#ec0e66","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-favicon.svg","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/my-light.webp","dark":"/images/my-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"font_sizes":{"title":"2.8rem","subtitle":"1.5rem"},"line_height":1.2,"title":"CSHRIMP 的魔幻小窝","subtitle":{"enable":false,"list":[]},"custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.3","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":false,"audio":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}}};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#ec0e66","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-favicon.svg","og_image":{"enable":false,"image_url":null},"article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"/images/my-light.webp","dark":"/images/my-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"font_sizes":{"title":"2.6rem","subtitle":"1.5rem"},"line_height":1.2,"title":"CSHRIMP 的魔幻小窝","subtitle":{"enable":true,"list":["科技","网络","整活","逗比","开发","美工","删库","游戏","崩溃","AI"]},"custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac","custom_font":{"enable":false,"font_family":null,"font_url":null}},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.2.3","friend_links":{"columns":2},"home_article":{"date_format":"auto","category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":3}},"plugins":{"aplayer":{"enable":false,"audio":[{"name":null,"artist":null,"url":null,"cover":null},{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}}};
     REDEFINE.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
     
@@ -382,27 +382,29 @@
 <li><h3 id="-10"><a href="#-10" class="headerlink" title></a><a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/" title="基本系统文件结构">基本系统文件结构</a></h3></li>
 <li><h3 id="-11"><a href="#-11" class="headerlink" title></a><a href="/2023/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/yum%E6%9C%AC%E5%9C%B0%E6%BA%90/" title="yum本地源">yum本地源</a></h3></li>
 <li><h3 id="-12"><a href="#-12" class="headerlink" title></a><a href="/2023/02/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/%E7%AE%A1%E7%90%86RPM%E5%8C%85TAR%E5%8C%85/" title="管理RPM包TAR包">管理RPM包TAR包</a></h3></li>
-<li><h3 id="磁盘管理-amp-LVM"><a href="#磁盘管理-amp-LVM" class="headerlink" title="磁盘管理&amp;LVM"></a>磁盘管理&amp;LVM</h3></li>
-<li><h3 id="文件共享"><a href="#文件共享" class="headerlink" title="文件共享"></a>文件共享</h3><ul>
-<li><h3 id="-13"><a href="#-13" class="headerlink" title></a><a href="/2023/03/05/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/samba/" title="samba">samba</a></h3></li>
-<li><h3 id="-14"><a href="#-14" class="headerlink" title></a><a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/nfs/" title="nfs">nfs</a></h3></li>
+<li><h3 id="-13"><a href="#-13" class="headerlink" title></a><a href="/2023/03/21/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86&LVM/" title="磁盘管理&amp;LVM‘ %}&lt;&#x2F;h3&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;h3 id&#x3D;&quot;文件共享&quot;&gt;&lt;a href&#x3D;&quot;#文件共享&quot; class&#x3D;&quot;headerlink&quot; title&#x3D;&quot;文件共享&quot;&gt;&lt;&#x2F;a&gt;文件共享&lt;&#x2F;h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;h3 id&#x3D;&quot;-14&quot;&gt;&lt;a href&#x3D;&quot;#-14&quot; class&#x3D;&quot;headerlink&quot; title&#x3D;&quot;&quot;&gt;&lt;&#x2F;a&gt;{% post_link 操作系统学习&#x2F;centos65&#x2F;samba samba&#39;">磁盘管理&amp;LVM‘ %}&lt;&#x2F;h3&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;h3 id&#x3D;&quot;文件共享&quot;&gt;&lt;a href&#x3D;&quot;#文件共享&quot; class&#x3D;&quot;headerlink&quot; title&#x3D;&quot;文件共享&quot;&gt;&lt;&#x2F;a&gt;文件共享&lt;&#x2F;h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;h3 id&#x3D;&quot;-14&quot;&gt;&lt;a href&#x3D;&quot;#-14&quot; class&#x3D;&quot;headerlink&quot; title&#x3D;&quot;&quot;&gt;&lt;&#x2F;a&gt;{% post_link 操作系统学习&#x2F;centos65&#x2F;samba samba&#39;</a></h3></li>
+<li><h3 id="-15"><a href="#-15" class="headerlink" title></a><a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/nfs/" title="nfs">nfs</a></h3></li>
 </ul>
 </li>
-<li><h3 id="-15"><a href="#-15" class="headerlink" title></a><a href="/2023/03/05/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/dhcp/" title="DHCP服务器">DHCP服务器</a></h3></li>
-<li><h3 id="-16"><a href="#-16" class="headerlink" title></a><a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/dns/" title="DNS服务器">DNS服务器</a></h3></li>
-<li><h3 id="-17"><a href="#-17" class="headerlink" title></a><a href="/2023/03/18/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/apache/" title="web服务器">web服务器</a></h3></li>
-<li><h3 id="-18"><a href="#-18" class="headerlink" title></a><a href="/2023/03/19/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/vsftpd/" title="FTP服务器">FTP服务器</a></h3></li>
+<li><h3 id="-16"><a href="#-16" class="headerlink" title></a><a href="/2023/03/05/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/dhcp/" title="DHCP服务器">DHCP服务器</a></h3></li>
+<li><h3 id="-17"><a href="#-17" class="headerlink" title></a><a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/dns/" title="DNS服务器">DNS服务器</a></h3></li>
+<li><h3 id="-18"><a href="#-18" class="headerlink" title></a><a href="/2023/03/18/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/apache/" title="web服务器">web服务器</a></h3></li>
+<li><h3 id="-19"><a href="#-19" class="headerlink" title></a><a href="/2023/03/19/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/vsftpd/" title="FTP服务器">FTP服务器</a></h3></li>
 <li><h3 id="远程访问"><a href="#远程访问" class="headerlink" title="远程访问"></a>远程访问</h3><ul>
-<li><h3 id="-19"><a href="#-19" class="headerlink" title></a><a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/" title="Telnet">Telnet</a></h3></li>
-<li><h3 id="-20"><a href="#-20" class="headerlink" title></a><a href="/2023/03/10/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/ssh/" title="ssh">ssh</a></h3></li>
+<li><h3 id="-20"><a href="#-20" class="headerlink" title></a><a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/" title="Telnet">Telnet</a></h3></li>
+<li><h3 id="-21"><a href="#-21" class="headerlink" title></a><a href="/2023/03/10/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/ssh/" title="ssh">ssh</a></h3></li>
 </ul>
 </li>
-<li><h3 id="-21"><a href="#-21" class="headerlink" title></a><a href="/2023/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/iptables/" title="防火墙设置（iptables）（未完）">防火墙设置（iptables）（未完）</a></h3></li>
+<li><h3 id="-22"><a href="#-22" class="headerlink" title></a><a href="/2023/03/21/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/iptables/" title="防火墙设置（iptables）（未完）">防火墙设置（iptables）（未完）</a></h3></li>
 </ul>
 </li>
 <li><h3 id="Windows-Server"><a href="#Windows-Server" class="headerlink" title="Windows Server"></a>Windows Server</h3><ul>
-<li><h3 id="-22"><a href="#-22" class="headerlink" title></a><a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/" title="安装windows server2008 r2">安装windows server2008 r2</a></h3></li>
-<li><h3 id="-23"><a href="#-23" class="headerlink" title></a><a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/hyperv/" title="安装与配置hyper-v">安装与配置hyper-v</a></h3></li>
+<li><h3 id="-23"><a href="#-23" class="headerlink" title></a><a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/" title="安装windows server2008 r2">安装windows server2008 r2</a></h3></li>
+<li><h3 id="-24"><a href="#-24" class="headerlink" title></a><a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/hyperv/" title="安装与配置hyper-v">安装与配置hyper-v</a></h3></li>
 <li><h3 id="部署与管理ad域"><a href="#部署与管理ad域" class="headerlink" title="部署与管理ad域"></a>部署与管理ad域</h3></li>
 <li><h3 id="管理用户账户和组"><a href="#管理用户账户和组" class="headerlink" title="管理用户账户和组"></a>管理用户账户和组</h3></li>
 <li><h3 id="管理文件系统与共享资源"><a href="#管理文件系统与共享资源" class="headerlink" title="管理文件系统与共享资源"></a>管理文件系统与共享资源</h3></li>
@@ -428,8 +430,8 @@
 <li><h2 id="渗透"><a href="#渗透" class="headerlink" title="渗透"></a>渗透</h2></li>
 <li><h2 id="加固"><a href="#加固" class="headerlink" title="加固"></a>加固</h2></li>
 </ul>
-</li>
-</ul>
+
+
 <h1 id="努力努力再努力，拼搏拼搏再拼搏"><a href="#努力努力再努力，拼搏拼搏再拼搏" class="headerlink" title="努力努力再努力，拼搏拼搏再拼搏"></a><strong>努力努力再努力，拼搏拼搏再拼搏</strong></h1>
             
         </div>
@@ -561,6 +563,13 @@
 
 
 
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js"></script>
 
 
 
