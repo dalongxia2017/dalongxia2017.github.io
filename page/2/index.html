@@ -158,6 +158,8 @@
                                     href="#" onClick="return false;">
                                     
                                         
+                                            <i class="fa-regular fa-navicon"></i>
+                                        
                                         目录&nbsp;<i class="fa-solid fa-chevron-down"></i>
                                     
                                 </a>
@@ -278,6 +280,8 @@
                         href="#" onClick="return false;">
                             
                                 
+                                    <i class="fa-regular fa-navicon"></i>
+                                
                                 目录&nbsp;<i class="fa-solid fa-chevron-down"></i>
                             
                         </a>
@@ -353,6 +357,211 @@
                 
                     <div class="home-content-container fade-in-down-animation">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/">
+                        文件结构
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        系统文件结构主要结构
+
+
+一级目录
+功能（作用）
+
+
+
+&#x2F;bin&#x2F;
+存放系统命令，普通用户和 root 都可以执行。放在 &#x2F;bin 下的命令在单用户模式下也可以执行
+
+
+&#x2F;boot&#x2F;
+系统启动目录，保...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Mar 17 2023 14:15:39 GMT+0800">
+                
+                    2023-03-17
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/">阅读全文<span class="seo-reader-text">文件结构</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/dns/">
+                        dns服务配置
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        安装bind和bind-utils1# yum install bind bind-utils -y
+
+启动重启关闭dns服务123# service named start# service named restart# service named...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Mar 17 2023 07:31:39 GMT+0800">
+                
+                    2023-03-17
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/dns/">阅读全文<span class="seo-reader-text">dns服务配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/nfs/">
+                        nfs
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        nfs服务端安装和配置1、安装nfs-utils和rpcbind1# yum install nfs-utils rpcbind -y
+
+2、查询安装情况123456# rpm -qa | grep nfsnfs-utils-xxx-xxx-xxxn...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Mar 17 2023 07:31:39 GMT+0800">
+                
+                    2023-03-17
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/nfs/">阅读全文<span class="seo-reader-text">nfs</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/">
+                        telnet的配置和使用
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        安装telnet服务端1、安装telnet
+2、配置 &#x2F;etc&#x2F;xinetd.d&#x2F;telnet 文件启动telnet
+3、设置最大连接数配置文件内添加 instances&#x3D;最大连接数
+4、启动telnet
+5、...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Mar 16 2023 21:41:39 GMT+0800">
+                
+                    2023-03-16
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/telnet/">阅读全文<span class="seo-reader-text">telnet的配置和使用</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/hyperv/">
+                        hyper-v的安装和配置
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        安装1、给虚拟机开启虚拟化在虚拟机的cpu选项寻找vt-x&#x2F;amd-v，并启动
+2、打开服务器管理器
+点击角色 -&gt; 添加角色 -&gt; 服务器角色 -&gt; Hyper-v -&gt; 下一步
+
+3、选择网卡创建虚拟网络（打钩即...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Mar 16 2023 16:18:39 GMT+0800">
+                
+                    2023-03-16
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/hyperv/">阅读全文<span class="seo-reader-text">hyper-v的安装和配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
         
             <li class="home-article-item">
 
@@ -443,7 +652,7 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/03/13/%E5%A5%87%E5%A6%99%E7%8E%A9%E6%84%8F/ai%E7%BB%98%E5%9B%BE/stable-diffusion-webui/stable-diffusion-webui/">
+                    <a href="/2023/03/13/%E5%A5%87%E5%A6%99%E7%8E%A9%E6%84%8F/ai/stable-diffusion-webui/stable-diffusion-webui/">
                         stable-diffusion-webui的折腾
                     </a>
                 </h3>
@@ -468,7 +677,7 @@
         
     </div>
 
-    <a href="/2023/03/13/%E5%A5%87%E5%A6%99%E7%8E%A9%E6%84%8F/ai%E7%BB%98%E5%9B%BE/stable-diffusion-webui/stable-diffusion-webui/">阅读全文<span class="seo-reader-text">stable-diffusion-webui的折腾</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2023/03/13/%E5%A5%87%E5%A6%99%E7%8E%A9%E6%84%8F/ai/stable-diffusion-webui/stable-diffusion-webui/">阅读全文<span class="seo-reader-text">stable-diffusion-webui的折腾</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -553,206 +762,6 @@
     </div>
 
     <a href="/2023/03/12/%E5%A5%87%E5%A6%99%E7%8E%A9%E6%84%8F/hexo/%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98/">阅读全文<span class="seo-reader-text">更改hexo的主题</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/03/11/%E5%A5%87%E5%A6%99%E7%8E%A9%E6%84%8F/hexo/config.yml%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E8%A7%A3%E9%87%8A/">
-                        hexo的配置文件
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        hexo的配置文件Docs: https://hexo.io/docs/configuration.html Source: https://github.com/hexojs/hexo/ 文档原文链接，以及hexo的源码
-
-Site—–网站设置
-
-...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Mar 11 2023 18:20:39 GMT+0800">
-                
-                    2023-03-11
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2023/03/11/%E5%A5%87%E5%A6%99%E7%8E%A9%E6%84%8F/hexo/config.yml%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E8%A7%A3%E9%87%8A/">阅读全文<span class="seo-reader-text">hexo的配置文件</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/03/11/%E5%A5%87%E5%A6%99%E7%8E%A9%E6%84%8F/hexo/%E5%AE%89%E8%A3%85hexo/">
-                        安装hexo
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        部署环境：ubuntu server22.04.2
-1、安装nodejs&amp;npm以及必要工具1# apt install nodejs npm vim git -y
-
-2、安装hexo-cli1# sudo npm install hexo-...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Mar 11 2023 17:23:39 GMT+0800">
-                
-                    2023-03-11
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2023/03/11/%E5%A5%87%E5%A6%99%E7%8E%A9%E6%84%8F/hexo/%E5%AE%89%E8%A3%85hexo/">阅读全文<span class="seo-reader-text">安装hexo</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/03/10/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/ssh/">
-                        ssh的使用和配置
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        安装ssh安装openssh客户端
-1# yum install openssh-client -y
-
-安装openssh服务端
-1# yum install openssh-server -y
-
-远程连接远程连接到其他设备ssh 账户名@ip地址&...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Mar 10 2023 13:15:39 GMT+0800">
-                
-                    2023-03-10
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2023/03/10/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/ssh/">阅读全文<span class="seo-reader-text">ssh的使用和配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/03/05/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/dhcp/">
-                        dhcp服务器配置
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        服务端的安装和配置安装dhcp服务1# yum install dhcp -y
-
-启动、重启和关闭dhcp服务123# service dhcpd start# service dhcpd restart# service dhcpd stop
-
-配...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Mar 05 2023 18:24:39 GMT+0800">
-                
-                    2023-03-05
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2023/03/05/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/dhcp/">阅读全文<span class="seo-reader-text">dhcp服务器配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/03/05/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/samba/">
-                        samba配置
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        安装和配置samba服务端1、安装samba
-2、启动samba服务
-3、关闭samba服务
-4、编辑配置文件，&#x2F;etc&#x2F;samba&#x2F;smb.conf12345678910111213141516171819202122...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Mar 05 2023 18:24:39 GMT+0800">
-                
-                    2023-03-05
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2023/03/05/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/samba/">阅读全文<span class="seo-reader-text">samba配置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
             </li>
