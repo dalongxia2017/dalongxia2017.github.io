@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		4、iptables用户和用户组 | 
+	 
+	CSHRIMP&#39;S BLOG
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico2023/02/19/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96/VMware/4%E3%80%81vmware%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "wujun234.com";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">CSHRIMP'S BLOG</a>
+
+	<ul id="menu">
+    
+      <li class="menu-item">
+        <a href="/about" class="menu-item-link">ABOUT</a>
+      </li>
+    
+
+    
+
+    
+
+    
+  
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1、虚拟化&容器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										VMware
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/02/19/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/VMware/1%E3%80%81vmware%E4%B8%8B%E8%BD%BD/">
+                     
+										    1、VMware Workstation Pro 下载
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/19/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/VMware/2%E3%80%81vmware%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+                     
+										    2、VMware基本操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/20/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/VMware/3%E3%80%81vmware%E5%BF%AB%E7%85%A7%E5%8A%9F%E8%83%BD/">
+                     
+										    3、vmware快照功能
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/19/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/VMware/4%E3%80%81vmware%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">
+                     
+										    4、vmware网络配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/04/01/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/docker/1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFdocker/">
+                     
+										    1、什么是docker
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/01/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/docker/2%E3%80%81docker%E5%AE%89%E8%A3%85/">
+                     
+										    2、docker安装
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2、操作系统学习
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										centos65
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/02/19/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/01%E3%80%81Centos%E5%AE%89%E8%A3%85/">
+                     
+										    1、Centos6.5的安装
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/20/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/02%E3%80%81%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/">
+                     
+										    2、linux基本操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/20/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/03%E3%80%81vim/">
+                     
+										    3、vi/vim的使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2023/02/21/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/04%E3%80%81%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84%E7%9A%84%E6%9D%83%E9%99%90/">
+                     
+										    4、iptables用户和用户组
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/23/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/05%E3%80%81%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB%E4%B8%8E%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/">
+                     
+										    5、运行级别与进程管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/15/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/06%E3%80%81%E5%9F%BA%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">
+                     
+										    6、基本网络配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/17/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/07%E3%80%81%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/">
+                     
+										    7、文件结构
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/20/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/08%E3%80%81yum%E6%9C%AC%E5%9C%B0%E6%BA%90/">
+                     
+										    8、Centos6.5的yum本地源
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/23/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/09%E3%80%81%E7%AE%A1%E7%90%86RPM%E5%8C%85TAR%E5%8C%85/">
+                     
+										    9、管理RPM包TAR包
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/21/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/10%E3%80%81%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86&LVM/">
+                     
+										    10、磁盘管理&LVM
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/05/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/11%E3%80%81samba/">
+                     
+										    11、samba配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/17/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/12%E3%80%81nfs/">
+                     
+										    12、nfs
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/05/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/13%E3%80%81dhcp/">
+                     
+										    13、dhcp服务器配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/17/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/14%E3%80%81dns/">
+                     
+										    14、dns服务配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/18/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/15%E3%80%81apache/">
+                     
+										    15、web服务器搭建配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/19/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/16%E3%80%81vsftpd/">
+                     
+										    16、vsftp服务器配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/16/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/17%E3%80%81telnet/">
+                     
+										    17、telnet的配置和使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/10/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/18%E3%80%81ssh/">
+                     
+										    18、ssh的使用和配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/22/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/19%E3%80%81iptables/">
+                     
+										    19、iptables的基本配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										windows-server-2008-r2
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/04/11/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/ad/">
+                     
+										    Active Directory域
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/16/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/hyperv/">
+                     
+										    hyper-v的安装和配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/16/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/iis/">
+                     
+										    iis
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/16/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/">
+                     
+										    windows server 2008 r2的安装
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/10/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/%E7%AE%A1%E7%90%86%E7%94%A8%E6%88%B7%E8%B4%A6%E6%88%B7%E5%92%8C%E7%BB%84/">
+                     
+										    管理用户账户和组
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/10/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/windows-server-2008-r2/%E9%85%8D%E7%BD%AE%E4%B8%8E%E7%AE%A1%E7%90%86%E5%9F%BA%E6%9C%AC%E7%A3%81%E7%9B%98%E5%92%8C%E5%8A%A8%E6%80%81%E7%A3%81%E7%9B%98/">
+                     
+										    基本磁盘管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										ai
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										stable-diffusion-webui
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/03/13/ai/stable-diffusion-webui/stable-diffusion-webui/">
+                     
+										    stable-diffusion-webui的折腾
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hexo
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/03/11/hexo/config.yml%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E8%A7%A3%E9%87%8A/">
+                     
+										    hexo的配置文件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/12/hexo/hexo+github/">
+                     
+										    利用GitHub托管博客
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/11/hexo/%E5%AE%89%E8%A3%85hexo/">
+                     
+										    安装hexo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/12/hexo/%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98/">
+                     
+										    更改hexo的主题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/17/hexo/%E6%B7%BB%E5%8A%A0%E7%9C%8B%E6%9D%BF%E5%A8%98/">
+                     
+										    添加看板娘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/1970/01/01/%E4%BE%8B%E5%AD%90/">
+                     
+										    test
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										小软件
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										all
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/03/27/%E5%B0%8F%E8%BD%AF%E4%BB%B6/all/%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/">
+                     
+										    第三方网易云音乐
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+	4、iptables用户和用户组
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>CShrimp</span>
+	<span>2023-02-21 13:20:39</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<h1 id="用户和用户组管理"><a href="#用户和用户组管理" class="headerlink" title="用户和用户组管理"></a>用户和用户组管理</h1><p>对于用户和用户组增加、删除、修改</p>
+<h3 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h3><p>useradd 用户名 [选项]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">useradd ZhangSan</span></span><br></pre></td></tr></table></figure>
+<p>常用选项：</p>
+<ul>
+<li>-c：注释，会显示在passwd的注释栏上</li>
+<li>-d：登录目录</li>
+<li>-g：加入的用户组</li>
+<li>-G：附属的用户组</li>
+<li>-s：指定shell</li>
+<li>-u：指定uid</li>
+</ul>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p>userdel 用户名</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">userdel ZhangSan</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改用户权限"><a href="#修改用户权限" class="headerlink" title="修改用户权限"></a>修改用户权限</h3><p>usermod [选项] 用户名</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">usermod ZhangSan</span></span><br></pre></td></tr></table></figure>
+<p>常用选项：</p>
+<ul>
+<li>-c：注释</li>
+<li>-d：修改主目录</li>
+<li>-e：修改密码过期时间</li>
+<li>-f：缓冲时间，密码过期多少天禁用账号</li>
+<li>-g：修改用户所属组</li>
+<li>-G：修改用户附属所属组</li>
+<li>-I：修改用户名称</li>
+<li>-L：锁定用户，密码作废</li>
+<li>-s：切换登入的shell</li>
+<li>-u：修改用户id</li>
+<li>-U：解除密码锁定</li>
+</ul>
+<h3 id="修改用户密码"><a href="#修改用户密码" class="headerlink" title="修改用户密码"></a>修改用户密码</h3><p>passwd 用户名 [选项]</p>
+<p><strong>注：该指令需要拥有su权限，而且输入密码时没有回显</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">passwd ZhangSan</span></span><br><span class="line">Enter new UNIX password：</span><br><span class="line">Retype new UNIX password：</span><br><span class="line">passwd: password updated successfully</span><br><span class="line"><span class="meta prompt_">#</span></span><br></pre></td></tr></table></figure>
+<p>常用选项：</p>
+<ul>
+<li>-d：删除密码</li>
+<li>-f：强制用户下次登入修改密码</li>
+<li>-l：锁定账号</li>
+</ul>
+<h3 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h3><p>su [用户名]<br>注：不写用户默认切换root</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">su ZhangSan</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">whoami</span></span></span><br><span class="line">ZhangSan</span><br></pre></td></tr></table></figure>
+
+<h3 id="新建用户组"><a href="#新建用户组" class="headerlink" title="新建用户组"></a>新建用户组</h3><p>groupadd 组名称 [选项]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">groupadd ZhangSan</span></span><br></pre></td></tr></table></figure>
+<p>常用选项：</p>
+<ul>
+<li>-g：指定新建的用户组id</li>
+<li>-r：创建为系统工作组，gid小于500</li>
+</ul>
+<h1 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h1><p>文件权限有读、写、执行，对应的符号是r、w、x，对应数字是4，2，1</p>
+<h2 id="利用chmod命令更改文件权限："><a href="#利用chmod命令更改文件权限：" class="headerlink" title="利用chmod命令更改文件权限："></a>利用chmod命令更改文件权限：</h2><p>chmod [权限] [路径]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chmod</span> 777 ZhangSan</span></span><br></pre></td></tr></table></figure>
+<p>权限：文件所有者，文件所有者同组成员，其他人</p>
+<table>
+<thead>
+<tr>
+<th align="center">权限</th>
+<th align="center">rwx</th>
+<th align="center">八进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">只读</td>
+<td align="center">r–</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">只写</td>
+<td align="center">-w-</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">只执行</td>
+<td align="center">–x</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">无权限</td>
+<td align="center">—</td>
+<td align="center">0</td>
+</tr>
+</tbody></table>
+<p>也可以使用加和减增加或删除权限</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chmod</span> u+r,g+w,o+x zhangsan</span></span><br></pre></td></tr></table></figure>
+<p>解释：给予所有者读取权限，给予同组成员写入权限，给予其他用户执行权限</p>
+<table>
+<thead>
+<tr>
+<th align="center">字母</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">u</td>
+<td align="center">用户</td>
+</tr>
+<tr>
+<td align="center">g</td>
+<td align="center">组成员</td>
+</tr>
+<tr>
+<td align="center">o</td>
+<td align="center">其他用户</td>
+</tr>
+</tbody></table>
+<p>人话翻译：u等于你，g等于同班同学，o等于其他班的同学</p>
+<h2 id="利用chown修改文件所属者"><a href="#利用chown修改文件所属者" class="headerlink" title="利用chown修改文件所属者"></a>利用chown修改文件所属者</h2><p>chown [-R] 用户名 路径</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">chowm ZhangSan Li4.txt</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="利用chgrp修改文件所属组"><a href="#利用chgrp修改文件所属组" class="headerlink" title="利用chgrp修改文件所属组"></a>利用chgrp修改文件所属组</h2><p>chgrp 组名 路径</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chgrp</span> ZhangSan Li4.txt</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="利用umask修改默认权限"><a href="#利用umask修改默认权限" class="headerlink" title="利用umask修改默认权限"></a>利用umask修改默认权限</h2><p>umask [减去的权限]</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">umask</span></span></span><br><span class="line">022</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">umask</span> 077</span></span><br></pre></td></tr></table></figure>
+<p>不带任何东西只执行umask显示当前权限，022指755权限</p>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2023/02/23/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/05%E3%80%81%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB%E4%B8%8E%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  5、运行级别与进程管理
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2023/02/20/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos65/03%E3%80%81vim/">
+                3、vi/vim的使用
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+	<a href="/">CShrimp</a> 
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+<!--  -->
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
