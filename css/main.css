@@ -31,7 +31,7 @@ a {
 	top: 0px;
 	width: 100%;
 	height: 50px;
-	background: #2b6964;
+	background:#2f3542;
 	z-index: 98;
     display: flex;
     align-items: baseline;
@@ -40,8 +40,8 @@ a {
 }
 #title {
 	font-size: 20px;
-	color: #b0ddce;
-	padding: 10px 15px;
+	color: #a4b0be;
+	padding: 10px 300px;
 }
 #menu {
 	position:fixed;
@@ -55,7 +55,7 @@ a {
 }
 #menu .menu-item-link{
 	font-size: 12px;
-	color: #b0ddce;
+	color: #a4b0be;
 }
 #menu .menu-item-link:hover {
 	border-bottom: 1px solid;
@@ -64,12 +64,12 @@ a {
 /* sidebar */
 #totop-toggle{
 	position: fixed;
-    bottom: 80px;
-    right: 50px;
+    bottom: 100px;
+    right: 200px;
 }
 #sidebar-toggle{
 	top: 60px;
-	left: 260px;
+	left: 510px;
 	position: absolute;
 }
 .toggle {
@@ -90,28 +90,28 @@ a {
 	flex-grow:1;
 	flex-shrink:1;
 	flex-basis: 0;
-	width: 250px;
-	left: -250px;
+	width: 500px;
+	left: -500px;
 	height: 100%;
 	top: 0px;
-	background: #41555d;
+	background: #2f3542;
 	z-index: 99;
 }
 #sidebar.on {
   left: 0;
 }
 #sidebar.off {
-  left: -250px;
+  left: -500px;
 }
 #search-input {
 	position: absolute;
-	width: 230px;
+	width: 480px;
 	height: 35px;
 	margin: 5px 10px 5px 10px;
 	border-radius:5px;
-	background: #3f4448;
-	text-indent: 20px;
-	color: #64cfff;
+	background: #747d8c;
+	text-indent: 25px;
+	color: #ffffff;
 }
 .sidebar-toc {
 	position: absolute;
@@ -393,7 +393,7 @@ table td {
 #footer{
 	font-size: 14px;
 	height: 50px;
-	background-color: #60281e;
+	background-color: #2f3542;
 	color: #dfb7b7;
 	text-align: center;
 }
