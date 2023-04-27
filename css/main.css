@@ -65,7 +65,7 @@ a {
 #totop-toggle{
 	position: fixed;
     bottom: 100px;
-    right: 200px;
+    right: 50px;
 }
 #sidebar-toggle{
 	top: 60px;
