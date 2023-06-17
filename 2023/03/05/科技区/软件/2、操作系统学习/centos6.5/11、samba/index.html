@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		11、samba配置 | 
+	 
+	CSHRIMP&#39;S BLOG
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	<!-- 
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+ -->
+	<!-- 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+ -->
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<link rel="stylesheet" href="/fontawesome-free-6.4.0-web/css/all.css">
+
+	
+<link rel="stylesheet" href="/build/styles/darcula.min.css">
+
+	<!-- 
+<link rel="stylesheet" href="/dist/jquery.fancybox.min.css">
+ -->
+
+	<!-- 
+<script src="/dist/jquery.min.js"></script>
+ -->
+	<!-- 
+<script src="/dist/jquery.fancybox.min.js"></script>
+ -->
+	
+<script src="/build/highlight.min.js"></script>
+
+	<!-- 
+<script src="/js/jquery.pjax.min.js"></script>
+ -->
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	<!-- 
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+ -->
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	<!-- 
+	 -->
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">CSHRIMP'S BLOG</a>
+
+	<ul id="menu">
+    
+      <li class="menu-item">
+        <a href="/about" class="menu-item-link">ABOUT</a>
+      </li>
+    
+
+    
+
+    
+
+    
+  
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/25/todo/">
+                     
+										    计划列表
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										科技区
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										硬件
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										网络设备
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										华为体系
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/05/27/%E7%A7%91%E6%8A%80%E5%8C%BA/%E7%A1%AC%E4%BB%B6/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/%E5%8D%8E%E4%B8%BA%E4%BD%93%E7%B3%BB/0%E3%80%81%E8%BF%99%E6%98%AF%E4%BC%B8/">
+                     
+										    0、这是伸
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										软件
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1、虚拟化&容器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										VMware
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/02/20/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/VMware/3%E3%80%81vmware%E5%BF%AB%E7%85%A7%E5%8A%9F%E8%83%BD/">
+                     
+										    3、vmware快照功能
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/04/01/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/docker/1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFdocker/">
+                     
+										    1、什么是docker
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/01/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/docker/2%E3%80%81docker%E5%AE%89%E8%A3%85/">
+                     
+										    2、docker安装
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										openstack
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/06/09/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/openstack/1%E3%80%81OpenStack%E6%90%AD%E5%BB%BA/">
+                     
+										    1、OpenStack搭建
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										openstack(single)
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/06/13/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/openstack(single)/1%E3%80%81OpenStack%E6%90%AD%E5%BB%BA/">
+                     
+										    1、OpenStack搭建
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										vmware
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/02/19/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/vmware/1%E3%80%81vmware%E4%B8%8B%E8%BD%BD/">
+                     
+										    1、VMware Workstation Pro 下载
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/19/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/vmware/2%E3%80%81vmware%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+                     
+										    2、VMware基本操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/20/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/vmware/3%E3%80%81vmware%E5%BF%AB%E7%85%A7%E5%8A%9F%E8%83%BD/">
+                     
+										    3、vmware快照功能
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/19/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/vmware/4%E3%80%81vmware%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">
+                     
+										    4、vmware网络配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2、操作系统学习
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										centos6.5
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/02/19/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/01%E3%80%81Centos%E5%AE%89%E8%A3%85/">
+                     
+										    1、Centos6.5的安装
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/20/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/02%E3%80%81%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/">
+                     
+										    2、linux基本操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/20/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/03%E3%80%81vim/">
+                     
+										    3、vi/vim的使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/21/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/04%E3%80%81%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84%E7%9A%84%E6%9D%83%E9%99%90/">
+                     
+										    4、iptables用户和用户组
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/23/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/05%E3%80%81%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB%E4%B8%8E%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/">
+                     
+										    5、运行级别与进程管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/15/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/06%E3%80%81%E5%9F%BA%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">
+                     
+										    6、基本网络配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/17/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/07%E3%80%81%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/">
+                     
+										    7、文件结构
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/20/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/08%E3%80%81yum%E6%9C%AC%E5%9C%B0%E6%BA%90/">
+                     
+										    8、Centos6.5的yum本地源
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/23/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/09%E3%80%81%E7%AE%A1%E7%90%86RPM%E5%8C%85TAR%E5%8C%85/">
+                     
+										    9、管理RPM包TAR包
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/21/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/10%E3%80%81%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86&LVM/">
+                     
+										    10、磁盘管理&LVM
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2023/03/05/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/11%E3%80%81samba/">
+                     
+										    11、samba配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/17/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/12%E3%80%81nfs/">
+                     
+										    12、nfs
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/05/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/13%E3%80%81dhcp/">
+                     
+										    13、dhcp服务器配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/17/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/14%E3%80%81dns/">
+                     
+										    14、dns服务配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/18/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/15%E3%80%81apache/">
+                     
+										    15、web服务器搭建配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/19/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/16%E3%80%81vsftpd/">
+                     
+										    16、vsftp服务器配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/16/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/17%E3%80%81telnet/">
+                     
+										    17、telnet的配置和使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/10/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/18%E3%80%81ssh/">
+                     
+										    18、ssh的使用和配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/22/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/19%E3%80%81iptables/">
+                     
+										    19、iptables的基本配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										rocky8.7
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/04/26/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/rocky8.7/pxe/">
+                     
+										    pxe配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/05/30/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/rocky8.7/zsh/">
+                     
+										    rocky安装zsh和主题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3、神奇的小东西
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x00签到题？
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/05/06/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/0x00%E7%AD%BE%E5%88%B0%E9%A2%98%EF%BC%9F/2023-05-06/">
+                     
+										    dns+ca+kdc+chrony
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x01网络搭建与运维2022
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/05/16/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/0x01%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA%E4%B8%8E%E8%BF%90%E7%BB%B42022/%E5%81%9A%E9%A2%98%E8%BF%87%E7%A8%8B/">
+                     
+										    2022国赛
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										人工智能
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/03/13/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/stable-diffusion-webui/">
+                     
+										    stable-diffusion-webui的折腾
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										博客
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hexo
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/03/11/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/%E5%8D%9A%E5%AE%A2/hexo/config.yml%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E8%A7%A3%E9%87%8A/">
+                     
+										    hexo的配置文件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/12/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/%E5%8D%9A%E5%AE%A2/hexo/hexo+github/">
+                     
+										    利用GitHub托管博客
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/11/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/%E5%8D%9A%E5%AE%A2/hexo/%E5%AE%89%E8%A3%85hexo/">
+                     
+										    安装hexo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/12/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/%E5%8D%9A%E5%AE%A2/hexo/%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98/">
+                     
+										    更改hexo的主题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/17/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/%E5%8D%9A%E5%AE%A2/hexo/%E6%B7%BB%E5%8A%A0%E7%9C%8B%E6%9D%BF%E5%A8%98/">
+                     
+										    添加看板娘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										软件
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/03/27/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/%E8%BD%AF%E4%BB%B6/%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/">
+                     
+										    第三方网易云音乐
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										5、数据恢复
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1、数据恢复基础课
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/04/28/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/5%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/1%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%9F%BA%E7%A1%80%E8%AF%BE/1%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E6%89%8B%E5%B7%A5%E6%81%A2%E5%A4%8D%E6%95%B0%E6%8D%AE/">
+                     
+										    1、为什么要学手工恢复数据
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/28/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/5%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/1%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%9F%BA%E7%A1%80%E8%AF%BE/2%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E7%8E%AF%E5%A2%83%E4%B9%8B%E8%99%9A%E6%8B%9F%E7%A3%81%E7%9B%98/">
+                     
+										    2、数据恢复环境之虚拟磁盘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/28/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/5%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/1%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%9F%BA%E7%A1%80%E8%AF%BE/3%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E8%BD%AF%E4%BB%B6%E4%B9%8Bwinhex%E7%9A%84%E4%BD%BF%E7%94%A8/">
+                     
+										    3、数据恢复软件之winhex的使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/28/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/5%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/1%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%9F%BA%E7%A1%80%E8%AF%BE/4%E3%80%81%E9%80%9A%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E6%96%B9%E6%B3%95/">
+                     
+										    4、通用的数据恢复方法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+	11、samba配置
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>CShrimp</span>
+	<span>2023-03-05 18:24:39</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<h3 id="安装和配置samba服务端"><a href="#安装和配置samba服务端" class="headerlink" title="安装和配置samba服务端"></a>安装和配置samba服务端</h3><h4 id="1、安装samba"><a href="#1、安装samba" class="headerlink" title="1、安装samba"></a>1、安装samba</h4><p><br><img src="/2023/03/05/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/11%E3%80%81samba/samba-1.png" alt="P0"></p>
+<h4 id="2、启动samba服务"><a href="#2、启动samba服务" class="headerlink" title="2、启动samba服务"></a>2、启动samba服务</h4><p><br><img src="/2023/03/05/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/11%E3%80%81samba/samba-2.png" alt="2"></p>
+<h4 id="3、关闭samba服务"><a href="#3、关闭samba服务" class="headerlink" title="3、关闭samba服务"></a>3、关闭samba服务</h4><p><br><img src="/2023/03/05/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/11%E3%80%81samba/samba-3.png" alt="3"></p>
+<h4 id="4、编辑配置文件，-x2F-etc-x2F-samba-x2F-smb-conf"><a href="#4、编辑配置文件，-x2F-etc-x2F-samba-x2F-smb-conf" class="headerlink" title="4、编辑配置文件，&#x2F;etc&#x2F;samba&#x2F;smb.conf"></a>4、编辑配置文件，&#x2F;etc&#x2F;samba&#x2F;smb.conf</h4><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[global]</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">workgroup</span> = MYGROUP</span><br><span class="line">    <span class="comment">;用法：workgroup = &lt;工作组群&gt;</span></span><br><span class="line">    <span class="comment">;说明：设定samba server的工作组</span></span><br><span class="line"></span><br><span class="line">    server <span class="attr">string</span> = Samba Server Version</span><br><span class="line">    <span class="comment">;用法：server string = &lt;说明&gt;</span></span><br><span class="line">    <span class="comment">;说明：设置注释</span></span><br><span class="line"></span><br><span class="line">    max log <span class="attr">size</span> = <span class="number">1000</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">logging</span> = file</span><br><span class="line"></span><br><span class="line">    panic <span class="attr">action</span> = /usr/share/samba/panic-action %d</span><br><span class="line"></span><br><span class="line">    server <span class="attr">role</span> = standalone server</span><br><span class="line"></span><br><span class="line">    obey pam <span class="attr">restrictions</span> = <span class="literal">yes</span></span><br><span class="line"></span><br><span class="line">    unix password <span class="attr">sync</span> = <span class="literal">yes</span></span><br><span class="line"></span><br><span class="line">    passwd <span class="attr">program</span> = /usr/bin/passwd %u</span><br><span class="line"></span><br><span class="line">    passwd <span class="attr">chat</span> = *Enter\snew\s*\spassword:* %n\n *Retype\snew\s*\spassword:* %n\n *password\supdated\ssuccessfully* .</span><br><span class="line"></span><br><span class="line">    pam password <span class="attr">change</span> = <span class="literal">yes</span></span><br><span class="line"></span><br><span class="line">    map to <span class="attr">guest</span> = bad user</span><br><span class="line"></span><br><span class="line">    create <span class="attr">mode</span> = <span class="number">0766</span></span><br><span class="line"></span><br><span class="line">    force create <span class="attr">mode</span> = <span class="number">0766</span></span><br><span class="line"></span><br><span class="line">    directory <span class="attr">mode</span> = <span class="number">0777</span></span><br><span class="line"></span><br><span class="line">    force directory <span class="attr">mode</span> = <span class="number">0777</span></span><br><span class="line"></span><br><span class="line">    usershare allow <span class="attr">guests</span> = <span class="literal">yes</span></span><br><span class="line"></span><br><span class="line">    unix <span class="attr">extensions</span> = <span class="literal">no</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">[printers]</span></span><br><span class="line"><span class="comment">;分享的名字</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">comment</span> = All Printers</span><br><span class="line">    <span class="comment">;显示的注释</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">browseable</span> = <span class="literal">no</span></span><br><span class="line">    <span class="comment">;是否在资源中显示共享目录</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">path</span> = /var/spool/samba</span><br><span class="line">    <span class="comment">;共享文件的目录</span></span><br><span class="line">    </span><br><span class="line">    <span class="attr">printable</span> = <span class="literal">yes</span></span><br><span class="line">    <span class="comment">;是否允许打印</span></span><br><span class="line"></span><br><span class="line">    guest <span class="attr">ok</span> = <span class="literal">no</span></span><br><span class="line">    <span class="comment">;是否公开共享，需要设置security = share 时生效</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">public</span> = <span class="literal">yes</span></span><br><span class="line">    <span class="comment">;是否公开共享，需要设置security = share 时生效</span></span><br><span class="line"></span><br><span class="line">    read <span class="attr">only</span> = <span class="literal">yes</span></span><br><span class="line">    <span class="comment">;只读</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">writable</span> = <span class="literal">no</span></span><br><span class="line">    <span class="comment">;如果和read only冲突，优先使用writable</span></span><br><span class="line"></span><br><span class="line">    create <span class="attr">mask</span> = <span class="number">0700</span></span><br><span class="line">    <span class="comment">;创建文件时给予的权限</span></span><br><span class="line"></span><br><span class="line">    directory <span class="attr">mask</span> = <span class="number">0700</span></span><br><span class="line">    <span class="comment">;创建文件夹给予的权限</span></span><br><span class="line"></span><br><span class="line">    vaild <span class="attr">users</span> = </span><br><span class="line">    <span class="comment">;设定只有此名单内的用户才能访问共享资源</span></span><br><span class="line"></span><br><span class="line">    invaild <span class="attr">users</span> = </span><br><span class="line">    <span class="comment">;设定只有此名单内的用户不能访问共享资源</span></span><br><span class="line"></span><br><span class="line">    read <span class="attr">list</span> = </span><br><span class="line">    <span class="comment">;只有列表内成员</span></span><br><span class="line"></span><br><span class="line">    hide dot <span class="attr">ftles</span> = <span class="literal">no</span></span><br><span class="line">    <span class="comment">;是否隐藏拥有隐藏属性的文件</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="远程连接samba服务端"><a href="#远程连接samba服务端" class="headerlink" title="远程连接samba服务端"></a>远程连接samba服务端</h3><h4 id="Linux："><a href="#Linux：" class="headerlink" title="Linux："></a>Linux：</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">mount -t cifs -o username=用户名,passwd=密码 //远程服务器的ip/路径 /mnt/samba</span> </span><br></pre></td></tr></table></figure>
+
+<h4 id="windows："><a href="#windows：" class="headerlink" title="windows："></a>windows：</h4><p>在 此电脑-&gt;映射网络驱动器-&gt;填写你的路径-&gt;验证身份（如果有）</p>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2023/03/10/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/18%E3%80%81ssh/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  18、ssh的使用和配置
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2023/03/05/%E7%A7%91%E6%8A%80%E5%8C%BA/%E8%BD%AF%E4%BB%B6/2%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/centos6.5/13%E3%80%81dhcp/">
+                13、dhcp服务器配置
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start">2023</span>-<span id="footerYear-end"></span>
+	<a href="/">CShrimp</a> 
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
