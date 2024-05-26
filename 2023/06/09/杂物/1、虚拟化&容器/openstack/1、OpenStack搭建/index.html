@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		1、OpenStack搭建 | 
+	 
+	CSHRIMP&#39;S HOME
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	<!-- 
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+ -->
+	<!-- 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+ -->
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<link rel="stylesheet" href="/fontawesome-free-6.4.0-web/css/all.css">
+
+	
+<link rel="stylesheet" href="/build/styles/darcula.min.css">
+
+	<!-- 
+<link rel="stylesheet" href="/dist/jquery.fancybox.min.css">
+ -->
+
+	<!-- 
+<script src="/dist/jquery.min.js"></script>
+ -->
+	<!-- 
+<script src="/dist/jquery.fancybox.min.js"></script>
+ -->
+	
+<script src="/build/highlight.min.js"></script>
+
+	<!-- 
+<script src="/js/jquery.pjax.min.js"></script>
+ -->
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	<!-- 
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+ -->
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	<!-- 
+	 -->
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">CSHRIMP'S HOME</a>
+
+	<ul id="menu">
+    
+      <li class="menu-item">
+        <a href="/about" class="menu-item-link">ABOUT</a>
+      </li>
+    
+
+    
+
+    
+
+    
+  
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="/2024/05/19/todo/">
+                     
+										    计划列表
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										操作系统
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0、rhel系&linux基础
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0、RHCSA
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/02/19/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/01%E3%80%81Centos%E5%AE%89%E8%A3%85/">
+                     
+										    1、Centos6.5的安装
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/02%E3%80%81%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/">
+                     
+										    2、linux基本操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/03%E3%80%81vim/">
+                     
+										    3、vi/vim的使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/21/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/04%E3%80%81%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84%E7%9A%84%E6%9D%83%E9%99%90/">
+                     
+										    4、iptables用户和用户组
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/05%E3%80%81%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB%E4%B8%8E%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/">
+                     
+										    5、运行级别与进程管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/06%E3%80%81%E5%9F%BA%E6%9C%AC%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">
+                     
+										    6、基本网络配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/07%E3%80%81%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/">
+                     
+										    7、文件结构
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/08%E3%80%81yum%E6%9C%AC%E5%9C%B0%E6%BA%90/">
+                     
+										    8、Centos6.5的yum本地源
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/09%E3%80%81%E7%AE%A1%E7%90%86RPM%E5%8C%85TAR%E5%8C%85/">
+                     
+										    9、管理RPM包TAR包
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/21/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/10%E3%80%81%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86&LVM/">
+                     
+										    10、磁盘管理&LVM
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/05/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/11%E3%80%81samba/">
+                     
+										    11、samba配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/12%E3%80%81nfs/">
+                     
+										    12、nfs
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/05/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/13%E3%80%81dhcp/">
+                     
+										    13、dhcp服务器配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/17/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/14%E3%80%81dns/">
+                     
+										    14、dns服务配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/18/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/15%E3%80%81apache/">
+                     
+										    15、web服务器搭建配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/19/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/16%E3%80%81vsftpd/">
+                     
+										    16、vsftp服务器配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/16/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/17%E3%80%81telnet/">
+                     
+										    17、telnet的配置和使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/10/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/18%E3%80%81ssh/">
+                     
+										    18、ssh的使用和配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/22/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/0%E3%80%81RHCSA/19%E3%80%81iptables/">
+                     
+										    19、iptables的基本配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1、RHCE
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/06/27/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/1%E3%80%81RHCE/chronyd/">
+                     
+										    chronyd
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/26/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/0%E3%80%81rhel%E7%B3%BB&linux%E5%9F%BA%E7%A1%80/1%E3%80%81RHCE/pxe/">
+                     
+										    pxe配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										杂物
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1、虚拟化&容器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/04/01/%E6%9D%82%E7%89%A9/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/docker/1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFdocker/">
+                     
+										    1、什么是docker
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/01/%E6%9D%82%E7%89%A9/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/docker/2%E3%80%81docker%E5%AE%89%E8%A3%85/">
+                     
+										    2、docker安装
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										openstack
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2023/06/09/%E6%9D%82%E7%89%A9/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/openstack/1%E3%80%81OpenStack%E6%90%AD%E5%BB%BA/">
+                     
+										    1、OpenStack搭建
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										openstack(single)
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/06/13/%E6%9D%82%E7%89%A9/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/openstack(single)/1%E3%80%81OpenStack%E6%90%AD%E5%BB%BA/">
+                     
+										    1、OpenStack搭建
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										vmware
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/02/19/%E6%9D%82%E7%89%A9/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/vmware/1%E3%80%81vmware%E4%B8%8B%E8%BD%BD/">
+                     
+										    1、VMware Workstation Pro 下载
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/19/%E6%9D%82%E7%89%A9/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/vmware/2%E3%80%81vmware%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+                     
+										    2、VMware基本操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/20/%E6%9D%82%E7%89%A9/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/vmware/3%E3%80%81vmware%E5%BF%AB%E7%85%A7%E5%8A%9F%E8%83%BD/">
+                     
+										    3、vmware快照功能
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/02/19/%E6%9D%82%E7%89%A9/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/vmware/4%E3%80%81vmware%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">
+                     
+										    4、vmware网络配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3、神奇的小东西
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0、签到题？
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/05/06/%E6%9D%82%E7%89%A9/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/0%E3%80%81%E7%AD%BE%E5%88%B0%E9%A2%98%EF%BC%9F/2023-05-06/">
+                     
+										    dns+ca+kdc+chrony
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1、网络搭建与运维2022
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/05/16/%E6%9D%82%E7%89%A9/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/1%E3%80%81%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA%E4%B8%8E%E8%BF%90%E7%BB%B42022/%E5%81%9A%E9%A2%98%E8%BF%87%E7%A8%8B/">
+                     
+										    2022国赛
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2、网络搭建与运维2021
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/07/21/%E6%9D%82%E7%89%A9/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/2%E3%80%81%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA%E4%B8%8E%E8%BF%90%E7%BB%B42021/%E5%81%9A%E9%A2%98%E8%BF%87%E7%A8%8B/">
+                     
+										    2021国赛
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										博客
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										hexo
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/03/11/%E6%9D%82%E7%89%A9/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/%E5%8D%9A%E5%AE%A2/hexo/config.yml%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E8%A7%A3%E9%87%8A/">
+                     
+										    hexo的配置文件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/12/%E6%9D%82%E7%89%A9/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/%E5%8D%9A%E5%AE%A2/hexo/hexo+github/">
+                     
+										    利用GitHub托管博客
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/11/%E6%9D%82%E7%89%A9/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/%E5%8D%9A%E5%AE%A2/hexo/%E5%AE%89%E8%A3%85hexo/">
+                     
+										    安装hexo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/12/%E6%9D%82%E7%89%A9/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/%E5%8D%9A%E5%AE%A2/hexo/%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98/">
+                     
+										    更改hexo的主题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/03/17/%E6%9D%82%E7%89%A9/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/%E5%8D%9A%E5%AE%A2/hexo/%E6%B7%BB%E5%8A%A0%E7%9C%8B%E6%9D%BF%E5%A8%98/">
+                     
+										    添加看板娘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										软件
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/03/27/%E6%9D%82%E7%89%A9/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/%E8%BD%AF%E4%BB%B6/%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/">
+                     
+										    第三方网易云音乐
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										5、数据恢复
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1、数据恢复基础课
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2023/04/28/%E6%9D%82%E7%89%A9/5%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/1%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%9F%BA%E7%A1%80%E8%AF%BE/1%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E6%89%8B%E5%B7%A5%E6%81%A2%E5%A4%8D%E6%95%B0%E6%8D%AE/">
+                     
+										    1、为什么要学手工恢复数据
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/28/%E6%9D%82%E7%89%A9/5%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/1%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%9F%BA%E7%A1%80%E8%AF%BE/2%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E7%8E%AF%E5%A2%83%E4%B9%8B%E8%99%9A%E6%8B%9F%E7%A3%81%E7%9B%98/">
+                     
+										    2、数据恢复环境之虚拟磁盘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/28/%E6%9D%82%E7%89%A9/5%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/1%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%9F%BA%E7%A1%80%E8%AF%BE/3%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E8%BD%AF%E4%BB%B6%E4%B9%8Bwinhex%E7%9A%84%E4%BD%BF%E7%94%A8/">
+                     
+										    3、数据恢复软件之winhex的使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2023/04/28/%E6%9D%82%E7%89%A9/5%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/1%E3%80%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%9F%BA%E7%A1%80%E8%AF%BE/4%E3%80%81%E9%80%9A%E7%94%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E6%96%B9%E6%B3%95/">
+                     
+										    4、通用的数据恢复方法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+	1、OpenStack搭建
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>CShrimp</span>
+	<span>2023-06-09 22:58:39</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<p>机子1：<br>主机名：controller<br>环境：centos7.9<br>ip：10.10.10.100</p>
+<p>机子2：<br>主机名：compute<br>环境：centos7.9<br>ip：10.10.10.101</p>
+<p>sr0：系统镜像<br>sr1：chinaskills_cloud_iaas_v2.0.3</p>
+<h2 id="修改hostname"><a href="#修改hostname" class="headerlink" title="修改hostname"></a>修改hostname</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">主机1</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">hostnamectl set-hostname controller</span></span><br><span class="line">主机2</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">hostnamectl set-hostname compute</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="去你码的selinux和防火墙"><a href="#去你码的selinux和防火墙" class="headerlink" title="去你码的selinux和防火墙"></a>去你码的selinux和防火墙</h2><p>双节点均执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">sed -i <span class="string">&#x27;s/SELINUX=enforcing/SELINUX=disabled/g&#x27;</span> /etc/selinux/config</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">systemctl stop firewalld.service</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">systemctl <span class="built_in">disable</span> firewalld.service</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">yum remove -y NetworkManager firewalld</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">yum -y install iptables-services</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">systemctl <span class="built_in">enable</span> iptables</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">systemctl restart iptables</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iptables -F</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iptables -X</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iptables -Z</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">service iptables save</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="配置yum"><a href="#配置yum" class="headerlink" title="配置yum"></a>配置yum</h2><p>controller本地源</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">mount /dev/sr0 /mnt</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">mkdir</span> /opt/repo</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">cp</span> /mnt/* /opt/repo/ -r</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">umount /mnt/</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">mkdir</span> /opt/stack</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">mount /dev/sr1 /mnt</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">cp</span> /mnt/* /opt/stack/ -r</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">rm</span> -rf /etc/yum.repos.d/*</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">cat</span> &gt;&gt; /etc/yum.repo.d/1.repo &lt;&lt; <span class="string">EOF</span></span></span><br><span class="line">[1]</span><br><span class="line">name=1</span><br><span class="line">baseurl=file:///opt/repo/</span><br><span class="line">enable=1</span><br><span class="line">gpgcheck=0</span><br><span class="line">[2]</span><br><span class="line">name=2</span><br><span class="line">baseurl=file:///opt/stack/iaas-repo/</span><br><span class="line">enable=1</span><br><span class="line">gpgcheck=0</span><br><span class="line">EOF</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">yum makecache</span></span></span><br></pre></td></tr></table></figure>
+
+<p>配置文件共享</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">yum install vsftpd -y</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">cat</span> &gt;&gt; /etc/vsftpd/vsftpd.conf &lt;&lt; <span class="string">EOF</span></span></span><br><span class="line">anon_root=/opt </span><br><span class="line">allow_writeable_chroot=YES </span><br><span class="line">chroot_local_user=YES&#x27;</span><br><span class="line">EOF</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">systemctl start vsftpd</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">systemctl enable vsftpd</span></span></span><br></pre></td></tr></table></figure>
+
+<p>compute配置源</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">cat</span> &gt;&gt; /etc/yum.repos.d/1.repo &lt;&lt; <span class="string">EOF</span></span></span><br><span class="line">[1]</span><br><span class="line">name=1</span><br><span class="line">baseurl=ftp://10.10.10.100/repo/</span><br><span class="line">enable=1</span><br><span class="line">gpgcheck=0</span><br><span class="line">[2]</span><br><span class="line">name=2</span><br><span class="line">baseurl=ftp://10.10.10.100/stack/iaas-repo/</span><br><span class="line">enable=1</span><br><span class="line">gpgcheck=0</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装openstack-iaas"><a href="#安装openstack-iaas" class="headerlink" title="安装openstack-iaas"></a>安装openstack-iaas</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">yum install openstack-iaas -y</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h2><p>双节点均进行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">fdisk /dev/sdb</span></span><br><span class="line">Command (m for help): n</span><br><span class="line">Select (default p): p</span><br><span class="line">Partition number (1-4, default 1):</span><br><span class="line">First sector (2048-104857599, default 2048):</span><br><span class="line">Last sector, +sectors or +size&#123;K,M,G&#125; (2048-104857599, default 104857599): +20G</span><br><span class="line"></span><br><span class="line">Command (m for help): n</span><br><span class="line">Select (default p):</span><br><span class="line">Partition number (2-4, default 2):</span><br><span class="line">First sector (41945088-104857599, default 41945088):</span><br><span class="line">Last sector, +sectors or +size&#123;K,M,G&#125; (41945088-104857599, default 104857599): +20G</span><br><span class="line"></span><br><span class="line">Command (m for help): n</span><br><span class="line">Select (default p):</span><br><span class="line">Using default response p</span><br><span class="line">Partition number (3,4, default 3):</span><br><span class="line">First sector (83888128-104857599, default 83888128):</span><br><span class="line">Last sector, +sectors or +size&#123;K,M,G&#125; (83888128-104857599, default 104857599):</span><br><span class="line"></span><br><span class="line">Command (m for help): w</span><br><span class="line">The partition table has been altered!</span><br><span class="line">Calling ioctl() to re-read partition table.</span><br><span class="line">Syncing disks.</span><br></pre></td></tr></table></figure>
+
+<h2 id="编辑-x2F-etc-x2F-openstack-x2F-openrc-sh"><a href="#编辑-x2F-etc-x2F-openstack-x2F-openrc-sh" class="headerlink" title="编辑&#x2F;etc&#x2F;openstack&#x2F;openrc.sh"></a>编辑&#x2F;etc&#x2F;openstack&#x2F;openrc.sh</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><span class="line">##--------------------system Config--------------------##</span><br><span class="line">##Controller Server Manager IP. example:x.x.x.x</span><br><span class="line">HOST_IP=10.10.10.100</span><br><span class="line">##Controller HOST Password. example:000000</span><br><span class="line">HOST_PASS=000000</span><br><span class="line">##Controller Server hostname. example:controller</span><br><span class="line">HOST_NAME=controller</span><br><span class="line">##Compute Node Manager IP. example:x.x.x.x</span><br><span class="line">HOST_IP_NODE=10.10.10.100</span><br><span class="line">##Compute HOST Password. example:000000</span><br><span class="line">HOST_PASS_NODE=000000</span><br><span class="line">##Compute Node hostname. example:compute</span><br><span class="line">HOST_NAME_NODE=compute</span><br><span class="line">##--------------------Chrony Config-------------------##</span><br><span class="line">##Controller network segment IP.  example:x.x.0.0/16(x.x.x.0/24)</span><br><span class="line">network_segment_IP=10.10.10.0/24</span><br><span class="line">##--------------------Rabbit Config ------------------##</span><br><span class="line">##user for rabbit. example:openstack</span><br><span class="line">RABBIT_USER=openstack</span><br><span class="line">##Password for rabbit user .example:000000</span><br><span class="line">RABBIT_PASS=000000</span><br><span class="line">##--------------------MySQL Config---------------------##</span><br><span class="line">##Password for MySQL root user . exmaple:000000</span><br><span class="line">DB_PASS=000000</span><br><span class="line">##--------------------Keystone Config------------------##</span><br><span class="line">##Password for Keystore admin user. exmaple:000000</span><br><span class="line">DOMAIN_NAME=demo</span><br><span class="line">ADMIN_PASS=000000</span><br><span class="line">DEMO_PASS=000000</span><br><span class="line">##Password for Mysql keystore user. exmaple:000000</span><br><span class="line">KEYSTONE_DBPASS=000000</span><br><span class="line">##--------------------Glance Config--------------------##</span><br><span class="line">##Password for Mysql glance user. exmaple:000000</span><br><span class="line">GLANCE_DBPASS=000000</span><br><span class="line">##Password for Keystore glance user. exmaple:000000</span><br><span class="line">GLANCE_PASS=000000</span><br><span class="line">##--------------------Placement Config----------------------##</span><br><span class="line">##Password for Mysql placement user. exmaple:000000</span><br><span class="line">PLACEMENT_DBPASS=000000</span><br><span class="line">##Password for Keystore placement user. exmaple:000000</span><br><span class="line">PLACEMENT_PASS=000000</span><br><span class="line">##--------------------Nova Config----------------------##</span><br><span class="line">##Password for Mysql nova user. exmaple:000000</span><br><span class="line">NOVA_DBPASS=000000</span><br><span class="line">##Password for Keystore nova user. exmaple:000000</span><br><span class="line">NOVA_PASS=000000</span><br><span class="line">##--------------------Neutron Config-------------------##</span><br><span class="line">##Password for Mysql neutron user. exmaple:000000</span><br><span class="line">NEUTRON_DBPASS=000000</span><br><span class="line">##Password for Keystore neutron user. exmaple:000000</span><br><span class="line">NEUTRON_PASS=000000</span><br><span class="line">##metadata secret for neutron. exmaple:000000</span><br><span class="line">METADATA_SECRET=000000</span><br><span class="line">##External Network Interface. example:eth1</span><br><span class="line">INTERFACE_NAME=ens33</span><br><span class="line">##External Network The Physical Adapter. example:provider</span><br><span class="line">Physical_NAME=provider</span><br><span class="line">##First Vlan ID in VLAN RANGE for VLAN Network. exmaple:101</span><br><span class="line">minvlan=1</span><br><span class="line">##Last Vlan ID in VLAN RANGE for VLAN Network. example:200</span><br><span class="line">maxvlan=1000</span><br><span class="line">##--------------------Cinder Config--------------------##</span><br><span class="line">##Password for Mysql cinder user. exmaple:000000</span><br><span class="line">CINDER_DBPASS=000000</span><br><span class="line">##Password for Keystore cinder user. exmaple:000000</span><br><span class="line">CINDER_PASS=000000</span><br><span class="line">##Cinder Block Disk. example:md126p3</span><br><span class="line">BLOCK_DISK=sdb1</span><br><span class="line">##--------------------Swift Config---------------------##</span><br><span class="line">##Password for Keystore swift user. exmaple:000000</span><br><span class="line">SWIFT_PASS=000000</span><br><span class="line">##The NODE Object Disk for Swift. example:md126p4.</span><br><span class="line">OBJECT_DISK=sdb2</span><br><span class="line">##The NODE IP for Swift Storage Network. example:x.x.x.x.</span><br><span class="line">STORAGE_LOCAL_NET_IP=10.10.10.100</span><br><span class="line">##--------------------Trove Config----------------------##</span><br><span class="line">##Password for Mysql trove user. exmaple:000000</span><br><span class="line">TROVE_DBPASS=000000</span><br><span class="line">##Password for Keystore trove user. exmaple:000000</span><br><span class="line">TROVE_PASS=000000</span><br><span class="line">##--------------------Heat Config----------------------##</span><br><span class="line">##Password for Mysql heat user. exmaple:000000</span><br><span class="line">HEAT_DBPASS=000000</span><br><span class="line">##Password for Keystore heat user. exmaple:000000</span><br><span class="line">HEAT_PASS=000000</span><br><span class="line">##--------------------Ceilometer Config----------------##</span><br><span class="line">##Password for Gnocchi ceilometer user. exmaple:000000</span><br><span class="line">CEILOMETER_DBPASS=000000</span><br><span class="line">##Password for Keystore ceilometer user. exmaple:000000</span><br><span class="line">CEILOMETER_PASS=000000</span><br><span class="line">##--------------------AODH Config----------------##</span><br><span class="line">##Password for Mysql AODH user. exmaple:000000</span><br><span class="line">AODH_DBPASS=000000</span><br><span class="line">##Password for Keystore AODH user. exmaple:000000</span><br><span class="line">AODH_PASS=000000</span><br><span class="line">##--------------------ZUN Config----------------##</span><br><span class="line">##Password for Mysql ZUN user. exmaple:000000</span><br><span class="line">ZUN_DBPASS=000000</span><br><span class="line">##Password for Keystore ZUN user. exmaple:000000</span><br><span class="line">ZUN_PASS=000000</span><br><span class="line">##Password for Keystore KURYR user. exmaple:000000</span><br><span class="line">KURYR_PASS=000000</span><br><span class="line">##--------------------OCTAVIA Config----------------##</span><br><span class="line">##Password for Mysql OCTAVIA user. exmaple:000000</span><br><span class="line">OCTAVIA_DBPASS=000000</span><br><span class="line">##Password for Keystore OCTAVIA user. exmaple:000000</span><br><span class="line">OCTAVIA_PASS=000000</span><br><span class="line">##--------------------Manila Config----------------##</span><br><span class="line">##Password for Mysql Manila user. exmaple:000000</span><br><span class="line">MANILA_DBPASS=000000</span><br><span class="line">##Password for Keystore Manila user. exmaple:000000</span><br><span class="line">MANILA_PASS=000000</span><br><span class="line">##The NODE Object Disk for Manila. example:md126p5.</span><br><span class="line">SHARE_DISK=sdb3</span><br><span class="line">##--------------------Cloudkitty Config----------------##</span><br><span class="line">##Password for Mysql Cloudkitty user. exmaple:000000</span><br><span class="line">CLOUDKITTY_DBPASS=000000</span><br><span class="line">##Password for Keystore Cloudkitty user. exmaple:000000</span><br><span class="line">CLOUDKITTY_PASS=000000</span><br><span class="line">##--------------------Barbican Config----------------##</span><br><span class="line">##Password for Mysql Barbican user. exmaple:000000</span><br><span class="line">BARBICAN_DBPASS=000000</span><br><span class="line">##Password for Keystore Barbican user. exmaple:000000</span><br><span class="line">BARBICAN_PASS=000000</span><br></pre></td></tr></table></figure>
+
+<h2 id="执行脚本"><a href="#执行脚本" class="headerlink" title="执行脚本"></a>执行脚本</h2><p>双节点均执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iaas-pre-host.sh</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">reboot</span></span><br></pre></td></tr></table></figure>
+
+<p>controller</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iaas-install-mysql.sh</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iaas-install-keystone.sh</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iaas-install-glance.sh</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iaas-install-placement.sh</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iaas-install-nova-controller.sh</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iaas-install-neutron-controller.sh</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iaas-install-dashboard.sh</span></span><br></pre></td></tr></table></figure>
+
+<p>compute</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iaas-install-nova-compute.sh</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iaas-install-neutron-compute.sh</span></span><br></pre></td></tr></table></figure>
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2023/06/13/%E6%9D%82%E7%89%A9/1%E3%80%81%E8%99%9A%E6%8B%9F%E5%8C%96&%E5%AE%B9%E5%99%A8/openstack(single)/1%E3%80%81OpenStack%E6%90%AD%E5%BB%BA/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  1、OpenStack搭建
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2023/05/16/%E6%9D%82%E7%89%A9/3%E3%80%81%E7%A5%9E%E5%A5%87%E7%9A%84%E5%B0%8F%E4%B8%9C%E8%A5%BF/1%E3%80%81%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA%E4%B8%8E%E8%BF%90%E7%BB%B42022/%E5%81%9A%E9%A2%98%E8%BF%87%E7%A8%8B/">
+                2022国赛
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start">2023</span>-<span id="footerYear-end"></span>
+	<a href="/">CShrimp</a> 
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
