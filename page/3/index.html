@@ -1060,40 +1060,19 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/README/">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/2.vsftpd/1.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
 				<h2 class="index-title">
-					README
+					vsftpd基本配置
 				</h2>
 				<div class="index-brief">
-					关于稍微更新到rocky9
-计划
- 1.基本配置
- yum&#x2F;rpm
- chronyd
- rsyslog
- 指定日志服务器
+					vsftpd基本配置安装1yum install vsftpd -y
 
-
- bind
- 隐藏版本号
- chroot
- 限制网段
- 子域委派
- 条件转发器
- smart-DNS
-
-
- unbound
- 子域委派
-
-
- openssh
- 批量
+修改配置默认配置如下123456789101112anonymous_enable=NOlocal_enable=YESwrite_enable=YESlocal_umask=022dirmessage_enable=YESxf
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2025-05-26</span>
+				    <span>2024-08-08</span>
                     
                             
                     
@@ -1101,17 +1080,20 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/1.shell/1.helloworld/">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/1.samba/2.%E9%99%90%E5%88%B6%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%B1%BB%E5%9E%8B/">
 				<h2 class="index-title">
-					1.helloworld
+					samba限制文件上传类型
 				</h2>
 				<div class="index-brief">
-					12#!/bin/bashecho &quot;Hello World!&quot;
+					限制smb文件上传类型编辑配置文件1234[global]...veto files=/*.exe/*.sh/.../delete veto files = yes
+
+veto files 是隐藏文件，多个类型用&#x2F;分开delete veto files 是删除文件
+
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2025-05-26</span>
+				    <span>2024-08-08</span>
                     
                             
                     
@@ -1119,20 +1101,21 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/3.ansible/1.%E8%AE%BE%E7%BD%AE%E5%8F%97%E6%8E%A7%E8%8A%82%E7%82%B9/">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/1.samba/1.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
 				<h2 class="index-title">
-					1.设置受控节点
+					samba基本配置
 				</h2>
 				<div class="index-brief">
-					ansible设置受控节点安装1yum install ansible-core -y
+					samba基本配置安装1yum install samba -y
 
-修改配置文件指定受控设备/etc/ansible/hosts
-1234cat &gt;&gt; /etc/ansible/hosts &lt;&lt; EOF[server]client.skills.comE
+smb用户管理查询所有用户1pdbedit -L
+
+新建用户1234567useradd -s /sbin/nologin user01useradd -s /sbin/nologin user02useradd -s /sbin/
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2025-05-26</span>
+				    <span>2024-08-08</span>
                     
                             
                     
@@ -1140,23 +1123,144 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/4.rust/1.helloworld/">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/8.openssl/1.%E4%B8%BBca%E9%A2%81%E5%8F%91%E8%AF%81%E4%B9%A6/">
 				<h2 class="index-title">
-					1.helloworld
+					openssl颁发带san证书
 				</h2>
 				<div class="index-brief">
-					123fn main() &#123;    println!(&quot;Hello, world!&quot;);&#125;
+					根证书和颁发证书安装openssl1yum install openssl-* -y
 
-偷懒方法
-12yum install cargo -ycargo new aaa
-
-然后在src里面有
-1234[root@linux1 ~]# cat aaa/sr
+生成根证书根证书目录在/etc/pki/CA
+123456cd /etc/pki/CAtouch index.txtecho 01 &gt; serialopenssl genrsa -out private/c
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2025-05-26</span>
+				    <span>2024-08-08</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/7.telnet/1.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
+				<h2 class="index-title">
+					telnet基本配置
+				</h2>
+				<div class="index-brief">
+					telnet基本配置服务端配置安装1yum install telnet-server -y
+
+启动&amp;墙123systemctl enable --now telnet.socketfirewall-cmd --add-port=23/tcpfirewall-cmd --add-port=2
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2024-08-08</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/6.openssh/3.sshpass/">
+				<h2 class="index-title">
+					sshpass基本用法
+				</h2>
+				<div class="index-brief">
+					sshpass的使用安装1yum install sshpass -y
+
+密码传入方式1234567891011# -p使用密码sshpass -p Pass-1234 ssh root@client.skills.com hostname# -f使用文件（注意权限问题）echo &#x27;Pas
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2024-08-08</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/6.openssh/2.%E6%89%B9%E9%87%8F%E5%85%8D%E5%AF%86/">
+				<h2 class="index-title">
+					ssh批量免密
+				</h2>
+				<div class="index-brief">
+					ssh批量传输秘钥方法一、sshpass安装1yum install sshpass -y
+
+免密123for i in &#123;1..10&#125;;do sshpass -p &#x27;Pass-1234&#x27; ssh-copy-id -f -o StrictHostKeyChec
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2024-08-08</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/6.openssh/1.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
+				<h2 class="index-title">
+					openssh基本配置
+				</h2>
+				<div class="index-brief">
+					openssh-server基本配置安装1yum install openssh-server -y
+
+启动&amp;防火墙123systemctl enable --now sshdfirewall-cmd --add-port=22/tcpfirewall-cmd --add-port=22/t
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2024-08-08</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/4.bind/7.%E9%99%90%E5%88%B6%E7%BD%91%E6%AE%B5/">
+				<h2 class="index-title">
+					bind限制网段
+				</h2>
+				<div class="index-brief">
+					限制bind查询网段修改配置文件编辑/etc/named.conf，此处为只允许localhost查询
+1234options &#123;    ...    allow-query     &#123; localhost; &#125;;&#125;
+
+修改后重启，在其他机子查询dns结果如下
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2024-08-07</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/4.bind/6.chroot/">
+				<h2 class="index-title">
+					bind的chroot模式
+				</h2>
+				<div class="index-brief">
+					bind的chroot安装1yum install bind-chroot -y
+
+配置chroot使用自带脚本挂载路径
+1/usr/libexec/setup-named-chroot.sh /var/named/chroot on
+
+因为是挂载，所以直接修改源路径和chroot路径效果是一样的。
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2024-08-07</span>
                     
                             
                     
@@ -1165,6 +1269,8 @@
 	
 	
 	<div id="index-paginator">
+		
+			<a class="extend prev" rel="prev" href="/page/2/">&lt;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">&gt;</a>
 		
 	</div>
 </div>

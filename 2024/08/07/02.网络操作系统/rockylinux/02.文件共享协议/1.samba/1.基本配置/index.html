@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		samba基本配置 | 
 	 
 	虾记
 	</title>
@@ -585,7 +587,7 @@
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/1.samba/1.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
                      
 										    1.基本配置
@@ -1057,117 +1059,110 @@
 
 	<!-- 引入正文 -->
 	<div id="content" class="content">
-		<div id="index">
+		<h1 id="article-title">
+	samba基本配置
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
 	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/README/">
-				<h2 class="index-title">
-					README
-				</h2>
-				<div class="index-brief">
-					关于稍微更新到rocky9
-计划
- 1.基本配置
- yum&#x2F;rpm
- chronyd
- rsyslog
- 指定日志服务器
 
+	<span>蒜香大龙虾</span>
+	<span>2024-08-08 01:08:17</span>
 
- bind
- 隐藏版本号
- chroot
- 限制网段
- 子域委派
- 条件转发器
- smart-DNS
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
 
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
 
- unbound
- 子域委派
-
-
- openssh
- 批量
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/1.shell/1.helloworld/">
-				<h2 class="index-title">
-					1.helloworld
-				</h2>
-				<div class="index-brief">
-					12#!/bin/bashecho &quot;Hello World!&quot;
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/3.ansible/1.%E8%AE%BE%E7%BD%AE%E5%8F%97%E6%8E%A7%E8%8A%82%E7%82%B9/">
-				<h2 class="index-title">
-					1.设置受控节点
-				</h2>
-				<div class="index-brief">
-					ansible设置受控节点安装1yum install ansible-core -y
-
-修改配置文件指定受控设备/etc/ansible/hosts
-1234cat &gt;&gt; /etc/ansible/hosts &lt;&lt; EOF[server]client.skills.comE
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/4.rust/1.helloworld/">
-				<h2 class="index-title">
-					1.helloworld
-				</h2>
-				<div class="index-brief">
-					123fn main() &#123;    println!(&quot;Hello, world!&quot;);&#125;
-
-偷懒方法
-12yum install cargo -ycargo new aaa
-
-然后在src里面有
-1234[root@linux1 ~]# cat aaa/sr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-	
-	<div id="index-paginator">
-		
-	</div>
 </div>
+
+<!-- content -->
+<div id="article-content">
+	<h1 id="samba基本配置"><a href="#samba基本配置" class="headerlink" title="samba基本配置"></a>samba基本配置</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install samba -y</span><br></pre></td></tr></table></figure>
+
+<h2 id="smb用户管理"><a href="#smb用户管理" class="headerlink" title="smb用户管理"></a>smb用户管理</h2><h3 id="查询所有用户"><a href="#查询所有用户" class="headerlink" title="查询所有用户"></a>查询所有用户</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdbedit -L</span><br></pre></td></tr></table></figure>
+
+<h3 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">useradd -s /sbin/nologin user01</span><br><span class="line">useradd -s /sbin/nologin user02</span><br><span class="line">useradd -s /sbin/nologin user03</span><br><span class="line"></span><br><span class="line">echo -e &quot;Pass-1234\nPass-1234&quot; | smbpasswd -s -a user01</span><br><span class="line">echo -e &quot;Pass-1234\nPass-1234&quot; | smbpasswd -s -a user02</span><br><span class="line">echo -e &quot;Pass-1234\nPass-1234&quot; | smbpasswd -s -a user03</span><br></pre></td></tr></table></figure>
+
+<h3 id="smbpasswd其它选项"><a href="#smbpasswd其它选项" class="headerlink" title="smbpasswd其它选项"></a>smbpasswd其它选项</h3><p>使用方法同上</p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-a</td>
+<td align="center">新建用户</td>
+</tr>
+<tr>
+<td align="center">-d</td>
+<td align="center">禁用用户</td>
+</tr>
+<tr>
+<td align="center">-e</td>
+<td align="center">启用用户</td>
+</tr>
+<tr>
+<td align="center">-x</td>
+<td align="center">删除用户</td>
+</tr>
+<tr>
+<td align="center">-s</td>
+<td align="center">传入密码</td>
+</tr>
+</tbody></table>
+<h2 id="常用配置"><a href="#常用配置" class="headerlink" title="常用配置"></a>常用配置</h2><p>配置文件在<code>/etc/samba/smb.conf</code></p>
+<h3 id="基本文件共享"><a href="#基本文件共享" class="headerlink" title="基本文件共享"></a>基本文件共享</h3><p>只能读</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[base_share]</span><br><span class="line">comment = base share</span><br><span class="line">path = /Srv/smb/base_share</span><br></pre></td></tr></table></figure>
+
+<h3 id="可写"><a href="#可写" class="headerlink" title="可写"></a>可写</h3><p>当<code>writeable=yes</code>和<code>read only=yes</code>同时存在时，只读</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[writeable_share]</span><br><span class="line">...</span><br><span class="line">writeable = yes</span><br></pre></td></tr></table></figure>
+
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/1.samba/2.%E9%99%90%E5%88%B6%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%B1%BB%E5%9E%8B/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  samba限制文件上传类型
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/8.openssl/1.%E4%B8%BBca%E9%A2%81%E5%8F%91%E8%AF%81%E4%B9%A6/">
+                openssl颁发带san证书
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
 
 	</div>
 	<div id="footer">

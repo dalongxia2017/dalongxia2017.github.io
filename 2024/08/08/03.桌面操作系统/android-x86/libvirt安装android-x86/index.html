@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		libvirt安装安卓x86 | 
 	 
 	虾记
 	</title>
@@ -978,7 +980,7 @@
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/">
                      
 										    libvirt安装android-x86
@@ -1057,117 +1059,135 @@
 
 	<!-- 引入正文 -->
 	<div id="content" class="content">
-		<div id="index">
+		<h1 id="article-title">
+	libvirt安装安卓x86
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
 	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/README/">
-				<h2 class="index-title">
-					README
-				</h2>
-				<div class="index-brief">
-					关于稍微更新到rocky9
-计划
- 1.基本配置
- yum&#x2F;rpm
- chronyd
- rsyslog
- 指定日志服务器
 
+	<span>蒜香大龙虾</span>
+	<span>2024-08-09 01:33:13</span>
 
- bind
- 隐藏版本号
- chroot
- 限制网段
- 子域委派
- 条件转发器
- smart-DNS
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
 
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
 
- unbound
- 子域委派
-
-
- openssh
- 批量
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/1.shell/1.helloworld/">
-				<h2 class="index-title">
-					1.helloworld
-				</h2>
-				<div class="index-brief">
-					12#!/bin/bashecho &quot;Hello World!&quot;
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/3.ansible/1.%E8%AE%BE%E7%BD%AE%E5%8F%97%E6%8E%A7%E8%8A%82%E7%82%B9/">
-				<h2 class="index-title">
-					1.设置受控节点
-				</h2>
-				<div class="index-brief">
-					ansible设置受控节点安装1yum install ansible-core -y
-
-修改配置文件指定受控设备/etc/ansible/hosts
-1234cat &gt;&gt; /etc/ansible/hosts &lt;&lt; EOF[server]client.skills.comE
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/4.rust/1.helloworld/">
-				<h2 class="index-title">
-					1.helloworld
-				</h2>
-				<div class="index-brief">
-					123fn main() &#123;    println!(&quot;Hello, world!&quot;);&#125;
-
-偷懒方法
-12yum install cargo -ycargo new aaa
-
-然后在src里面有
-1234[root@linux1 ~]# cat aaa/sr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-	
-	<div id="index-paginator">
-		
-	</div>
 </div>
+
+<!-- content -->
+<div id="article-content">
+	<h1 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h1><p><a target="_blank" rel="noopener" href="https://www.android-x86.org/download.html">官网</a></p>
+<h1 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">virt-install \</span><br><span class="line">-n myphone \</span><br><span class="line">--memory 8192 \</span><br><span class="line">--osinfo android-x86-9.0 \</span><br><span class="line">--vcpus 4 \</span><br><span class="line">--cpu host \</span><br><span class="line">-c /root/android-x86_64-9.0-r2.iso \</span><br><span class="line">--disk size=128 \</span><br><span class="line">--graphics spice \</span><br><span class="line">--network type=direct,source=enp2s0</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h1><p>连接虚拟机</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/1.png"></p>
+<p>选择第三项进入安装程序</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/2.png"></p>
+<p>编辑磁盘分区</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/3.png"></p>
+<p>不使用GPT磁盘类型</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/4.png"></p>
+<p>新建一个分区</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/5.png"></p>
+<p>设置为主分区</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/6.png"></p>
+<p>设置分区大小，默认为全部</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/7.png"></p>
+<p>设置为bootable</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/8.png"></p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/9.png"></p>
+<p>写入分区表</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/10.png"></p>
+<p>确认写入，输入yes</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/11.png"></p>
+<p>退出磁盘分区程序</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/12.png"></p>
+<p>选择刚刚创建好的磁盘</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/13.png"></p>
+<p>选择文件系统为ext4</p>
+<p>一定！一定！！一定！！！不能用ntfs</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/14.png"></p>
+<p>确定格式化</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/15.png"></p>
+<p>安装grub引导</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/16.png"></p>
+<p>使system可读可写</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/17.png"></p>
+<p>稍等片刻等待安装，然后重启</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/18.png"></p>
+<p>启动系统，可以等待自己读秒，也可以手动回车第一个</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/19.png"></p>
+<p>选择中文</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/20.png"></p>
+<p>姑且先跳过网络，避免玄学问题</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/21.png"></p>
+<p>继续跳过</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/22.png"></p>
+<p>调整时间时区</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/23.png"></p>
+<p>滑到最底下，然后接受一堆东西</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/24.png"></p>
+<p>先不设置密码</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/25.png"></p>
+<p>跳</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/26.png"></p>
+<p>然后进入桌面后，打开设置连接网络</p>
+<p><img src="/2024/08/08/03.%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/android-x86/libvirt%E5%AE%89%E8%A3%85android-x86/27.png"></p>
+<h1 id="添加arm原生库支持"><a href="#添加arm原生库支持" class="headerlink" title="添加arm原生库支持"></a>添加arm原生库支持</h1><p><a target="_blank" rel="noopener" href="https://github.com/SGNight/Arm-NativeBridge">github项目</a></p>
+<p>安卓9原生库直链</p>
+<p>下载地址：<a target="_blank" rel="noopener" href="http://dl.android-x86.org/houdini/9_y/houdini.sfs">http://dl.android-x86.org/houdini/9_y&#x2F;houdini.sfs</a></p>
+<p>请在安卓虚拟机内下载。</p>
+<p>然后按alt+f1进入console</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /storage/emulated/0/Download/</span><br><span class="line">mkdir /data/arm</span><br><span class="line">cp houdini.sfs /data/arm/houdini9_y.sfs</span><br><span class="line">enable_nativebridge</span><br></pre></td></tr></table></figure>
+
+<p>如果没有任何报错证明成功了。</p>
+<p>按alt+f7返回图形界面。</p>
+<p>然后就可以愉快使用了。</p>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2024/08/29/114514.%E4%B8%8B%E5%8C%97%E6%B3%BD%E6%9D%82%E7%89%A9%E5%8C%BA/mariadb%E6%94%B9%E5%AF%86%E7%A0%81/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  mariadb改密码
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2024/08/08/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/9.IP%E9%85%8D%E7%BD%AE/1.nmcli/1.%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+                nmcli基本命令
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
 
 	</div>
 	<div id="footer">

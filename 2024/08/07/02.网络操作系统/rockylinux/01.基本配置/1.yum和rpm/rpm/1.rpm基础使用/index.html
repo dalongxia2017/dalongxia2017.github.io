@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		rpm的基本使用方法 | 
 	 
 	虾记
 	</title>
@@ -240,7 +242,7 @@
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/1.yum%E5%92%8Crpm/rpm/1.rpm%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
                      
 										    1.rpm基础使用
@@ -1057,117 +1059,127 @@
 
 	<!-- 引入正文 -->
 	<div id="content" class="content">
-		<div id="index">
+		<h1 id="article-title">
+	rpm的基本使用方法
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
 	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/README/">
-				<h2 class="index-title">
-					README
-				</h2>
-				<div class="index-brief">
-					关于稍微更新到rocky9
-计划
- 1.基本配置
- yum&#x2F;rpm
- chronyd
- rsyslog
- 指定日志服务器
 
+	<span>蒜香大龙虾</span>
+	<span>2024-08-07 23:18:48</span>
 
- bind
- 隐藏版本号
- chroot
- 限制网段
- 子域委派
- 条件转发器
- smart-DNS
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
 
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
 
- unbound
- 子域委派
-
-
- openssh
- 批量
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/1.shell/1.helloworld/">
-				<h2 class="index-title">
-					1.helloworld
-				</h2>
-				<div class="index-brief">
-					12#!/bin/bashecho &quot;Hello World!&quot;
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/3.ansible/1.%E8%AE%BE%E7%BD%AE%E5%8F%97%E6%8E%A7%E8%8A%82%E7%82%B9/">
-				<h2 class="index-title">
-					1.设置受控节点
-				</h2>
-				<div class="index-brief">
-					ansible设置受控节点安装1yum install ansible-core -y
-
-修改配置文件指定受控设备/etc/ansible/hosts
-1234cat &gt;&gt; /etc/ansible/hosts &lt;&lt; EOF[server]client.skills.comE
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/4.rust/1.helloworld/">
-				<h2 class="index-title">
-					1.helloworld
-				</h2>
-				<div class="index-brief">
-					123fn main() &#123;    println!(&quot;Hello, world!&quot;);&#125;
-
-偷懒方法
-12yum install cargo -ycargo new aaa
-
-然后在src里面有
-1234[root@linux1 ~]# cat aaa/sr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-	
-	<div id="index-paginator">
-		
-	</div>
 </div>
+
+<!-- content -->
+<div id="article-content">
+	<h1 id="rpm基础使用"><a href="#rpm基础使用" class="headerlink" title="rpm基础使用"></a>rpm基础使用</h1><p>rpm用的比较少，不能自动处理依赖关系</p>
+<table>
+<thead>
+<tr>
+<th align="center">常用选项</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-i</td>
+<td align="center">安装软件</td>
+</tr>
+<tr>
+<td align="center">-U</td>
+<td align="center">升级软件</td>
+</tr>
+<tr>
+<td align="center">-v</td>
+<td align="center">显示详细信息</td>
+</tr>
+<tr>
+<td align="center">-h</td>
+<td align="center">显示进度条</td>
+</tr>
+<tr>
+<td align="center">-e</td>
+<td align="center">卸载软件包</td>
+</tr>
+<tr>
+<td align="center">-q</td>
+<td align="center">查询软件包</td>
+</tr>
+<tr>
+<td align="center">-V</td>
+<td align="center">校验安装包</td>
+</tr>
+</tbody></table>
+<h2 id="安装升级软件"><a href="#安装升级软件" class="headerlink" title="安装升级软件"></a>安装升级软件</h2><p>安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh vim-minimal-8.2.2637-20.el9_1.x86_64.rpm</span><br></pre></td></tr></table></figure>
+
+<p>升级</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -Uvh vim-minimal-8.2.2637-20.el9_1.x86_64.rpm</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除软件"><a href="#删除软件" class="headerlink" title="删除软件"></a>删除软件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -e Package_name</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询软件"><a href="#查询软件" class="headerlink" title="查询软件"></a>查询软件</h2><p>查询包名&#x2F;查看包是否安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -q vim-minimal</span><br></pre></td></tr></table></figure>
+
+<p>查询结果如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@linux1 opt]# rpm -q vim-minimal</span><br><span class="line">vim-minimal-8.2.2637-20.el9_1.x86_64</span><br><span class="line">[root@linux1 opt]# rpm -q asdfethesrfg</span><br><span class="line">package asdfethesrfg is not installed</span><br></pre></td></tr></table></figure>
+
+<p>列出所有安装的包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa</span><br></pre></td></tr></table></figure>
+
+<p>查看一个软件的信息</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qi vim-minimal</span><br></pre></td></tr></table></figure>
+
+<p>查询软件文件列表</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ql vim-minimal</span><br></pre></td></tr></table></figure>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/1.yum%E5%92%8Crpm/yum/1.%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E6%BA%90/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  配置yum本地源
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2024/08/07/05.%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/vim/vim%E7%AE%80%E6%98%93%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/">
+                vim简易脚本编写
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
 
 	</div>
 	<div id="footer">

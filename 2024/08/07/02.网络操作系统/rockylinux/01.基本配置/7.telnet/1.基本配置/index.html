@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		telnet基本配置 | 
 	 
 	虾记
 	</title>
@@ -475,7 +477,7 @@
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/7.telnet/1.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
                      
 										    1.基本配置
@@ -1057,117 +1059,79 @@
 
 	<!-- 引入正文 -->
 	<div id="content" class="content">
-		<div id="index">
+		<h1 id="article-title">
+	telnet基本配置
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
 	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/README/">
-				<h2 class="index-title">
-					README
-				</h2>
-				<div class="index-brief">
-					关于稍微更新到rocky9
-计划
- 1.基本配置
- yum&#x2F;rpm
- chronyd
- rsyslog
- 指定日志服务器
 
+	<span>蒜香大龙虾</span>
+	<span>2024-08-08 01:04:37</span>
 
- bind
- 隐藏版本号
- chroot
- 限制网段
- 子域委派
- 条件转发器
- smart-DNS
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
 
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
 
- unbound
- 子域委派
-
-
- openssh
- 批量
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/1.shell/1.helloworld/">
-				<h2 class="index-title">
-					1.helloworld
-				</h2>
-				<div class="index-brief">
-					12#!/bin/bashecho &quot;Hello World!&quot;
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/3.ansible/1.%E8%AE%BE%E7%BD%AE%E5%8F%97%E6%8E%A7%E8%8A%82%E7%82%B9/">
-				<h2 class="index-title">
-					1.设置受控节点
-				</h2>
-				<div class="index-brief">
-					ansible设置受控节点安装1yum install ansible-core -y
-
-修改配置文件指定受控设备/etc/ansible/hosts
-1234cat &gt;&gt; /etc/ansible/hosts &lt;&lt; EOF[server]client.skills.comE
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/4.rust/1.helloworld/">
-				<h2 class="index-title">
-					1.helloworld
-				</h2>
-				<div class="index-brief">
-					123fn main() &#123;    println!(&quot;Hello, world!&quot;);&#125;
-
-偷懒方法
-12yum install cargo -ycargo new aaa
-
-然后在src里面有
-1234[root@linux1 ~]# cat aaa/sr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-	
-	<div id="index-paginator">
-		
-	</div>
 </div>
+
+<!-- content -->
+<div id="article-content">
+	<h1 id="telnet基本配置"><a href="#telnet基本配置" class="headerlink" title="telnet基本配置"></a>telnet基本配置</h1><h2 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置"></a>服务端配置</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install telnet-server -y</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动-墙"><a href="#启动-墙" class="headerlink" title="启动&amp;墙"></a>启动&amp;墙</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable --now telnet.socket</span><br><span class="line">firewall-cmd --add-port=23/tcp</span><br><span class="line">firewall-cmd --add-port=23/tcp --permanent</span><br></pre></td></tr></table></figure>
+
+<h2 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h2><h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install telnet -y</span><br></pre></td></tr></table></figure>
+
+<h3 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h3><p>连接服务器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet 服务端ip</span><br></pre></td></tr></table></figure>
+
+<p>简单的测试 e.g.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@linux2 ~]# telnet 172.20.20.11</span><br><span class="line">Trying 172.20.20.11...</span><br><span class="line">Connected to 172.20.20.11.</span><br><span class="line">Escape character is &#x27;^]&#x27;.</span><br><span class="line"></span><br><span class="line">Kernel 5.14.0-362.8.1.el9_3.x86_64 on an x86_64</span><br><span class="line">linux1 login: root</span><br><span class="line">Password: </span><br><span class="line">Last login: Thu Mar 28 13:01:21 from 172.20.20.1</span><br><span class="line">[root@linux1 ~]# </span><br></pre></td></tr></table></figure>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/8.openssl/1.%E4%B8%BBca%E9%A2%81%E5%8F%91%E8%AF%81%E4%B9%A6/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  openssl颁发带san证书
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/6.openssh/3.sshpass/">
+                sshpass基本用法
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
 
 	</div>
 	<div id="footer">

@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		iscsi基本配置 | 
 	 
 	虾记
 	</title>
@@ -706,7 +708,7 @@
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/5.iscsi/1.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
                      
 										    1.基本配置
@@ -1057,117 +1059,118 @@
 
 	<!-- 引入正文 -->
 	<div id="content" class="content">
-		<div id="index">
+		<h1 id="article-title">
+	iscsi基本配置
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
 	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/README/">
-				<h2 class="index-title">
-					README
-				</h2>
-				<div class="index-brief">
-					关于稍微更新到rocky9
-计划
- 1.基本配置
- yum&#x2F;rpm
- chronyd
- rsyslog
- 指定日志服务器
 
+	<span>蒜香大龙虾</span>
+	<span>2024-08-08 01:35:45</span>
 
- bind
- 隐藏版本号
- chroot
- 限制网段
- 子域委派
- 条件转发器
- smart-DNS
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
 
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
 
- unbound
- 子域委派
-
-
- openssh
- 批量
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/1.shell/1.helloworld/">
-				<h2 class="index-title">
-					1.helloworld
-				</h2>
-				<div class="index-brief">
-					12#!/bin/bashecho &quot;Hello World!&quot;
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/3.ansible/1.%E8%AE%BE%E7%BD%AE%E5%8F%97%E6%8E%A7%E8%8A%82%E7%82%B9/">
-				<h2 class="index-title">
-					1.设置受控节点
-				</h2>
-				<div class="index-brief">
-					ansible设置受控节点安装1yum install ansible-core -y
-
-修改配置文件指定受控设备/etc/ansible/hosts
-1234cat &gt;&gt; /etc/ansible/hosts &lt;&lt; EOF[server]client.skills.comE
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/4.rust/1.helloworld/">
-				<h2 class="index-title">
-					1.helloworld
-				</h2>
-				<div class="index-brief">
-					123fn main() &#123;    println!(&quot;Hello, world!&quot;);&#125;
-
-偷懒方法
-12yum install cargo -ycargo new aaa
-
-然后在src里面有
-1234[root@linux1 ~]# cat aaa/sr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-	
-	<div id="index-paginator">
-		
-	</div>
 </div>
+
+<!-- content -->
+<div id="article-content">
+	<h1 id="iscsi基本配置"><a href="#iscsi基本配置" class="headerlink" title="iscsi基本配置"></a>iscsi基本配置</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install targetcli -y</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建共享"><a href="#创建共享" class="headerlink" title="创建共享"></a>创建共享</h2><p>进入targetcli</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">targetcli</span><br></pre></td></tr></table></figure>
+
+<p>创建块设备</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /backstores/block</span><br><span class="line">create dev=/dev/sdb1 name=sdb1</span><br></pre></td></tr></table></figure>
+
+<p>创建target</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /iscsi</span><br><span class="line">create wwn=iqn.2024-04.com.skills:server</span><br></pre></td></tr></table></figure>
+
+<p>创建lun</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd iqn.2024-04.com.skills:server/tpg1/luns</span><br><span class="line">create /backstores/block/sdb1</span><br></pre></td></tr></table></figure>
+
+<p>设置认证</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd /iscsi/iqn.2024-04.com.skills:server/tpg1</span><br><span class="line">set attribute authentication=1</span><br><span class="line">cd /iscsi/iqn.2024-04.com.skills:server/tpg1/acls</span><br><span class="line">create wwn=iqn.2024-04.com.skills:client</span><br><span class="line">cd iqn.2024-04.com.skills:client</span><br><span class="line">set auth userid=skills</span><br><span class="line">set auth password=Pass-1234</span><br></pre></td></tr></table></figure>
+
+<p>退出</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
+
+<h2 id="启动-fw"><a href="#启动-fw" class="headerlink" title="启动&amp;fw"></a>启动&amp;fw</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable --now targetclid</span><br><span class="line">systemctl enable --now target</span><br><span class="line">firewall-cmd --add-port=3260/tcp</span><br><span class="line">firewall-cmd --add-port=3260/tcp --per</span><br></pre></td></tr></table></figure>
+
+<p>PS:如果改了配置需要重启<code>target</code>和<code>targetclid</code></p>
+<h2 id="客户端连接"><a href="#客户端连接" class="headerlink" title="客户端连接"></a>客户端连接</h2><p>安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install iscsi-initiator-utils -y</span><br></pre></td></tr></table></figure>
+
+<p>懒狗记法</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@linux2 ~]# man iscsiadm | grep &quot;\-\-mode&quot;</span><br><span class="line">       -m, --mode op</span><br><span class="line">              sh# iscsiadm --mode discoverydb --type sendtargets --portal 192.168.1.10 --discover</span><br><span class="line">              sh# iscsiadm --mode node --targetname iqn.2001-05.com.doe:test --portal 192.168.1.1:3260 --login</span><br><span class="line">              sh# iscsiadm --mode node --targetname iqn.2001-05.com.doe:test --portal 192.168.1.1:3260 --logout</span><br><span class="line">              sh# iscsiadm --mode node</span><br><span class="line">              sh# iscsiadm --mode node --targetname iqn.2001-05.com.doe:test --portal 192.168.1.1:3260</span><br></pre></td></tr></table></figure>
+
+<p>修改iqn和密码</p>
+<p><code>/etc/iscsi/initiatorname.iscsi</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InitiatorName=iqn.2024-04.com.skills:client</span><br></pre></td></tr></table></figure>
+
+<p><code>/etc/iscsid.conf</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">node.session.auth.authmethod = CHAP</span><br><span class="line">node.session.auth.username = skills</span><br><span class="line">node.session.auth.password = Pass-1234</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>重启客户端</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart iscsi iscsid</span><br></pre></td></tr></table></figure>
+
+<p>发现target</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iscsiadm --mode discovery --<span class="built_in">type</span> sendtargets --portal server.skills.com --discover</span></span><br><span class="line">iscsiadm -m discovery -t sendtargets -p server.skills.com</span><br></pre></td></tr></table></figure>
+
+<p>登录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">iscsiadm --mode node --portal server.skills.com --login</span></span><br><span class="line">iscsiadm -m node -p server.skills.com --login</span><br></pre></td></tr></table></figure>
+
+<p>查看</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iscsiadm -m session -o show</span><br></pre></td></tr></table></figure>
+
+<p>断开连接</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iscsiadm -m node -U all</span><br></pre></td></tr></table></figure>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/03.web/1.httpd/1.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  httpd基本配置（未完成）
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/4.rsync/2.%E6%9C%8D%E5%8A%A1%E7%AB%AF/">
+                rsyncd基本配置
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
 
 	</div>
 	<div id="footer">

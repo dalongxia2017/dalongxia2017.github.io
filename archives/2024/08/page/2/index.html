@@ -1060,40 +1060,19 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/README/">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/03.web/1.httpd/1.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
 				<h2 class="index-title">
-					README
+					httpd基本配置（未完成）
 				</h2>
 				<div class="index-brief">
-					关于稍微更新到rocky9
-计划
- 1.基本配置
- yum&#x2F;rpm
- chronyd
- rsyslog
- 指定日志服务器
+					httpd配置安装1yum install httpd -y
 
-
- bind
- 隐藏版本号
- chroot
- 限制网段
- 子域委派
- 条件转发器
- smart-DNS
-
-
- unbound
- 子域委派
-
-
- openssh
- 批量
+配置虚拟主机123456789&lt;VirtualHost *:8080&gt;    ServerName www.skills.com    DocumentRoot /    DirectoryIndex index.php&l
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2025-05-26</span>
+				    <span>2024-08-08</span>
                     
                             
                     
@@ -1101,17 +1080,26 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/1.shell/1.helloworld/">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/5.iscsi/1.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
 				<h2 class="index-title">
-					1.helloworld
+					iscsi基本配置
 				</h2>
 				<div class="index-brief">
-					12#!/bin/bashecho &quot;Hello World!&quot;
+					iscsi基本配置安装1yum install targetcli -y
+
+创建共享进入targetcli
+1targetcli
+
+创建块设备
+12cd /backstores/blockcreate dev=/dev/sdb1 name=sdb1
+
+创建target
+12cd /iscsicrea
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2025-05-26</span>
+				    <span>2024-08-08</span>
                     
                             
                     
@@ -1119,20 +1107,20 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/3.ansible/1.%E8%AE%BE%E7%BD%AE%E5%8F%97%E6%8E%A7%E8%8A%82%E7%82%B9/">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/4.rsync/2.%E6%9C%8D%E5%8A%A1%E7%AB%AF/">
 				<h2 class="index-title">
-					1.设置受控节点
+					rsyncd基本配置
 				</h2>
 				<div class="index-brief">
-					ansible设置受控节点安装1yum install ansible-core -y
+					rsync服务端安装1yum install rsync rsync-daemon -y
 
-修改配置文件指定受控设备/etc/ansible/hosts
-1234cat &gt;&gt; /etc/ansible/hosts &lt;&lt; EOF[server]client.skills.comE
+修改配置文件修改默认配置文件路径为/etc/rsyncd.conf
+123cat &gt; /etc/sysconfig/rsyncd &lt;&lt; EOFOPTIONS=&quot;/etc/rsync
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2025-05-26</span>
+				    <span>2024-08-08</span>
                     
                             
                     
@@ -1140,23 +1128,148 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/4.rust/1.helloworld/">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/4.rsync/1.%E5%AE%A2%E6%88%B7%E7%AB%AF/">
 				<h2 class="index-title">
-					1.helloworld
+					rsync同步
 				</h2>
 				<div class="index-brief">
-					123fn main() &#123;    println!(&quot;Hello, world!&quot;);&#125;
+					rsync客户端安装1yum install rsync -y
 
-偷懒方法
-12yum install cargo -ycargo new aaa
+同步12mkdir /opt/reporsync -av rsync://172.20.20.11/repo /opt/repo
 
-然后在src里面有
-1234[root@linux1 ~]# cat aaa/sr
+这里的repo是服务端那边指定的，参考服务端的配置
+1234...[repo]path=/opt/re
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2025-05-26</span>
+				    <span>2024-08-08</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/3.nfs/1.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
+				<h2 class="index-title">
+					nfs基本配置
+				</h2>
+				<div class="index-brief">
+					nfs基本配置安装1yum install nfs-utils
+
+创建共享文件夹创建目录
+12mkdir /opt/nfsecho &quot;114514&quot; &gt; /opt/nfs/test.txt
+
+设置共享文件夹
+123cat &gt; /etc/exports &lt;&lt;
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2024-08-08</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/2.vsftpd/2.%E8%99%9A%E6%8B%9F%E7%94%A8%E6%88%B7/">
+				<h2 class="index-title">
+					vsftpd虚拟用户
+				</h2>
+				<div class="index-brief">
+					vsftpd虚拟用户修改配置文件配置/etc/vsftpd/vsftpd.conf12345anonymous_enable=NO        #禁用匿名用户local_umask=002            #本地用户创建的权限guest_enable=YES        #启用虚拟用户gu
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2024-08-08</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/2.vsftpd/1.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
+				<h2 class="index-title">
+					vsftpd基本配置
+				</h2>
+				<div class="index-brief">
+					vsftpd基本配置安装1yum install vsftpd -y
+
+修改配置默认配置如下123456789101112anonymous_enable=NOlocal_enable=YESwrite_enable=YESlocal_umask=022dirmessage_enable=YESxf
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2024-08-08</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/1.samba/2.%E9%99%90%E5%88%B6%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%B1%BB%E5%9E%8B/">
+				<h2 class="index-title">
+					samba限制文件上传类型
+				</h2>
+				<div class="index-brief">
+					限制smb文件上传类型编辑配置文件1234[global]...veto files=/*.exe/*.sh/.../delete veto files = yes
+
+veto files 是隐藏文件，多个类型用&#x2F;分开delete veto files 是删除文件
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2024-08-08</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/02.%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE/1.samba/1.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
+				<h2 class="index-title">
+					samba基本配置
+				</h2>
+				<div class="index-brief">
+					samba基本配置安装1yum install samba -y
+
+smb用户管理查询所有用户1pdbedit -L
+
+新建用户1234567useradd -s /sbin/nologin user01useradd -s /sbin/nologin user02useradd -s /sbin/
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2024-08-08</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2024/08/07/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/8.openssl/1.%E4%B8%BBca%E9%A2%81%E5%8F%91%E8%AF%81%E4%B9%A6/">
+				<h2 class="index-title">
+					openssl颁发带san证书
+				</h2>
+				<div class="index-brief">
+					根证书和颁发证书安装openssl1yum install openssl-* -y
+
+生成根证书根证书目录在/etc/pki/CA
+123456cd /etc/pki/CAtouch index.txtecho 01 &gt; serialopenssl genrsa -out private/c
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2024-08-08</span>
                     
                             
                     
@@ -1165,6 +1278,8 @@
 	
 	
 	<div id="index-paginator">
+		
+			<a class="extend prev" rel="prev" href="/archives/2024/08/">&lt;</a><a class="page-number" href="/archives/2024/08/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2024/08/page/3/">3</a><a class="page-number" href="/archives/2024/08/page/4/">4</a><a class="extend next" rel="next" href="/archives/2024/08/page/3/">&gt;</a>
 		
 	</div>
 </div>

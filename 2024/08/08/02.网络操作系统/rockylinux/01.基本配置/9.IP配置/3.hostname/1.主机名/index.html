@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		设置主机名 | 
 	 
 	虾记
 	</title>
@@ -548,7 +550,7 @@
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2024/08/08/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/9.IP%E9%85%8D%E7%BD%AE/3.hostname/1.%E4%B8%BB%E6%9C%BA%E5%90%8D/">
                      
 										    1.主机名
@@ -1057,117 +1059,75 @@
 
 	<!-- 引入正文 -->
 	<div id="content" class="content">
-		<div id="index">
+		<h1 id="article-title">
+	设置主机名
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
 	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/README/">
-				<h2 class="index-title">
-					README
-				</h2>
-				<div class="index-brief">
-					关于稍微更新到rocky9
-计划
- 1.基本配置
- yum&#x2F;rpm
- chronyd
- rsyslog
- 指定日志服务器
 
+	<span>蒜香大龙虾</span>
+	<span>2024-08-08 20:00:50</span>
 
- bind
- 隐藏版本号
- chroot
- 限制网段
- 子域委派
- 条件转发器
- smart-DNS
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
 
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
 
- unbound
- 子域委派
-
-
- openssh
- 批量
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/1.shell/1.helloworld/">
-				<h2 class="index-title">
-					1.helloworld
-				</h2>
-				<div class="index-brief">
-					12#!/bin/bashecho &quot;Hello World!&quot;
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/3.ansible/1.%E8%AE%BE%E7%BD%AE%E5%8F%97%E6%8E%A7%E8%8A%82%E7%82%B9/">
-				<h2 class="index-title">
-					1.设置受控节点
-				</h2>
-				<div class="index-brief">
-					ansible设置受控节点安装1yum install ansible-core -y
-
-修改配置文件指定受控设备/etc/ansible/hosts
-1234cat &gt;&gt; /etc/ansible/hosts &lt;&lt; EOF[server]client.skills.comE
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2025/05/26/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/12.%E8%84%9A%E6%9C%AC/4.rust/1.helloworld/">
-				<h2 class="index-title">
-					1.helloworld
-				</h2>
-				<div class="index-brief">
-					123fn main() &#123;    println!(&quot;Hello, world!&quot;);&#125;
-
-偷懒方法
-12yum install cargo -ycargo new aaa
-
-然后在src里面有
-1234[root@linux1 ~]# cat aaa/sr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2025-05-26</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-	
-	<div id="index-paginator">
-		
-	</div>
 </div>
+
+<!-- content -->
+<div id="article-content">
+	<h1 id="查询当前主机名"><a href="#查询当前主机名" class="headerlink" title="查询当前主机名"></a>查询当前主机名</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# hostnamectl </span><br><span class="line">   Static hostname: (unset)                           </span><br><span class="line">Transient hostname: localhost</span><br><span class="line">         Icon name: computer-vm</span><br><span class="line">           Chassis: vm 🖴</span><br><span class="line">        Machine ID: 4a5136f385f04411ac7922ceccb08b9d</span><br><span class="line">           Boot ID: bfee5e742a4f4b28a569717959433aa7</span><br><span class="line">    Virtualization: kvm</span><br><span class="line">  Operating System: Rocky Linux 9.4 (Blue Onyx)       </span><br><span class="line">       CPE OS Name: cpe:/o:rocky:rocky:9::baseos</span><br><span class="line">            Kernel: Linux 5.14.0-427.20.1.el9_4.x86_64</span><br><span class="line">      Architecture: x86-64</span><br><span class="line">   Hardware Vendor: QEMU</span><br><span class="line">    Hardware Model: Standard PC _Q35 + ICH9, 2009_</span><br><span class="line">  Firmware Version: Arch Linux 1.16.3-1-1</span><br></pre></td></tr></table></figure>
+
+<h1 id="修改主机名"><a href="#修改主机名" class="headerlink" title="修改主机名"></a>修改主机名</h1><p>修改名称后需要登出或重新打开bash方可看到新的主机名</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# hostnamectl set-hostname linux1</span><br><span class="line">[root@localhost ~]# bash</span><br><span class="line">[root@linux1 ~]# hostnamectl </span><br><span class="line"> Static hostname: linux1</span><br><span class="line">       Icon name: computer-vm</span><br><span class="line">         Chassis: vm 🖴</span><br><span class="line">      Machine ID: 4a5136f385f04411ac7922ceccb08b9d</span><br><span class="line">         Boot ID: bfee5e742a4f4b28a569717959433aa7</span><br><span class="line">  Virtualization: kvm</span><br><span class="line">Operating System: Rocky Linux 9.4 (Blue Onyx)       </span><br><span class="line">     CPE OS Name: cpe:/o:rocky:rocky:9::baseos</span><br><span class="line">          Kernel: Linux 5.14.0-427.20.1.el9_4.x86_64</span><br><span class="line">    Architecture: x86-64</span><br><span class="line"> Hardware Vendor: QEMU</span><br><span class="line">  Hardware Model: Standard PC _Q35 + ICH9, 2009_</span><br><span class="line">Firmware Version: Arch Linux 1.16.3-1-1</span><br></pre></td></tr></table></figure>
+
+<h1 id="远程修改主机名"><a href="#远程修改主机名" class="headerlink" title="远程修改主机名"></a>远程修改主机名</h1><p>通过SSH连接远程修改主机名</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl set-hostname -H root@172.20.20.11 linux114514</span><br></pre></td></tr></table></figure>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2024/08/08/02.%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rockylinux/01.%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/9.IP%E9%85%8D%E7%BD%AE/1.nmcli/1.%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  nmcli基本命令
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2024/08/08/01.%E8%99%9A%E6%8B%9F%E5%8C%96/3.KVM_QEMU/%E9%80%9A%E8%BF%87virt-install%E5%8A%A0%E8%BD%BDcloudinit/">
+                virt-install实现cloudinit
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
 
 	</div>
 	<div id="footer">
