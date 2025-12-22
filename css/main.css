@@ -268,6 +268,9 @@ a {
   transition: all 0.2s;
 }
 /* article */
+#ai-generated {
+	border-bottom: 2px solid #ddd;
+}
 #article-title {
 	border-bottom: 2px solid #ddd;
 }
