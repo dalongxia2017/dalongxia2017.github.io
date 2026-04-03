@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[50654,["/_next/static/chunks/0q.z262eu0-0u.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/08vkjlhcab9-i.js"],"default"]
+3:I[22016,["/_next/static/chunks/0q.z262eu0-0u.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/08vkjlhcab9-i.js"],""]
+4:I[97367,["/_next/static/chunks/0q.z262eu0-0u.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"flex min-h-screen","children":[["$","$L2",null,{"posts":[{"slug":"test","title":"测试 Markdown","date":"2026-04-03","description":""}]}],["$","div",null,{"className":"flex-1 max-w-4xl mx-auto py-12 px-8","children":[["$","h1",null,{"className":"text-5xl font-bold mb-12","children":"我的博客"}],false,["$","div",null,{"className":"space-y-12","children":[["$","article","test",{"className":"border-b pb-10","children":[["$","$L3",null,{"href":"/blog/test","className":"group","children":["$","h2",null,{"className":"text-3xl font-semibold mb-3 group-hover:text-blue-600 transition","children":"测试 Markdown"}]}],["$","time",null,{"className":"text-zinc-500 block","children":"2026-04-03"}],""]}]]}]]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/08vkjlhcab9-i.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"qcfLuU2MCf_khjhsFRHBy"}
+6:null
